@@ -8,6 +8,7 @@
 \usepackage{graphicx} % żeby ryciny i zdjęcia były
 \usepackage{listings} % syntax highlighting
 \usepackage{verbatimbox} % marginesy dla tabel
+\usepackage{emptypage} % usuwa nagłówki i numery stron z pustych stron
 
 % PAGE LAYOUT
 %\usepackage{showframe} % debug
@@ -45,6 +46,28 @@
    \vskip 40\p@
   }}
 \makeatother
+
+% SPIS TREŚCI
+
+%kropki w~spisie tresci
+\makeatletter
+\def\numberline#1{\hb@xt@\@tempdima{#1.\hfil}}
+\makeatother
+
+% TYTUŁY ROZDZIAŁÓW
+
+%kropki po tytułach rozdziałów
+\makeatletter
+\renewcommand*\@seccntformat[1]%
+{\csname the#1\endcsname.\enspace}
+\makeatother
+
+
+% KONFIGURACJA WYGLĄDU NAGŁÓWKA TEGO CO SIĘ POWTARZA
+
+\fancyhead{} 
+\fancyhead[LE]{\rightmark}
+\fancyhead[RO]{\leftmark}
 
 % CODE LISTINGS 
 
@@ -106,12 +129,6 @@ basicstyle=\ttfamily\small,
 }
 
 
-% KONFIGURACJA WYGLĄDU NAGŁÓWKA TEGO CO SIĘ POWTARZA
-
-\fancyhead{} 
-\fancyhead[LE]{\rightmark}
-\fancyhead[RO]{\leftmark}
-
 
 
 \begin{document}
@@ -172,7 +189,6 @@ Toruń 2016
 
 \tableofcontents
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter*{Słownik pojęć}
 \markboth{}{Słownik pojęć}
 \addcontentsline{toc}{chapter}{Słownik pojęć}
@@ -196,7 +212,6 @@ Toruń 2016
 	\item[Zobowiązania] Zmuszenie prawem do świadczenia pieniężnego na rzecz wierzyciela.
 \end{description}
  
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter*{Wstęp}
 \markboth{}{Wstęp}
 \addcontentsline{toc}{chapter}{Wstęp}
@@ -463,7 +478,6 @@ Odpowiedzi z serwera bywają nieprzewidywalne. Podczas tworzenia aplikacji na za
 W okolicy 10 dnia każdego miesiąca o wieczornej porze należy uzbroić się w cierpliwość, gdyż wówczas inwestorzy szturmują serwis w poszukiwaniu najlepszych aukcji. Wtedy z powodu opóźnień, częściej zamiast spodziewanej odowiedzi otrzymamy błąd 503.
 
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Wykorzystane technologie i narzędzia}
 W tym rozdziale przedstawiam technologie i narzędzia, które w znaczący sposób pomogły zrealizować projekt. Skupiam się na pobieżnym opisie technologii, prezentuję również sposób implementacji komponentów aplikacji.
 
@@ -520,7 +534,6 @@ Przeglądarka plików assembly i dekompilator kodu .NET, oparty o licencję MIT.
 
  
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Budowa projektu}
 Projekt został zbudowany w oparciu o bibliotekę Windows Phone SDK z wykorzystaniem wzorca architektonicznego MVVM. Z narzędzi zewnętrznych, zapewniłem integrację z Web API serwisu Kokos.
 
@@ -672,7 +685,6 @@ Windows Phone 8.1 pozwala wykonywać aplikacji zadania bez konieczności trzyman
 
 
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Prezentacja interfejsu aplikacji}
 
 \section{Etymologia nazwy}
@@ -726,7 +738,6 @@ Aby uruchomić zadania w tle, należy mieć dodany przynajmniej jeden filtr w ap
  
 
  
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{Podsumowanie}
 Aplikacja ma w założeniu rozwiązać problem, jakim jest szybki dostęp do oferty pożyczkowej na urządzeniach mobilnych. Skupia się na obsłudze najpopularniejszego serwisu, oferującego usługi ,,p2p lending''. Kopra ma wyciągnąć najważniejsze informacje, potrzebne do dalszego procesu myślowego czy warto zainteresować się ofertą. 
 
@@ -740,7 +751,6 @@ Stworzona przeze mnie aplikacja jest pierwsza w swojej kategorii. Liczę na odze
  
  
  
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \addcontentsline{toc}{chapter}{Spis rysunków}
 \listoffigures
 
@@ -748,7 +758,6 @@ Stworzona przeze mnie aplikacja jest pierwsza w swojej kategorii. Liczę na odze
 
 
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
 \addcontentsline{toc}{chapter}{Bibliografia}
 \begin{thebibliography}{99}
 
