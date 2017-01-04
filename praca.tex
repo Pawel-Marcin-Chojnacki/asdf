@@ -236,12 +236,16 @@ Czynniki, które zdecydowały o implementacji projektu w formie aplikacji to: za
 \section*{Jaki jest cel aplikacji?}
 \addcontentsline{toc}{section}{Jaki jest cel aplikacji?}
 
-Zależy mi, by osoba korzystająca z aplikacji mogła w każdej chwili przeglądać najważniejsze informacje o wybranych przez siebie aukcjach, dowiadywać się w czasie rzeczywistym o nowych ofertach pożyczkowych i w ciągu kilku godzin podjąć decyzję o nowej inwestycji. Zasadniczo celem jest skrócenie czasu potrzebnego do podpisania umowy o pożyczkę. By tego dokonać, zaprezentuję inwestorowi najistotniejsze dane. Przypomnę, kiedy trzeba, że pojawiła się kolejna oferta oraz pozwolę wyszukać aukcje, które najbardziej interesują inwestora.
+Zależy mi, by osoba korzystająca z aplikacji mogła w każdej chwili przeglądać najważniejsze informacje o wybranych przez siebie aukcjach, a także dowiadywać się w czasie rzeczywistym o nowych ofertach pożyczkowych. Umożliwi jej to w ciągu kilku godzin podjąć decyzję o nowej inwestycji. Celem zasadniczym jest \textbf{skrócenie czasu potrzebnego do podpisania umowy o pożyczkę}. By tego dokonać, zaprezentuję inwestorowi najistotniejsze dane. Przypomnę, gdy zajdzie potrzeba, że pojawiła się kolejna oferta oraz pozwolę wyszukać aukcje, które najbardziej interesują inwestora.
 
 \section*{Założenia projektowe}
 \addcontentsline{toc}{section}{Założenia projektowe}
 
-Cała praca skupia się na ułatwieniu dostępu do korzystania z najpopularniejszego serwisu pożyczek społecznościowych w Polsce. Aplikacja ma być bezpieczna, stabilna, niezawodna. Szybkość działania jest kwestią drugorzędną, jednak przy tak małych zbiorach danych nie ma możliwości na znaczące spowolnienia w responsywności. Myślą przewodnią jest dostarczenie wyłuskanych informacji w odpowiednim momencie. Kopra jest zgodna z wytycznymi Microsoftu dot. projektowania aplikacji mobilnych dla systemu Windows Phone: \textit{,,Aplikacja ma robić jedną rzecz i ma ją robić dobrze''}\cite{wpDesign} oraz \textit{,,Do more''}\cite{doMore}, oba odnoszą się do skupienia na produktywności i komforcie użytkownika. 
+Cała praca skupia się na ułatwieniu dostępu do korzystania z najpopularniejszego serwisu pożyczek społecznościowych w Polsce. Aplikacja ma być bezpieczna, stabilna, niezawodna. Szybkość działania jest kwestią drugorzędną, gdyż aplikacja operuje na zbyt małych zbiorach danych, by ich przetwarzanie miało powodować znaczące spowolnienia w responsywności. 
+
+Myślą przewodnią jest dostarczenie wyłuskanych informacji w odpowiednim momencie. 
+
+Kopra jest zgodna z wytycznymi Microsoftu dot. projektowania aplikacji mobilnych dla systemu Windows Phone: \textit{,,Aplikacja ma robić jedną rzecz i ma ją robić dobrze''}\cite{wpDesign} oraz \textit{,,Do more''}\cite{doMore}, oba odnoszą się do skupienia na produktywności i komforcie użytkownika. 
 
 \section*{Korzystanie z serwisów pożyczkowych na smartfonach}
 \addcontentsline{toc}{section}{Korzystanie z serwisów pożyczkowych na smartfonach}
@@ -387,8 +391,8 @@ Miejscem, w którym spędziłem najwięcej czasu, napisałem i złożyłem proje
 Język programowania Microsoft Visual C\# został zaprojektowany z myślą o tworzeniu aplikacji działających z zestawem narzędzi .NET Framework. Firma Microsoft projektowała go jako potężny, a zarazem prosty język orientowany obiektowo z bezpiecznym typowaniem. \cite{csharp} Składnia wywodzi się z rodziny języków C. Dziedziczy wiele najlepszych cech języka C++ i Microsoft Visual Basic, odrzucając większość ich anachronizmów, tworząc bardziej logiczną strukturę języka. Pierwsza wersja oficjalnie zadebiutowała w 2001 roku. Wielu programistów uważało go za próbę skopiowania Javy, jednak kolejne wersje przewyższają prostotą składni i klarownością instrukcji swój domniemany pierwowzór. Premiera C\# 2.0 ze środowiskiem Visual Studio 2005 wprowadzały kilka nowych elementów do języka, takich jak typy generyczne, iteratory, metody anonimowe. Uważam, że kolejna wersja języka, C\# 3.0 przyczyniła się do największej adopcji wśród programistów. Wszystko przez innowacyjne konstrukcje, które konkurencja wprowadzała przez kilka następnych lat. Moją ulubioną nowością tego wydania jest LINQ (Language-Integrated Query). Również wersja C\# 5.0 daje wrażenie dynamicznego rozwoju języka. Projektanci ułatwili tworzenie wywołań asynchronicznych przez dodanie modyfikatorów metod async/await. Kolejne wersje języka wprowadzają udogodnienia z ułatwiające największe wyzwania stojące przed programistą. Każda wersja języka jest ściśle powiązana ze środowiskiem Visual Studio C\# oraz zestawem narzędzi .NET Framework, choć numeracja wersji nie zawsze się pokrywa.
 
 \section{.NET Framework}
-\textit{W odniesieniu do zmian wprowadzonych przez Microsoft w 2016 roku w związku z wprowadzeniem nowego podziału architektury .NET, ograniczam się do Standardowej Biblioteki .NET (ang. .NET Standard Library) oraz do .NET Framework ograniczony do podzbioru WPF.\cite{dotnetArtykuł} 
-.NET Framework jest platformą programistyczną wydaną w 2002 roku przez Microsoft. Do niedawna była to jedyna platforma dla programistów .NET. W platformie znajduje się zestaw klas biblioteki oraz API systemu Windows, które znacznie podnoszą produktywność programowania aplikacji typu desktop. Kolejne wydania platformy .NET są ściśle powiązane z nowymi wydaniami języka C\#. Wersja Frameworka używana przez Koprę jest oznaczona numerem 4.5.1  i jest kompatybilna z Visual Studio 2013 na Windows 8.1 wraz z wersjami późniejszymi. }}
+W odniesieniu do zmian wprowadzonych przez Microsoft w 2016 roku w związku z wprowadzeniem nowego podziału architektury .NET, ograniczam się do Standardowej Biblioteki .NET (ang. .NET Standard Library) oraz do .NET Framework ograniczony do podzbioru WPF.\cite{dotnetArtykul} 
+.NET Framework jest platformą programistyczną wydaną w 2002 roku przez Microsoft. Do niedawna była to jedyna platforma dla programistów .NET. W platformie znajduje się zestaw klas biblioteki oraz API systemu Windows, które znacznie podnoszą produktywność programowania aplikacji typu desktop. Kolejne wydania platformy .NET są ściśle powiązane z nowymi wydaniami języka C\#. Wersja Frameworka używana przez Koprę jest oznaczona numerem 4.5.1  i jest kompatybilna z Visual Studio 2013 na Windows 8.1 wraz z wersjami późniejszymi. 
 
 
 \section{Windows Phone 8.1 SDK}
@@ -666,10 +670,13 @@ Stworzona przeze mnie aplikacja jest pierwsza w swojej kategorii. Liczę na odze
 \begin{thebibliography}{99}
 
 \bibitem{git} \textsc{Chacon S., Straub B.:}
-\textit{Pro Git} Apress, 2014, Wydanie II, ISBN 978-14-842-0077-3.
+\textit{Pro Git}, Apress, 2014, Wydanie II, ISBN 978-14-842-0077-3.
 
 \bibitem{aspNet} \textsc{Dino E.:}
-\textit{Programming Microsoft ASP.NET 4} Microsoft Press, 2011, ISBN 978-0-7356-4338-3.
+\textit{Programming Microsoft ASP.NET 4}, Microsoft Press, 2011, ISBN 978-0-7356-4338-3.
+
+\bibitem{inwestycje} \textsc{Jajuga K., Jajuga T.:}
+\textit{Inwestycje. Instrumenty finansowe, ryzyko finansowe, inżynieria finansowa}, Warszawa, Wydawnictwo Naukowe PWN SA, 2015, Wydanie III zm., ISBN 978-83-01-14957-4.
 
 \bibitem{slownikPwn} \textsc{Drabik L., Sobol	E.:}
 \textit{Słownik języka polskiego PWN} Wydawnictwo Naukowe PWN, 2007, ISBN 978-8-3011-7377-7.
@@ -746,6 +753,9 @@ Stworzona przeze mnie aplikacja jest pierwsza w swojej kategorii. Liczę na odze
 %\bibitem{xxx} xXx \\
 %\texttt{https://developer.microsoft.com/en-us/windows/downloadsdk}, \\dostęp: 27.12.2016.
 
+\bibitem{dotnetArtykul} Komponenty architektury zestawu narzędzi .NET, \\
+\texttt{https://docs.microsoft.com/en-us/dotnet/articles/standard/components}, \\dostęp: 27.12.2016.
+
 \bibitem{tajneArchiwaMicrosoftu} Archiwum Windows SDK oraz emulatorów, \\
 \texttt{https://developer.microsoft.com/en-us/windows/downloads/sdk-archive}, \\dostęp: 27.12.2016.
 
@@ -770,11 +780,7 @@ Stworzona przeze mnie aplikacja jest pierwsza w swojej kategorii. Liczę na odze
 \bibitem{mvcXerox} Oryginalna notka techniczna nt. wzorca MVC stworzona dla XEROX PARC w latach 1978-79, \\
 \texttt{http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html}, \\dostęp: 27.12.2016.
 
-\bibitem{inwestycje} \textsc{Jajuga K., Jajuga T.:}
-\textit{Inwestycje. Instrumenty finansowe, ryzyko finansowe, inżynieria finansowa.} Wydawnictwo Naukowe PWN SA, 2015, ISBN 978-83-01-14957-4.
 
-\bibitem{dotnetArtykuł} Komponenty architektury zestawu narzędzi .NET, \\
-\texttt{https://docs.microsoft.com/en-us/dotnet/articles/standard/components}, \\dostęp: 27.12.2016.
 
 
 \end{thebibliography}
