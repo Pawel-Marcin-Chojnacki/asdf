@@ -448,7 +448,7 @@ W tym rozdziale przedstawię wzorzec architektoniczny MVVM, jego zalety i wady o
 
 \subsection{Opis wzorca Model View ViewModel}
 
-Wprowadzony przez Microsoft w 2005 roku, wzorzec architektoniczny, opiera się na tych samych założeniach co zaprezentowanym lata wcześniej model prezentacji (Presetation Model). PM model dziedziczy po Model Widok Prezenter MVP - Model View Presenter, wzorzec architektoniczny z początku lat 90 ubiegłego wieku. Z tym, że wzorzec PM jest szczególnie przydatny w programowaniu złożonych interfejsów użytkownika. Na systemie Windows, Presentation Model bardzo dobrze współpracuje z interfejsem użytkownika zbudowanym z biblioteką Windows Presentation Foundation (WPF) oraz biblioteką Silverlight. Właśnie dlatego Microsoft zbudował wersję wzorca PM specjalnie pod WPF i nazwał go Model-View-ViewModel (MVVM). \cite{aspNet} MVVM używa wielu specyficznych możliwości i narzędzi znanych z platformy Silverlight takich jak wiązanie danych. Wprowadzenie wzorca MVVM w aplikacjach opierających się na technologiach WPF, Silverlight jest zalecanym podejściem, ponieważ są to bardzo ułatwiają jego implementację.
+Wprowadzony przez Microsoft w 2005 roku, wzorzec architektoniczny, opiera się na tych samych założeniach co zaprezentowany lata wcześniej model prezentacji (Presetation Model). PM dziedziczy po Model Widok Prezenter MVP - \textit{(ang.Model View Presenter)}, wzorzec architektoniczny z początku lat 90 ubiegłego wieku. Z tym, że wzorzec PM jest szczególnie przydatny w programowaniu złożonych interfejsów użytkownika. Na systemie Windows, Presentation Model bardzo dobrze współpracuje z interfejsem użytkownika zbudowanym z biblioteką Windows Presentation Foundation (WPF) oraz biblioteką Silverlight. Właśnie dlatego Microsoft zbudował wersję wzorca PM specjalnie pod WPF i nazwał go Model-View-ViewModel (MVVM). \cite{aspNet} MVVM używa wielu specyficznych możliwości i narzędzi znanych z platformy Silverlight takich jak wiązanie danych. Wprowadzenie wzorca MVVM w aplikacjach opierających się na technologiach WPF, Silverlight jest zalecanym podejściem, ponieważ są to bardzo ułatwiają jego implementację.
 
 Do zalet Model View ViewModel względem tradycyjnego podejścia (przeciągania kotrolek z Toolboxa i pisanie dalej w formie Code-behind) są:
 
@@ -525,7 +525,31 @@ pubilic konstruktor() {
 
 Do wiązania danych zaimplementowałem interfejs INotifyPropertyChanged. 
 
+\begin{lstlisting}[caption=Implementacja interfejsu INotifyPropertyChanged w jednej z klas, label=lst:test, language=xml]
+public class MainViewModel : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        public void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this,
+                new PropertyChangedEventArgs(propertyName));
+        }
+    }
+\end{lstlisting}
+
+Mając tak zaimplementowaną klasę, pozostałe widok-modele dziedziczą po MainViewModel używając wywołania metody \textit{NotifyPropertyChanged()} do powiadomienia o zmianie wartości właściwości.
+\begin{lstlisting}[caption=Przykładowa właściwość wykorzystująca mechanizm NotifyPropertyChanged, label=lst:test, language=xml]
+		public string ApiKeyValue
+		{
+			get { return _apiKeyValue; }
+			set
+			{
+				_apiKeyValue = value;
+				NotifyPropertyChanged(nameof(ApiKeyValue));
+			}
+		}
+\end{lstlisting}
 
 \section{Kokos WebAPI}
 
@@ -565,13 +589,28 @@ Każda z funkcji ma określony spory zakres parametrów oraz tabelę ze zwracany
 
 W celu uniknięcia powielania kodu podczas zapytań, napisałem klasę, która generuje zapytania do serwisu. Wykorzystuje mniej niż 50\% funkcji, dlatego nie widziałem powodu by tworzyć osobny projekt na komunikację z serwisem. Elementy stałe, przechowuję w formie prywatnych elementów klasy.
 
-{\color{red} miejsce na listing}
+\begin{lstlisting}[caption=Składowe budujące zapytanie do serwisu, label=lst:test, language=xml]
+		private const string BaseAddress = "https://kokos.pl/webapi/";
+		private const string DataType = "&type=json";
+		private const string Search = "search?";
+		private const string RecentAuctions = "get-recent-auctions?";
+		private const string AuctionData = "get-auction-data?";
+		private const string Comments = "comments=1";
+		private const string Records = "records=";
+		private const string Key = "key=";
+		private const string Id = "id=";
+		private const string Type = "type=";
+\end{lstlisting}
 
-Tworzenie parametrów zapytań API schowane jest w klasie RequestGenerator. Przechowuje tam zbiór funkcji do tworzenia całościowych obiektów Uri, gotowych do przekazania użycia przez dowolny serwis.
 
-{\color{red} miejsce na listing}
+Tworzenie parametrów zapytań API schowane jest w klasie RequestGenerator. Przechowuje tam zbiór funkcji do tworzenia całościowych obiektów Uri, gotowych do przekazania użycia przez serwis.
 
-{\color{red} miejsce na listing}
+\begin{lstlisting}[caption=Nagłówki metod pozwalających składać zapytania do serwisu., label=lst:test, language=xml]
+public Uri FilteredAuction(string filter)
+public Uri ComposeSearchAuctionQuery(Dictionary<string, string> search)
+public Uri MostRecentAuctions()
+public Uri GetAuctionData(GetAuctionDataParameters parameters)
+\end{lstlisting}
 
 Komunikacja z serwisem odbywa się przy pomocy klasy KokosConnectionManager. Do komunikacji internetowej, wykorzystana jest klasa HttpClient.
 
@@ -617,24 +656,62 @@ Aplikacja ma po zalogowaniu ma dostęp do wszystkich danych osobowych umieszczon
 
 Logo aplikacji jest rysunkiem połowy owocu kokosowego z liśćmi drzewa kokosowego. Jak wspomniałem w pierwszych rozdziałach pracy, jest to nawiązanie nazwy do wykorzystywanego serwisu. Logo zostało wykonane w bieli, bez tła, dlatego jest przystosowane do każdego motywu kolorystycznego z nasyconymi barwami (różnymi od bieli).
 
-{\color{red} miejsce na rysunek}
+\begin{figure}[htp]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{kafelekSzeroki.png}
+		\caption{Logo na szerokim kafelku}
+	\end{minipage}
+\hspace*{60px}
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{kafelekKwadratowy.png}
+		\caption{Logo na kwadratowym kafelku}
+	\end{minipage}
+	\hfill
+\end{figure}
 
 
 \subsection{Splash screen}
 
 W trakcie uruchamiania aplikacji, użytkownik może zobaczyć duże logo aplikacji wraz z jej nazwą na niebieskim tle. 
-{\color{red} miejsce na rysunek}
+\begin{figure}[htp]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{splashScreen.png}
+		\caption{Splash screen}
+	\end{minipage}
+\hspace*{60px}
+	\hfill
+\end{figure}
 
 
 \subsection{Strona logowania}
 Pierwszy ekran jaki widzi użytkownik, jest on wykonany w motywie pośrednim. Pozwala na łagodne przejście między domyślnym ciemnym motywem Windows Phone na motyw jasny, który będzie widoczny po zalogowaniu się do serwisu. Na tym ekranie użytkownik jest zmuszony do przekazania loginu (adresu email) oraz hasła bezpośrednio do strony Kokos.pl. Po wybraniu przycisku zaloguj, jest on zastąpiony przez napis ,,Logowanie...'' oraz animację paska postępu. Dodatkowym elementem są komunikaty informujące użytkownika np. o braku połączenia z Internetem.
-{\color{red} miejsce na rysunek}
+\begin{figure}[htp]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{logowanie.png}
+		\caption{Ekran logowania}
+	\end{minipage}
+\hspace*{60px}
+	\hfill
+\end{figure}
 
 
 \subsection{Strona główna}
 Ekran dostępny po zalogowaniu składa się z trzech części. Na górze ekranu po lewej stronie widnieje mała wersja logo oraz nazwy aplikacji. Po prawej stronie, znajduje się nazwa zalogowanego użytkownika. Drugą część stanowią przyciski, symulujące wyglądem kafelki znane w ekosystemie Windows Phone 8. Jest to miejsce agregujące najważniejsze funkcje dostępne dla użytkownika. 
+\begin{figure}[htp]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{mainScreen.png}
+		\caption{Strona główna aplikacji}
+	\end{minipage}
+\hspace*{60px}
+	\hfill
+\end{figure}
 
-
+\subsection{Dodaj filtr}
+Ekran znajduje się pod przyciskiem \textit{Dodaj filtr} z ikoną znaku plus na stronie głównej aplikacji. Jest on przeznaczony do dodawania kryteriów wyszukiwania w postaci plików w pamięci telefonu.
 
 \section{Instrukcja obsługi do aplikacji}
 
