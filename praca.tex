@@ -7,6 +7,7 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % kolory jak się chce gdzieś użyć
 \usepackage{graphicx} % żeby ryciny i zdjęcia były
 \usepackage{listings} % syntax highlighting
+\usepackage{verbatimbox} % marginesy dla tabel
 
 % PAGE LAYOUT
 %\usepackage{showframe} % debug
@@ -262,29 +263,68 @@ Uważam, że Kopra ułatwi użytkownikom systemu Windows Phone 8.1 szybki dostę
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \chapter{O pożyczaniu}
 \section{Krótka historia pieniądza}
-Pożyczki istnieją od tysięcy lat. Pierwsze informacje o pożyczaniu pieniędzy wywodzą się ze starożytnej Mezopotamii \cite{financingCivilization}. Zajęcie było to tak popularne, że grupy osób zaczęły się specjalizować w pośrednictwie między tymi, którzy mieli pieniądze oraz tymi, którzy te pieniądze chcieli pożyczyć. Dzisiaj te grupy stanowią banki. Wypaczając idee pożyczania pieniędzy od osób posiadających pieniądze (pożyczkodawców) do osób biorących te pieniądze na pewien czas (pożyczkobiorców), banki stały się przedsiębiorstwami szukającymi zysków na obrocie pieniędzmi, nie tylko ich pożyczaniu. Doprowadziło to do bardzo wielu niebezpiecznych zachowań. Najgorszym z nich jest system rezerw cząstkowych. Działa on do czasu, kiedy następuje zalanie rynku toksycznymi pożyczkami, następnie toksyczne pożyczki nie są spłacane i bank nie jest w stanie utrzymać płynności finansowej, bo jak się okazuje większość jego pieniędzy to zabezpieczenia na papierze, których nie da się wyegzekwować. Kolejnym zagrożeniem, jakie niesie ze sobą system rezerw cząstkowych jest stałe zagrożenie wahaniami nastrojów społecznych. W wyniku plotki rozpuszczonej wśród klientów banku bądź czasowej niewypłacalności depozytów, może nastąpić zjawisko paniki bankowej. Wielu ekonomistów zgadza się z poglądem, iż dobrze zarządzany system rezerw cząstkowych prowadzi do szybszego rozwoju gospodarczego i uniezależnia bogactwo kraju od złóż naturalnych.\cite{fractionalReserveBanking}
+Pożyczki istnieją od tysięcy lat. Pierwsze informacje o pożyczaniu pieniędzy wywodzą się ze starożytnej Mezopotamii \cite{financingCivilization}. 
+
+Zajęcie było to tak popularne, że grupy osób zaczęły się specjalizować w pośrednictwie między tymi, którzy mieli pieniądze oraz tymi, którzy te pieniądze chcieli pożyczyć. Dzisiaj te grupy stanowią banki. 
+
+Wypaczając idee pożyczania pieniędzy od osób posiadających pieniądze (pożyczkodawców) do osób biorących te pieniądze na pewien czas (pożyczkobiorców), banki stały się przedsiębiorstwami szukającymi zysków na obrocie pieniędzmi -- nie tylko na ich pożyczaniu. Doprowadziło to do bardzo wielu niebezpiecznych zachowań. 
+
+Najgorszym z nich jest \textbf{system rezerw cząstkowych}. Działa on do czasu, kiedy następuje zalanie rynku toksycznymi pożyczkami. Jednakże gdy to nastąpi, bank nie jest w stanie utrzymać płynności finansowej. Okazuje się wówczas, że większość jego pieniędzy to zabezpieczenia na papierze, których nie da się wyegzekwować. 
+
+Kolejnym niebezpieczeństwem, jakie niesie ze sobą system rezerw cząstkowych, jest stałe zagrożenie wahaniami nastrojów społecznych. W wyniku plotki rozpuszczonej wśród klientów banku bądź też czasowej niewypłacalności depozytów może nastąpić \textbf{zjawisko paniki bankowej}. Wielu ekonomistów zgadza się z poglądem, iż dobrze zarządzany system rezerw cząstkowych prowadzi do szybszego rozwoju gospodarczego i uniezależnia bogactwo kraju od złóż naturalnych.\cite{fractionalReserveBanking}
 
 \section{Idea pożyczek społecznościowych}
-Z języku angielskim znane jako \textit{,,peer-to-peer lending''} (w skrócie P2P). Zbiór czynności polegających na korelowaniu osób potrzebujących kredytu gotówkowego z ludźmi chętnymi do udzielenia części kredytu przez platformę online.\cite{P2P} Dla osób z dodatkową gotówką jest to sposób na naukę oceny ryzyka inwestycji niewielkim kosztem (stawki wejściowe do inwestycji są bardzo niskie). Szczególną zachętą jest tutaj relatywnie duży zwrot z inwestycji biorąc pod uwagę współczynnik ryzyka. W Polsce serwisy pożyczek społecznościowych upowszechniły się, kiedy oprocentowanie lokat spadło poniżej 5\% (zaraz po zablokowaniu lokat jednodniowych).\cite{antybelkowe} Rynek pożyczek otworzył się na zastrzyk gotówki w mniej bezpieczne umowy z wyższym oprocentowaniem. Doprowadziło to do sytuacji obniżenia oprocentowania pożyczek kwalifikowanych jako ,,wysokiego ryzyka'', wyższej niespłacalności przy stosunkowo niskim oprocentowaniu. Sytuacja po roku ustabilizowała się. Ostatecznie wszystkie serwisy w Polsce poprawiły wymogi weryfikacji finansowej by udzielić pożyczki, a oprocentowanie maksymalne zostało obniżone z 25\% do 10\% (stan na październik 2016). W efekcie te instrumenty stały się niewiele bardziej opłacalne od lokat sprzed ustawą blokującą omijanie podatku od dochodów kapitałowych.
+Pożyczki społecznościowe w języku angielskim znane są jako \textit{,,peer-to-peer lending''} (w skrócie: P2P). Jest to zbiór czynności polegających na korelowaniu osób potrzebujących kredytu gotówkowego z ludźmi chętnymi do udzielenia części kredytu przez platformę online.\cite{P2P} 
+
+Dla osób z dodatkową gotówką jest to sposób na naukę oceny ryzyka inwestycji niewielkim kosztem (stawki wejściowe do inwestycji są bardzo niskie). Szczególną zachętą jest tutaj relatywnie duży zwrot z inwestycji biorąc pod uwagę współczynnik ryzyka. 
+
+W Polsce serwisy pożyczek społecznościowych upowszechniły się, kiedy oprocentowanie lokat spadło poniżej 5\% (zaraz po zablokowaniu lokat jednodniowych).\cite{antybelkowe} Spowodowało to nagły wzrost zainteresowania rynkiem pożyczek -- wliczając w to mniej bezpieczne umowy z wyższym oprocentowaniem. Doprowadziło to do sytuacji obniżenia oprocentowania pożyczek kwalifikowanych jako ,,wysokiego ryzyka'', czyli takich o wyższej niespłacalności przy stosunkowo niskim oprocentowaniu. Sytuacja po roku ustabilizowała się. 
+
+Ostatecznie wszystkie serwisy pożyczek społecznościowych w Polsce poprawiły wymogi weryfikacji finansowej w celu udzielenia pożyczki. Ponadto oprocentowanie maksymalne zostało obniżone z 25\% do 10\% (stan na październik 2016). W efekcie instrumenty te stały się niewiele bardziej opłacalne od lokat sprzed czasów ustawy blokującej omijanie podatku od dochodów kapitałowych.
  
  
-\section{Jakie są ryzyka związane z tym instrumentem finansowym?}
+\section{Ryzyka związane z pożyczkami społecznościowymi}
+
+Jako ryzyka związane z inwestowaniem w rynek pożyczek można wymienić:
 
 \begin{itemize}
-
-\item \textbf{Urząd Skarbowy} -- zyski z przychodów kapitałowych są opodatkowane 19-procentową stawką (na rok 2016). Jedyną jasną kwestią tutaj jest, iż należy podatek od każdego wypracowanego zysku zapłacić. Problem pojawia się z interpretacją prawa, kiedy należy założyć działalność gospodarczą i w jaki sposób rozliczać się z urzędem skarbowym oraz fiskusem. Naczelny Sąd Administracyjny w sprawie o sygnaturze II FSK 1472/10 orzekł, że regularne inwestycje w pożyczki nosi znamiona działalności gospodarczej.\cite{nsaZnamiona} Jednak w sprawie o sygnaturze II FSK 142/10 ten sam sąd wydał wyrok odwrotny, uznając wówczas, że pożyczanie pieniędzy nie nosi znamion prowadzenia działalności gospodarczej. \cite{nsaWyrokOdwrotny} Mając na uwadze powyższe wyroki, przed rozpoczęciem regularnego pożyczania, należy zwrócić się do dyrektora właściwej sobie Izby Skarbowej z zapytaniem o sposób rozliczania. \cite{oswiadczenieKokos}
-
-\item \textbf{Windykacje}. Jak wygląda odzyskiwanie wierzytelności przy braku spłat? Pierwszą rzeczą, którą należy zrobić to próbować rozmowy z wierzycielem, wyjaśnić przyczyny opóźnień i znaleźć sposób na najszybszy powrót do regularnych spłat. Jeśli kontaktu nie można nawiązać natychmiast, można skorzystać z monitów udostępnianych w serwisach. Są one dostępne bezpośrednio na stronie z ofertą pożyczkową. Wysłanie monitu, jest przypomnieniem w formie SMS/telefonu/wiadomości email o zaległych ratach, monit stanowi dodatkowe obciążenie finansowe dla spłacającego, dlatego rozwiązanie nie jest zalecane jako pierwsza forma "kontaktu". Kolejnym krokiem jest podjęcie działań prawnych, tu zaczynają się problemy dla inwestora, gdyż należy zdecydować czy ściągać samodzielnie, wynająć własną firmę prawniczą, czy skorzystać z usług dostępnych w serwisie. Jako drobny inwestor, przy kwotach 100--500 zł najoptymalniejszym rozwiązaniem jest wybór ścieżki od kontaktu z PB do monitów. Jeśli nie można dojść swoich roszczeń polubownie, dobrym rozwiązaniem jest wspólna windykacja większości PD aukcji. Inwestorzy wspólnie wynajmują firmę windykacyjną, gdzie za 10-15\% odzyskanej kwoty, można liczyć na większe prawdopodobieństwo odzyskania pieniędzy. Jeśli firma nie odzyska długu, nie dostaje wynagrodzenia.
-
+\item sprzeczne interpretacje prawne Naczelnego Sądu Administracyjnego przy czerpaniu zysków z pożyczek społecznościowych,
+\item problemy ze ściąganiem wierzytelności.
 \end{itemize}
+
+W akapitach poniżej znajduje się krótkie omówienie tych problemów oraz sposoby rozwiązania ich.
+
+\subsection*{Urząd Skarbowy}
+Zyski z przychodów kapitałowych są opodatkowane 19-procentową stawką (na rok 2016). Jedyną jasną kwestią jest to, iż od każdego wypracowanego zysku należy zapłacić podatek. 
+
+Problem pojawia się z interpretacją prawa -- kiedy należy założyć działalność gospodarczą oraz w jaki sposób rozliczać się z Urzędem Skarbowym i fiskusem. Naczelny Sąd Administracyjny w sprawie o sygnaturze II FSK 1472/10 orzekł, że regularne inwestowanie w pożyczki nosi znamiona działalności gospodarczej.\cite{nsaZnamiona} Jednak w sprawie o sygnaturze II FSK 142/10 ten sam sąd wydał wyrok odwrotny, uznając wówczas, że pożyczanie pieniędzy nie nosi znamion prowadzenia działalności gospodarczej. \cite{nsaWyrokOdwrotny} 
+
+Mając na uwadze powyższe wyroki, przed rozpoczęciem regularnego pożyczania, \emph{należy zwrócić się do dyrektora właściwej sobie Izby Skarbowej z zapytaniem o sposób rozliczania.} \cite{oswiadczenieKokos}
+
+\subsection*{Windykacja}
+
+Jak wygląda odzyskiwanie wierzytelności przy braku spłat? Pierwszą rzeczą, którą należy zrobić to próbować rozmowy z wierzycielem, wyjaśnić przyczyny opóźnień i znaleźć sposób na najszybszy powrót do regularnych spłat. 
+
+Jeśli kontaktu nie można nawiązać natychmiast, można skorzystać udostępnionych w serwisach monitów. Monit jest przypomnieniem o zaległych ratach, wysyłanym w formie SMS/telefonu/wiadomości email. Jednakże dla spłacającego monit stanowi dodatkowe obciążenie finansowe, dlatego nie jest to rozwiązanie zalecane jako pierwsza forma ,,kontaktu''. 
+
+Kolejny krok stanowi podjęcie działań prawnych. Na tym etapie zaczynają się problemy dla inwestora, gdyż musi podjąć decyzję, czy ściągać należności samodzielnie, wynająć firmę prawniczą lub też skorzystać z usług windykacyjnych dostępnych w serwisie. 
+
+Dobrym rozwiązaniem jest wspólna windykacja większości PD aukcji. Polega ona na tym, że inwestorzy wspólnie wynajmują firmę windykacyjną, gdzie za 10-15\% odzyskanej kwoty mogą liczyć na większe prawdopodobieństwo odzyskania pieniędzy. Jeśli firma nie odzyska długu, nie dostaje wynagrodzenia.
 
 
 \section{Jakie zyski można osiągnąć?}
 
-Średnie oprocentowanie w serwisie Kokos wynosi 16,87\% \cite{zostanInwestorem} (na dzień 28.10.2016).
-Stopa lombardowa ustalona przez Narodowy Bank Polski wynosi 2,5\% \cite{stopy} (ustalona w dniu 05.03.2015).
+\textbf{Średnie oprocentowanie} w serwisie Kokos wynosi 16,87\% \cite{zostanInwestorem} (na dzień 28.10.2016).
 
-Maksymalne oprocentowanie dla pożyczki w skali roku wynosi stawka stopy lombardowej pomnożona razy cztery. Średnie oprocentowanie w serwisie jest wyższe niż 10\%, ponieważ jest liczone od czasu powstania serwisu, kiedy to stawka lombardowa wynosiła 6,25\% co dawało maksymalny zysk do 25\% rocznie. Stawka oprocentowania rośnie również kiedy pożyczka jest spłacana przed czasem (jest to możliwe, szczególnie, kiedy PB buduje swoją reputację i zobowiązuje się spłacić 3 letnie zobowiązanie w ciągu 1 roku). Z moich osobistych obserwacji wyłania się obraz zwrotu z inwestycji na poziomie 12\% rocznie, wliczając w to niespłacone zobowiązania. Kosztem opłacalności, który często nie jest brany pod uwagę jest czas. Do zysków należy wliczyć również czas poświęcony na analizę i pilnowanie inwestycji, kontakt z pożyczkobiorcą i innymi wpłacającymi. Opłacalność (gdzie zysk przekracza zainwestowany czas) można zaobserwować przy kwotach inwestycji przekraczających 500 zł miesięcznie. Utrzymywanie się z odsetek na serwisie wymaga przejścia na etat by zarządzać narastającą ilością pożyczek (w tym wypadku można zająć się również inwestowaniem w akcje).
+\textbf{Stopa lombardowa} ustalona przez Narodowy Bank Polski wynosi 2,5\% \cite{stopy} (ustalona w dniu 05.03.2015).
+ 
+\textbf{Maksymalne oprocentowanie} dla pożyczki w skali roku to stawka stopy lombardowej pomnożona razy cztery, czyli 10\%.
+
+Średnie oprocentowanie w serwisie jest wyższe niż 10\%, ponieważ jest liczone od czasu powstania serwisu, kiedy to stawka lombardowa wynosiła 6,25\%, co dawało maksymalny zysk do 25\% rocznie. Stawka oprocentowania rośnie również wówczas kiedy pożyczka zostaje spłacona przed czasem. Jest to możliwe szczególnie w przypadku gdy PB buduje swoją reputację i zobowiązuje się spłacić 3-letnie zobowiązanie w ciągu 1 roku. 
+
+Z moich osobistych obserwacji wyłania się obraz zwrotu z inwestycji na poziomie 12\% rocznie, wliczając w to niespłacone zobowiązania. Warto zauważyć, iż w trakcie całej operacji inwestujemy także swój czas. Rozważając opłacalność pożyczek społecznościowych należy wliczyć również czas poświęcony na analizę i pilnowanie inwestycji oraz czas na kontaktowanie się z pożyczkobiorcą i innymi wpłacającymi. Zysk przekraczający zainwestowany czas można zaobserwować przy kwotach inwestycji powyżej 500~zł miesięcznie. 
+
+Utrzymywanie się z odsetek zarobionych na pożyczkach wymaga pełnoetatowego zaangażowania w zarządzanie narastającą ilością pożyczek. W takim przypadku można zająć się również inwestowaniem w akcje.
 
 
 \section{Porównanie najpopularniejszych instrumentów finansowych}
@@ -292,11 +332,13 @@ Maksymalne oprocentowanie dla pożyczki w skali roku wynosi stawka stopy lombard
 % będziesz chciał sobie robić kolory, to można tak:
 % \cellcolor[HTML]{D8FF91}
 
-Zysk rośnie wraz z ryzykiem. Inwestując aktywa, zawsze istnieje ryzyko straty części lub całości inwestycji. Istnieje prawie wykładnicza zależność między ryzykiem utraty inwestycji z wysokością osiągniętych zysków. Poniżej prezentuję prostą tabelę z porównaniem przykładowych zysków i ryzyka dla poszczególnych instrumentów finansowych. 
-\newline \newline
+Zysk rośnie wraz z ryzykiem. Przy inwestowaniu aktywów zawsze istnieje ryzyko straty części lub całości inwestycji. Można zaobserwować niemal wykładniczą zależność między ryzykiem utraty inwestycji, a wysokością osiągniętych zysków. 
+
+Poniżej prezentuję prostą tabelę z porównaniem przykładowych zysków i ryzyka dla poszczególnych instrumentów finansowych. 
+
 \begin{small}
 \noindent
-\begin{tabularx}{\textwidth}{@{}|l| *6{>{\centering\arraybackslash}X|}@{}}
+\addvbuffer[12pt 0pt]{\begin{tabularx}{\textwidth}{@{}|l| *6{>{\centering\arraybackslash}X|}@{}}
   \hline
   \textit{Właściwość} & \textbf{Obligacje} & \textbf{Lokata} & \textbf{Fundusz inwestycyjny} & \textbf{Pożyczka społecznościowa} & \textbf{Giełda} \\
   \hline 
@@ -308,13 +350,13 @@ Zysk rośnie wraz z ryzykiem. Inwestując aktywa, zawsze istnieje ryzyko straty 
   \hline
   \textbf{Poziom skomplikowania} & Podstawowy & Podstawowy & Łatwy & Średni & Wysoki \\
   \hline
-\end{tabularx}
+\end{tabularx}}
 \end{small}
 
 
 \section{Porównanie polskich serwisów pożyczkowych}
 
-Istniejące serwisy w Polsce:
+Istniejące serwisy w Polsce to:
 
 \begin{enumerate}
 
@@ -330,9 +372,9 @@ Istniejące serwisy w Polsce:
 
 \begin{small}
 \noindent
-\begin{tabularx}{\textwidth}{@{}|l| *7{>{\centering\arraybackslash}X|}@{}}
+\addvbuffer[8pt 12pt]{\begin{tabularx}{\textwidth}{@{}|l| *7{>{\centering\arraybackslash}X|}@{}}
    \hline
-   \textit{serwis} & \textbf{Użytko-wnicy} & \textbf{Udzielone pożyczki} & \textbf{Spłacone zobowiązania} & \textbf{Spłacalność} & \textbf{Średnie oprocentowanie} & \textbf{Charakter} \\
+   \textit{Serwis} & \textbf{Użytko-wnicy} & \textbf{Udzielone pożyczki} & \textbf{Spłacone zobowiązania} & \textbf{Spłacalność} & \textbf{Średnie oprocentowanie} & \textbf{Charakter} \\
    \hline
    \textbf{Finansowo} & b/d & b/d & 85 813 tys. zł & 91,9\% & 5,49\% & Chwilówki \\
    \hline
@@ -346,14 +388,30 @@ Istniejące serwisy w Polsce:
    \hline
    \textbf{CapitalClub} & 1 tys. & 0,1 tys. & 4 000 tys. & b/d & b/d & Inwestycje \\
    \hline
-\end{tabularx}
+\end{tabularx}}
 \end{small}
 
-W porównaniu brakuje serwisu Lendico. Ten niemiecki serwis zawiesił działalność inwestycyjną, od kilku miesięcy nie ma ofert inwestycyjnych. Prawdopodobnie ze względu na niskie zainteresowanie zostanie wkrótce wycofany z polskiego rynku.
+W zestawieniu brakuje serwisu Lendico. Ten niemiecki serwis zawiesił działalność inwestycyjną -- od kilku miesięcy nie ma ofert inwestycyjnych. Jest prawdopodobne, że ze względu na niskie zainteresowanie zostanie wkrótce wycofany z polskiego rynku.
 
 \section{Wybór systemu do implementacji}
 
-Pierwszym i obecnie najpopularniejszym serwisem jest Kokos. W ciągu 8 lat działalności pożyczono 143,4mln zł na 126 738 aukcjach. Dla porównania CapitalClub informuje na stronie głównej o sumie 4mln zł przez 102 udzielone pożyczki. Kokos, którego właścicielem jest firma Bluemedia, posiada największą bazę aktywnych inwestorów, wiele innowacyjnych zabezpieczeń jak FriendlyScore, responsywny interfejs, przelewy ekspresowe, raporty inwestora, podstawowe API do zapytań o aukcję. Ważnym aspektem jest również dostęp do interfejsu programistycznego udostępnionego dla programistów. Ze wszystkich platform, API jest udostępnione na trzech – Kokos, Zakra, Zakramini. Zakra i Zakramini pozwalają korzystać programiście/inwestorowi z zapytań do serwisu po osobistej prośbie o wygenerowanie klucza. Stanowi to wielką przeszkodę, każdy kto chcę sprawdzić działanie funkcjonalności jest zobowiązany wystosować pisemną prośbę o wygenerowanie klucza i po kilku dniach otrzyma dostęp do WebAPI. Kolejnym mankamentem jest bardzo okrojony zakres zwracanych informacji. Dostępne są następujące wywołania (wraz z odpowiedziami):
+Pierwszym i obecnie najpopularniejszym serwisem jest \textbf{Kokos}. W ciągu 8~lat działalności pożyczono 143,4mln zł na 126~738 aukcjach. Dla porównania, CapitalClub informuje na stronie głównej o sumie 4~mln~zł przez 102~udzielone pożyczki dla firm. 
+
+Kokos, którego właścicielem jest firma Bluemedia, posiada:
+\begin{itemize}
+\item największą bazę aktywnych inwestorów,
+\item wiele innowacyjnych zabezpieczeń, takich jak np. FriendlyScore,
+\item responsywny interfejs,
+\item przelewy ekspresowe,
+\item raporty inwestora,
+\item podstawowe API do zapytań o aukcję.
+\end{itemize}
+
+Ważnym aspektem jest również \textbf{dostęp do interfejsu programistycznego udostępnionego dla programistów}. Ze wszystkich platform, API jest udostępnione na trzech – Kokos, Zakra, Zakramini. 
+
+Zakra i Zakramini pozwalają korzystać programiście lub inwestorowi z zapytań do serwisu po osobistej prośbie o wygenerowanie klucza. Stanowi to wielką przeszkodę, gdyż każdy kto chce sprawdzić działanie funkcjonalności jest zobowiązany wystosować pisemną prośbę o wygenerowanie klucza i otrzyma dostęp do WebAPI dopiero po upływie kilku dni. 
+
+Kolejnym mankamentem jest bardzo okrojony zakres zwracanych informacji. Dostępne są następujące wywołania (wraz z odpowiedziami):
 
 \begin{description}[style=nextline]
 
@@ -369,17 +427,40 @@ Pierwszym i obecnie najpopularniejszym serwisem jest Kokos. W ciągu 8 lat dzia�
 
 Zwracają one tylko najbardziej podstawowe informacje \cite{zakraPlApi}, właściwie szczątkowe. Nie można z nich złożyć porządnej informacji kredytowej.
 
-Pozostaje jeszcze Kokos ze swoim interfejsem. Pozwala na uzyskanie znacznie bardziej złożonych informacji o aukcji, użytkownikach, stanie finansowym. Wygenerowanie klucza jest też niesamowicie proste, wystarczy kliknięcie w przycisk ,,Wygeneruj klucz'' i gotowe, na rok klucz jest aktywny. Mam nadzieję, że po przedstawieniu powyższych informacji jest jasne, że wyboru, który serwis obsłużyć, nie istnieje.
+Pozostaje jeszcze Kokos ze swoim interfejsem. Pozwala na uzyskanie znacznie bardziej złożonych informacji o aukcji, użytkownikach, stanie finansowym. Wygenerowanie klucza jest niesamowicie proste -- wystarczy kliknięcie w przycisk ,,Wygeneruj klucz'' i od razu otrzymujemy klucz aktywny przez rok. 
+
+Mam nadzieję, że po przedstawieniu powyższych informacji jest jasne, że wybór, który serwis obsłużyć, tak naprawdę nie istnieje.
 
 \section{WebAPI}
 
-Interfejs programistyczny wchodzi w skład Narzędzi użytkowników. Dokumentacja \cite{kokosPlApi} jest kompletna (parę brakujących elementów można szybko wywnioskować z kontekstu). Aby rozpocząć korzystanie, należy wygenerować własny klucz, zapoznać się z regulaminem korzystania oraz dokumentacją użytkownika. Dokumentacja ma formę listy funkcji dostępnych dla programisty. Wybierając konkretną metodę, otrzymuje się stronę z opisem argumentów (parametrów) funkcji, listę zwracanych elementów, strukturę, przykład użycia, przykładowe zapytanie i odpowiedź w formie XML. Odpowiedź na zapytania można dostać w formacie XML, JSON, HTML. Zapytania wykonuje się w modelu REST, wszystkie parametry są przekazywane przy użyciu GET w postaci:  
+Interfejs programistyczny wchodzi w skład narzędzi użytkowników. Dokumentacja \cite{kokosPlApi} jest prawie kompletna (parę brakujących elementów można szybko wywnioskować z kontekstu). 
+
+Aby rozpocząć korzystanie, należy wygenerować własny klucz i zapoznać się z regulaminem korzystania oraz dokumentacją użytkownika. 
+
+\textbf{Dokumentacja} posiada formę listy funkcji dostępnych dla programisty. Po wybraniu konkretnej metody otrzymuje się:
+
+\begin{itemize}
+\item stronę z opisem argumentów (parametrów) funkcji,
+\item listę zwracanych elementów,
+\item sposób użycia, 
+\item przykładowe zapytanie i odpowiedź w formie XML.
+\end{itemize}
+
+Odpowiedź na zapytanie można otrzymać w formacie XML, JSON lub HTML. Zapytania wykonuje się w modelu REST -- wszystkie parametry są przekazywane przy użyciu zapytania GET w postaci:  
 
 \begin{center}
 \texttt{https://kokos.pl/webapi/search?key=\textit{<klucz>}\&\textit{<parametry>}}
 \end{center}
 
-Użytkownik może wykonywać jedno zapytanie na sekundę. Przy częstszych odpytaniach serwis zgłosi błąd 503 \textit{,,Service Temporarily Unavailable''}. Ta sama sytuacja pojawi się, kiedy stronę internetową odświeża się w przeglądarce zbyt często. Do dokumentacji dołączony jest również słownik, bez którego nie mógłbym złożyć odpowiedniego wywołania. Część słownika jest zaszyta w aplikacji, nie można dynamicznie go pobierać i aktualizować kontrolek w aplikacji. Jednak są to elementy niezmienne, takie jak województwa, statusy spłaty, bądź status aktywności pożyczki. Z istotnych informacji trzeba jeszcze pamiętać o wygenerowaniu klucza co roku. Aplikacje korzystające z klucza muszą go odnowić. Data ważności klucza jest wyświetlana na stronie dokumentacji w zakładce \textit{,,Klucz WebAPI''}. Niestety próba odświeżenia klucza przed jego wygaśnięciem nic nie zmieni, należy odczekać do jego wygaśnięcia, by aktywować go ponownie na rok. Same odpowiedzi z serwera bywają nieprzewidywalne. Podczas tworzenia aplikacji na zapytanie o listę inwestorów, raz otrzymywałem listę w formacie JSON. Kiedy inwestorów nie było, zamiast pustej listy otrzymywałem jeden pusty element. W okolicy 10 dnia każdego miesiąca, wieczorem należy uzbroić się w cierpliwość, kiedy inwestorzy szturmują serwis w poszukiwaniu najlepszych aukcji. Przez opóźnienia serwer wysyła częściej błąd 503 jako odpowiedź. 
+Użytkownik może wykonywać \textbf{jedno zapytanie na sekundę}. Przy częstszych odpytaniach serwis zgłosi błąd 503 \textit{,,Service Temporarily Unavailable''}. Ta sama sytuacja pojawi się, kiedy stronę internetową odświeża się w przeglądarce zbyt często. 
+
+Do dokumentacji dołączony jest również \textbf{słownik oznaczeń} używanych w zapytaniach i odpowiedziach. Istnieje część słownika, która nie posiada możliwości dynamicznego pobierania celem aktualizowania na jego podstawie interfejsu użytkownika. Tę część należy wpisać na stałe w aplikacji. Dotyczy to jednak elementów niezmiennych, takich jak: nazwy województw, statusy spłat oraz statusy aktywności pożyczki. 
+
+Istotne jest także pamiętanie o wygenerowaniu klucza co roku. Aplikacje korzystające z klucza muszą go odnowić. Data ważności klucza jest wyświetlana na stronie dokumentacji w zakładce \textit{,,Klucz WebAPI''}. Niestety próba odświeżenia klucza przed jego wygaśnięciem nic nie zmienia -- należy odczekać do jego wygaśnięcia, by móc aktywować go ponownie na rok. 
+
+Odpowiedzi z serwera bywają nieprzewidywalne. Podczas tworzenia aplikacji na zapytanie o listę inwestorów, otrzymywałem listę w formacie JSON. Jednak kiedy inwestorów nie było, zamiast pustej listy otrzymywałem jeden pusty element. 
+
+W okolicy 10 dnia każdego miesiąca o wieczornej porze należy uzbroić się w cierpliwość, gdyż wówczas inwestorzy szturmują serwis w poszukiwaniu najlepszych aukcji. Wtedy z powodu opóźnień, częściej zamiast spodziewanej odowiedzi otrzymamy błąd 503.
 
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
