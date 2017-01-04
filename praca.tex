@@ -76,6 +76,10 @@
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
 \lstset{ %
+%frame=lines,
+aboveskip=1.5em,
+    belowcaptionskip=1.5em,
+    xleftmargin=0.5cm,
   backgroundcolor=\color{white},   % choose the background color
   %basicstyle=\footnotesize,        % size of fonts used for the code
   breaklines=true,                 % automatic line breaking only at whitespace
@@ -515,7 +519,7 @@ Kopra została również uruchomiona pod emulatorem systemu Windows Mobile 10 i 
 
 \section{Newtonsoft.Json}
 
-Najpopularniejsze narzędzie do pracy z danymi w formacie JSON. Oprogramowanie działa na jednej z najbardziej liberalnych licencji, MIT. \cite{mitLicence} {\color{red}Wśród bibliotek dostępnych w menadżerze pakietów NuGet, zajmuje pierwsze miejsce mając ponad 15 milionów pobrań. [15]} Json.NET znacznie uprościł proces przetwarzania danych otrzymanych z serwisu. Zgodnie z opisem na stronie, biblioteka jest bardzo łata w użyciu, nawet przy złożonych typach danych. Znalazłem się jednak kilkukrotnie w sytuacji, gdzie musiałem rozbudować mechanizm serializujący o dodatkowe warunki. Działo się tak kiedy serwis zwracał mi różne rodzaje danych dla jednego zapytania. Dla pobierania elementów ze struktury HTML, których nie można pobrać przez API serwisu, istnieje mechanizm wspierający XPath. JSONPath \cite{jsonPath} jest wbudowany w bibliotekę i świetnie wspiera pobieranie elementów wg. ścieżki i natychmiastowe ich serializowanie do JSON’a.
+Najpopularniejsze narzędzie do pracy z danymi w formacie JSON. Oprogramowanie działa na jednej z najbardziej liberalnych licencji, MIT. \cite{mitLicence} Wśród bibliotek dostępnych w menadżerze pakietów NuGet, zajmuje pierwsze miejsce mając ponad 15 milionów pobrań. [15] Json.NET znacznie uprościł proces przetwarzania danych otrzymanych z serwisu. Zgodnie z opisem na stronie, biblioteka jest bardzo łata w użyciu, nawet przy złożonych typach danych. Znalazłem się jednak kilkukrotnie w sytuacji, gdzie musiałem rozbudować mechanizm serializujący o dodatkowe warunki. Działo się tak kiedy serwis zwracał mi różne rodzaje danych dla jednego zapytania. Dla pobierania elementów ze struktury HTML, których nie można pobrać przez API serwisu, istnieje mechanizm wspierający XPath. JSONPath \cite{jsonPath} jest wbudowany w bibliotekę i świetnie wspiera pobieranie elementów wg. ścieżki i natychmiastowe ich serializowanie do JSON’a.
 
 
 \section{Git i GitHub}
@@ -575,7 +579,7 @@ Praca nie byłaby kompletna, gdybym nie wspomniał nic o wzorcu, który wpłyną
 \subsection{Implementacja MVVM w aplikacji}
 Aplikacje korzystające z wzorca MVVM mają z góry ustalony szkielet folderów.
 
-\begin{figure}[htp]
+\begin{figure}[h]
 	\centering
 			\includegraphics[resolution=120]{strukturaFolderow.png}
 		\caption{Struktura folderów w projekcie aplikacji Kopra}
@@ -584,14 +588,14 @@ Aplikacje korzystające z wzorca MVVM mają z góry ustalony szkielet folderów.
 Mój projekt ściśle trzyma się tej struktury wraz z dodatkowymi elementami. Przyjąłem następującą konwencje nazewniczą, dla każdego widoku dołączyłem sufiks ,,Page'', natomiast każdy widok-model w nazwie ma dołączony sufiks ,,ViewModel''. Każdy widok ma odpowiadający mu jeden widok-model. 
 
 
-\begin{figure}[htp]
+\begin{figure}[h]
 	\centering
-	\begin{minipage}[b]{0.3\textwidth}
+	\begin{minipage}[h]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{listawidokow.png}
 		\caption{Lista plików widoków w projekcie}
 	\end{minipage}
 \hspace*{60px}
-	\begin{minipage}[b]{0.3\textwidth}
+	\begin{minipage}[h]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{listaviewmodeli.png}
 		\caption{Lista plików widok-modeli w projekcie}
 	\end{minipage}
@@ -600,49 +604,62 @@ Mój projekt ściśle trzyma się tej struktury wraz z dodatkowymi elementami. P
 
 
 %Podpięcie widok-modelu do Widoku w pliku XAML: 
-
+\noindent
+\begin{minipage}{\linewidth}
 \begin{lstlisting}[caption=Podpięcie widok-modelu do Widoku w pliku XAML, label=lst:test, language=xml]
 <Page.DataContext>
 	<viewModel:NameViewModel></viewModel:NameViewModel>
 </Page.DataContext>
 \end{lstlisting}
+\end{minipage}
 
 %Podpięcie widok-modelu w pliku Code-Behind:
 
-\begin{lstlisting}[caption=Podpięcie widok-modelu w pliku Code-Behind. W konstruktorze inicjalizuje obiekt podając widok-model\, z którym jest spięty., label=lst:test]
+\noindent
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption=Podpięcie widok-modelu w pliku Code-Behind, label=lst:test]
 private AddFilterViewModel _viewModel;
 
-public AddFilterPage() {
+public AddFilterPage() 
+{
 	_viewModel = DataContext as AddFilterViewModel;
 }
 \end{lstlisting}
+\end{minipage}
+
+
+\noindent
+\begin{minipage}{\linewidth}
 
 Do wiązania danych zaimplementowałem interfejs INotifyPropertyChanged. 
 
-\begin{lstlisting}[caption=Implementacja interfejsu INotifyPropertyChanged w jednej z klas, label=lst:test, language=xml]
+\begin{lstlisting}[caption=Implementacja interfejsu INotifyPropertyChanged w jednej z klas, label=lst:test]
 public class MainViewModel : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this,
-                new PropertyChangedEventArgs(propertyName));
-        }
-    }
+{
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	public void NotifyPropertyChanged(string propertyName)
+	{
+		PropertyChanged?.Invoke(this,
+			new PropertyChangedEventArgs(propertyName));
+	}
+}
 \end{lstlisting}
+\end{minipage}
 
 Mając tak zaimplementowaną klasę, pozostałe widok-modele dziedziczą po MainViewModel używając wywołania metody \textit{NotifyPropertyChanged()} do powiadomienia o zmianie wartości właściwości.
-\begin{lstlisting}[caption=Przykładowa właściwość wykorzystująca mechanizm NotifyPropertyChanged, label=lst:test, language=xml]
-		public string ApiKeyValue
-		{
-			get { return _apiKeyValue; }
-			set
-			{
-				_apiKeyValue = value;
-				NotifyPropertyChanged(nameof(ApiKeyValue));
-			}
-		}
+
+\noindent
+\begin{lstlisting}[caption=Przykładowa właściwość wykorzystująca mechanizm NotifyPropertyChanged, label=lst:test]
+public string ApiKeyValue
+{
+	get { return _apiKeyValue; }
+	set
+	{
+		_apiKeyValue = value;
+		NotifyPropertyChanged(nameof(ApiKeyValue));
+	}
+}
 \end{lstlisting}
 
 \section{Kokos WebAPI}
@@ -683,23 +700,25 @@ Każda z funkcji ma określony spory zakres parametrów oraz tabelę ze zwracany
 
 W celu uniknięcia powielania kodu podczas zapytań, napisałem klasę, która generuje zapytania do serwisu. Wykorzystuje mniej niż 50\% funkcji, dlatego nie widziałem powodu by tworzyć osobny projekt na komunikację z serwisem. Elementy stałe, przechowuję w formie prywatnych elementów klasy.
 
-\begin{lstlisting}[caption=Składowe budujące zapytanie do serwisu, label=lst:test, language=xml]
-		private const string BaseAddress = "https://kokos.pl/webapi/";
-		private const string DataType = "&type=json";
-		private const string Search = "search?";
-		private const string RecentAuctions = "get-recent-auctions?";
-		private const string AuctionData = "get-auction-data?";
-		private const string Comments = "comments=1";
-		private const string Records = "records=";
-		private const string Key = "key=";
-		private const string Id = "id=";
-		private const string Type = "type=";
+\noindent
+\begin{lstlisting}[caption=Składowe budujące zapytanie do serwisu, label=lst:test]
+private const string BaseAddress = "https://kokos.pl/webapi/";
+private const string DataType = "&type=json";
+private const string Search = "search?";
+private const string RecentAuctions = "get-recent-auctions?";
+private const string AuctionData = "get-auction-data?";
+private const string Comments = "comments=1";
+private const string Records = "records=";
+private const string Key = "key=";
+private const string Id = "id=";
+private const string Type = "type=";
 \end{lstlisting}
 
 
 Tworzenie parametrów zapytań API schowane jest w klasie RequestGenerator. Przechowuje tam zbiór funkcji do tworzenia całościowych obiektów Uri, gotowych do przekazania użycia przez serwis.
 
-\begin{lstlisting}[caption=Nagłówki metod pozwalających składać zapytania do serwisu., label=lst:test, language=xml]
+\noindent
+\begin{lstlisting}[caption=Nagłówki metod pozwalających składać zapytania do serwisu., label=lst:test]
 public Uri FilteredAuction(string filter)
 public Uri ComposeSearchAuctionQuery(Dictionary<string, string> search)
 public Uri MostRecentAuctions()
@@ -749,7 +768,7 @@ Aplikacja ma po zalogowaniu ma dostęp do wszystkich danych osobowych umieszczon
 
 Logo aplikacji jest rysunkiem połowy owocu kokosowego z liśćmi drzewa kokosowego. Jak wspomniałem w pierwszych rozdziałach pracy, jest to nawiązanie nazwy do wykorzystywanego serwisu. Logo zostało wykonane w bieli, bez tła, dlatego jest przystosowane do każdego motywu kolorystycznego z nasyconymi barwami (różnymi od bieli).
 
-\begin{figure}[htp]
+\begin{figure}[h]
 	\centering
 	\begin{minipage}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{kafelekSzeroki.png}
@@ -766,40 +785,38 @@ Logo aplikacji jest rysunkiem połowy owocu kokosowego z liśćmi drzewa kokosow
 
 \subsection{Splash screen}
 
+
 W trakcie uruchamiania aplikacji, użytkownik może zobaczyć duże logo aplikacji wraz z jej nazwą na niebieskim tle. 
-\begin{figure}[htp]
-	\centering
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{splashScreen.png}
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{splashScreen.png}
 		\caption{Splash screen}
 	\end{minipage}
-\hspace*{60px}
 	\hfill
 \end{figure}
 
 
 \subsection{Strona logowania}
 Pierwszy ekran jaki widzi użytkownik, jest on wykonany w motywie pośrednim. Pozwala na łagodne przejście między domyślnym ciemnym motywem Windows Phone na motyw jasny, który będzie widoczny po zalogowaniu się do serwisu. Na tym ekranie użytkownik jest zmuszony do przekazania loginu (adresu email) oraz hasła bezpośrednio do strony Kokos.pl. Po wybraniu przycisku zaloguj, jest on zastąpiony przez napis ,,Logowanie...'' oraz animację paska postępu. Dodatkowym elementem są komunikaty informujące użytkownika np. o braku połączenia z Internetem.
-\begin{figure}[htp]
-	\centering
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{logowanie.png}
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{logowanie.png}
 		\caption{Ekran logowania}
 	\end{minipage}
-\hspace*{60px}
 	\hfill
 \end{figure}
 
 
 \subsection{Strona główna}
 Ekran dostępny po zalogowaniu składa się z trzech części. Na górze ekranu po lewej stronie widnieje mała wersja logo oraz nazwy aplikacji. Po prawej stronie, znajduje się nazwa zalogowanego użytkownika. Drugą część stanowią przyciski, symulujące wyglądem kafelki znane w ekosystemie Windows Phone 8. Jest to miejsce agregujące najważniejsze funkcje dostępne dla użytkownika. 
-\begin{figure}[htp]
-	\centering
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{mainScreen.png}
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{mainScreen.png}
 		\caption{Strona główna aplikacji}
 	\end{minipage}
-\hspace*{60px}
 	\hfill
 \end{figure}
 
@@ -811,8 +828,6 @@ Ekran znajduje się pod przyciskiem \textit{Dodaj filtr} z ikoną znaku plus na 
 Aby korzystać z aplikacji, należy mieć aktywne konto w serwisie kokos.pl oraz aktywować klucz API pierwszy raz przez przeglądarkę. Po uruchomieniu Kopry, należy podać adres email oraz hasło logowania do serwisu. Po poprawnej weryfikacji, użytkownik zostanie przeniesiony do ekranu głównego, skąd może się dostać do wszystkich najważniejszych funkcjonalności aplikacji. Użytkownik może przeskoczyć bezpośrednio do jednej z trzech najnowszych aukcji wyświetlanych na dole ekranu.
 
 Aby uruchomić zadania w tle, należy mieć dodany przynajmniej jeden filtr w aplikacji, a następnie z ekranu ustawień wybrać z listy, jakie aukcje mają być wyszukiwane w tle. Maksymalnie co 30 minut można otrzymać powiadomienie, z nową aukcją.
- 
- 
 
  
 \chapter{Podsumowanie}
@@ -830,9 +845,6 @@ Stworzona przeze mnie aplikacja jest pierwsza w swojej kategorii. Liczę na odze
  
 \addcontentsline{toc}{chapter}{Spis rysunków}
 \listoffigures
-
-
-
 
 
 \addcontentsline{toc}{chapter}{Bibliografia}
