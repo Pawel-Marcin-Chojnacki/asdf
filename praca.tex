@@ -505,34 +505,45 @@ Również wersja C\# 5.0 daje wrażenie dynamicznego rozwoju języka. Projektanc
 Podsumowując, kolejne wersje języka wprowadzają udogodnienia pomagające pokonywanie największych wyzwań stojących przed programistą. Każda wersja jest ściśle powiązana ze środowiskiem Visual Studio C\# oraz zestawem narzędzi .NET Framework, choć numeracja wersji nie zawsze się pokrywa.
 
 \section{.NET Framework}
-W odniesieniu do zmian wprowadzonych przez Microsoft w 2016 roku w związku z wprowadzeniem nowego podziału architektury .NET, ograniczam się do Standardowej Biblioteki .NET (ang. .NET Standard Library) oraz do .NET Framework ograniczony do podzbioru WPF.\cite{dotnetArtykul} 
-.NET Framework jest platformą programistyczną wydaną w 2002 roku przez Microsoft. Do niedawna była to jedyna platforma dla programistów .NET. W platformie znajduje się zestaw klas biblioteki oraz API systemu Windows, które znacznie podnoszą produktywność programowania aplikacji typu desktop. Kolejne wydania platformy .NET są ściśle powiązane z nowymi wydaniami języka C\#. Wersja Frameworka używana przez Koprę jest oznaczona numerem 4.5.1  i jest kompatybilna z Visual Studio 2013 na Windows 8.1 wraz z wersjami późniejszymi. 
+W odniesieniu do zmian wprowadzonych przez Microsoft w 2016 roku (ze względu na wprowadzenie nowego podziału architektury .NET), ograniczam się do Standardowej Biblioteki .NET (ang. \textit{.NET Standard Library}) oraz do .NET Framework ograniczony do podzbioru WPF.\cite{dotnetArtykul} 
+
+.NET Framework jest platformą programistyczną wydaną w 2002 roku przez Microsoft. Do niedawna była to jedyna platforma dla programistów .NET.\cite{dotnetArtykul}  W platformie znajduje się zestaw klas biblioteki oraz API systemu Windows, co znacząco podnosi produktywność programowania aplikacji typu desktop. 
+
+Kolejne wydania platformy .NET są ściśle powiązane z nowymi wydaniami języka C\#. Wersja Frameworka używana przez Koprę została oznaczona numerem 4.5.1 i jest kompatybilna z Visual Studio~2013 na Windows~8.1 wraz z wersjami późniejszymi. 
 
 
 \section{Windows Phone 8.1 SDK}
-Microsoft ukrył stronę z Windows Phone 8.1 SDK oraz zestawem emulatorów na rzecz promocji Windows 10 Mobile. Zestaw narzędzi jest dość trudny w odnalezieniu. By się dostać do zasobu, musiałem użyć zewnętrznej wyszukiwarki, ponieważ ta ze strony Microsoft.com nie zwraca wyników. Żeby zdobyć zestaw narzędzi programistycznych na tą platformę, trzeba przeszukiwać archiwa Mircosoftu. \cite{tajneArchiwaMicrosoftu} Do programowania na system Windows Phone potrzebne jest urządzenie fizyczne (preferowana Nokia Lumia) bądź emulator, do którego wymagany jest procesor ze wsparciem SLAT (Second Level Address Translation). Należy również pamiętać, że do komfortowej pracy z emulatorem potrzeba przynajmniej 8~GB pamięci RAM. Zestaw SDK zawiera 6 różnych konfiguracji emulatorów: 
+Microsoft ukrył stronę z Windows Phone 8.1 SDK oraz zestawem emulatorów na rzecz promocji Windows 10 Mobile. Dlatego zestaw narzędzi jest dość trudny w odnalezieniu. By się dostać do zasobu, musiałem użyć zewnętrznej wyszukiwarki, ponieważ ta ze strony Microsoft.com nie zwraca wyników. Celem zdobycia zestawu narzędzi programistycznych na tą platformę, trzeba przeszukiwać archiwa Mircosoftu. \cite{tajneArchiwaMicrosoftu} 
 
-\begin{figure}[htp]
+Do programowania na system Windows Phone potrzebne jest urządzenie fizyczne (preferowana Nokia Lumia) bądź emulator, do którego wymagany jest procesor ze wsparciem SLAT \textit{(Second Level Address Translation)}. Należy również pamiętać, że do komfortowej pracy z emulatorem potrzeba przynajmniej 8~GB pamięci RAM. Zestaw SDK zawiera 6~różnych konfiguracji emulatorów (rysunek~\ref{fig:emulatory}): 
+
+\begin{figure}[h]
 	\centering
 			\includegraphics[resolution=120]{emulatory.png}
 		\caption{Zestaw konfiguracji emulatorów dostępny w Windows Phone 8.1 SDK}
+		\label{fig:emulatory}
 \end{figure}
 
-Aplikację przetestowałem na każdym z wyżej wymienionych urządzeń wirtualnych, w orientacji pionowej oraz na urządzeniach Nokia Lumia 925, Microsoft Lumia 530, Nokia Lumia 625.
+Aplikację przetestowałem na każdym z wyżej wymienionych urządzeń wirtualnych, a także na fizycznych urządzeniach: Nokia Lumia~925, Microsoft Lumia~530, Nokia Lumia~625.
 
-Kopra została również uruchomiona pod emulatorem systemu Windows 10 Mobile i działa poprawnie pod poniższym konfiguracjami. Nie została przetestowana dokładnie na nich, również nie miałem dostępu do urządzeń fizycznych z systemem Windows 10 Mobile, stąd użytkownik powinien używać oprogramowania na tym systemie na własną odpowiedzialność.
+Kopra została również uruchomiona w emulatorze systemu Windows 10 Mobile i działa poprawnie w konfiguracjach zaprezentowanych poniżej (rysunek \ref{fig:emulatoryWin10}). Nie została przetestowana dokładnie na nich. Podobnie nie miałem dostępu do urządzeń fizycznych z systemem Windows 10 Mobile, stąd użytkownik powinien używać oprogramowania na tym systemie na własną odpowiedzialność.
 
 \begin{figure}[htp]
 	\centering
 			\includegraphics[resolution=120]{emulatoryWin10.png}
 		\caption{Zestaw konfiguracji emulatorów dostępny w Windows 10 Mobile SDK}
+		\label{fig:emulatoryWin10}
 \end{figure}
 
 
 
 \section{Newtonsoft.Json}
 
-Najpopularniejsze narzędzie do pracy z danymi w formacie JSON. Oprogramowanie działa na jednej z najbardziej liberalnych licencji, MIT. \cite{mitLicence} Wśród bibliotek dostępnych w menadżerze pakietów NuGet, zajmuje pierwsze miejsce mając ponad 15 milionów pobrań. [15] Json.NET znacznie uprościł proces przetwarzania danych otrzymanych z serwisu. Zgodnie z opisem na stronie, biblioteka jest bardzo łata w użyciu, nawet przy złożonych typach danych. Znalazłem się jednak kilkukrotnie w sytuacji, gdzie musiałem rozbudować mechanizm serializujący o dodatkowe warunki. Działo się tak kiedy serwis zwracał mi różne rodzaje danych dla jednego zapytania. Dla pobierania elementów ze struktury HTML, których nie można pobrać przez API serwisu, istnieje mechanizm wspierający XPath. JSONPath \cite{jsonPath} jest wbudowany w bibliotekę i świetnie wspiera pobieranie elementów wg. ścieżki i natychmiastowe ich serializowanie do JSON’a.
+Newtonsoft.Json stanowi najpopularniejsze narzędzie do pracy z danymi w formacie JSON. Oprogramowanie działa na jednej z najbardziej liberalnych licencji, MIT.\cite{mitLicence} Wśród bibliotek dostępnych w menadżerze pakietów NuGet, zajmuje pierwsze miejsce mając ponad 15 milionów pobrań.[15] 
+
+Json.NET znacznie uprościł proces przetwarzania danych otrzymanych z serwisu. Zgodnie z opisem zamieszczonym na stronie projektu, biblioteka jest bardzo łatwa w użyciu, nawet w przypadku złożonych typach danych. Znalazłem się jednak kilkukrotnie w sytuacji, gdzie musiałem rozbudować mechanizm serializujący o dodatkowe warunki. Działo się tak kiedy serwis zwracał mi różne rodzaje danych dla jednego zapytania. 
+
+Do pobierania elementów ze struktury HTML, których nie można pobrać przez API serwisu, istnieje mechanizm wspierający XPath. JSONPath \cite{jsonPath} jest wbudowany w bibliotekę i świetnie wspiera pobieranie elementów wg ścieżki oraz natychmiastowe serializowanie ich do formatu JSON.
 
 
 \section{Git i GitHub}
