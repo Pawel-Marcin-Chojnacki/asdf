@@ -472,7 +472,7 @@ Odpowiedź na zapytanie można otrzymać w formacie XML, JSON lub HTML. Zapytani
 \texttt{https://kokos.pl/webapi/search?key=\textit{<klucz>}\&\textit{<parametry>}}
 \end{center}
 
-Użytkownik może wykonywać \textbf{jedno zapytanie na sekundę}. Przy częstszych odpytaniach serwis zgłosi błąd 503 \textit{,,Service Temporarily Unavailable''}. Ta sama sytuacja pojawi się, kiedy stronę internetową odświeża się w przeglądarce zbyt często. 
+Użytkownik może wykonywać maksymalnie \textbf{jedno zapytanie na sekundę}. Przy częstszych odpytaniach serwis zgłosi błąd 503 \textit{,,Service Temporarily Unavailable''}. Ta sama sytuacja pojawi się, kiedy stronę internetową odświeża się w przeglądarce zbyt często. 
 
 Do dokumentacji dołączony jest również \textbf{słownik oznaczeń} używanych w zapytaniach i odpowiedziach. Istnieje część słownika, która nie posiada możliwości dynamicznego pobierania celem aktualizowania na jego podstawie interfejsu użytkownika. Tę część należy wpisać na stałe w aplikacji. Dotyczy to jednak elementów niezmiennych, takich jak: nazwy województw, statusy spłat oraz statusy aktywności pożyczki. 
 
@@ -716,7 +716,7 @@ private const string Type = "type=";
 \end{lstlisting}
 
 
-Tworzenie parametrów zapytań API schowane jest w klasie RequestGenerator. Przechowuje tam zbiór funkcji do tworzenia całościowych obiektów Uri, gotowych do przekazania użycia przez serwis.
+Tworzenie parametrów zapytań API schowane jest w klasie \texttt{RequestGenerator}. Przechowuje tam zbiór funkcji do tworzenia całościowych obiektów Uri, gotowych do przekazania użycia przez serwis.
 
 \noindent
 \begin{lstlisting}[caption=Nagłówki metod pozwalających składać zapytania do serwisu., label=lst:test]
@@ -726,7 +726,7 @@ public Uri MostRecentAuctions()
 public Uri GetAuctionData(GetAuctionDataParameters parameters)
 \end{lstlisting}
 
-Komunikacja z serwisem odbywa się przy pomocy klasy KokosConnectionManager. Do komunikacji internetowej, wykorzystana jest klasa HttpClient.
+Komunikacja z serwisem odbywa się przy pomocy klasy \texttt{KokosConnectionManager}. Do komunikacji internetowej, wykorzystana jest klasa \texttt{HttpClient}.
 
 
 \section{Notyfikacje przez BackgroundTask}
@@ -734,7 +734,7 @@ Komunikacja z serwisem odbywa się przy pomocy klasy KokosConnectionManager. Do 
 
 \subsection{Opis}
 
-Windows Phone 8.1 pozwala wykonywać aplikacji zadania bez konieczności trzymania jej na pierwszym tle. Funkcjonalność ta nazywa się \textit{Background Task} i użyłem jej do powiadamiania użytkownika o nowych aukcjach w serwisie.
+Windows Phone 8.1 pozwala wykonywać aplikacji zadania bez konieczności trzymania jej na pierwszym planie. Funkcjonalność ta nazywa się \textit{Background Task}. Użyłem jej do powiadamiania użytkownika o nowych aukcjach w serwisie.
 
 \subsection{Implementacja NewAuctionNotifier}
 
@@ -822,10 +822,28 @@ Ekran dostępny po zalogowaniu składa się z trzech części. Na górze ekranu 
 \end{figure}
 
 \subsection{Dodaj filtr}
-Ekran znajduje się pod przyciskiem \textit{Dodaj filtr} z ikoną znaku plus na stronie głównej aplikacji. Jest on przeznaczony do dodawania kryteriów wyszukiwania w postaci plików w pamięci telefonu.
+Ekran znajduje się pod przyciskiem \textit{Dodaj filtr} z ikoną znaku plus na stronie głównej aplikacji. Służy on do określania parametrów aukcji jakie odpowiadają wymaganiom użytkownika. Po wpisaniu nazwy filtru i określeniu  które są zapisywane w pamięci telefonu celem powtórnego użycia. Po wpisaniu kryteriów użytkownik może zapisać je na telefonie. Filtry są świetnym sposobem na oszczędzenie czasu, ponieważ pozwalają zapamiętać preferencje użytkownika, są również niezbędne do działania powiadomień w tle, gdzie należy wybrać jeden z filtrów jako monitor aukcji.
 
+{\color{red}miejsce na obrazek}
+
+\subsection{Szukaj aukcji}
+Ekran oznaczony ikoną lupy pozwala na szybkie wyszukanie aukcji spełniających wymagania użytkownika.
+{\color{red}Ekran szukaj aukcji}
+\subsection{Wyniki wyszukiwania}
+Ekran dostępny po wybraniu funkcji szukaj (ikona lupy) lub wybraniu jednego filtru z listy. Wyświetla stronę ze znalezionymi aukcjami dla 
+{\color{red}Ekran wyniki wyszukiwania}
+\subsection{Lista filtrów}
+{\color{red}Ekran lista filtrów}
+\subsection{Ustawienia}
+{\color{red}Ekran ustawienia}
+\subsection{Raport inwestora}
+{\color{red}Ekran raport inwestora}
+\subsection{Najnowsze aukcje}
+{\color{red}Ekran najnowsze aukcje}
+\subsection{Szczegóły aukcji}
+{\color{red}Ekran szczegółY aukcji}
 \section{Instrukcja obsługi do aplikacji}
-
+{\color{red} CZY TO WGL POTRZEBNE? Chyba tak, warto napisać o tym że trza interneta, pamiętać o kluczu, pamiętać o background tasku, pamiętać o ojczyźnie}
 Aby korzystać z aplikacji, należy mieć aktywne konto w serwisie kokos.pl oraz aktywować klucz API pierwszy raz przez przeglądarkę. Po uruchomieniu Kopry, należy podać adres email oraz hasło logowania do serwisu. Po poprawnej weryfikacji, użytkownik zostanie przeniesiony do ekranu głównego, skąd może się dostać do wszystkich najważniejszych funkcjonalności aplikacji. Użytkownik może przeskoczyć bezpośrednio do jednej z trzech najnowszych aukcji wyświetlanych na dole ekranu.
 
 Aby uruchomić zadania w tle, należy mieć dodany przynajmniej jeden filtr w aplikacji, a następnie z ekranu ustawień wybrać z listy, jakie aukcje mają być wyszukiwane w tle. Maksymalnie co 30 minut można otrzymać powiadomienie, z nową aukcją.
