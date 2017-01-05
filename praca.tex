@@ -212,6 +212,7 @@ Toruń 2016
 	\item[Pożyczkodawca] Osoba lub instytucja udzielająca pożyczki.\cite{slownikPwn}
 	\item[RRSO (Rzeczywista roczna stopa oprocentowania)] Wszystkie koszty realnie ponoszone przez pożyczkobiorcę. Kwotę wyraża się w wartości procentowej całkowitej kwoty kredytu w stosunku rocznym. (Przykładowo, Tomek, pożyczając 1000~zł na 2~lata musi oddać 1200 zł. Roczna opłata za kredyt wynosi $ 200 / 2 = 100 \text{ zł} $, co jest wartością 10\% z całkowitej pożyczonej kwoty. RRSO wynosi wtedy 10\%.)
 	\item[Saldo] Stan konta w wybranej walucie lub jednostce aktywów (ilość akcji, kruszcu), po uwzględnieniu wszystkich transakcji rozliczonych i nierozliczonych w danej chwili.
+	\item[Toksyczne aktywa] {\color{red}\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non lectus pulvinar, bibendum est eu, venenatis odio. In faucibus orci vel tortor pellentesque molestie.}}
 	\item[Windykacja] Dochodzenie własności za pomocą dostępnych środków prawnych. Dążenie do odzyskania pieniędzy przekazanych podmiotowi przez osobę wszczynającą proces odzyskiwania należności.
 	\item[Zobowiązania] Zmuszenie prawem do świadczenia pieniężnego na rzecz wierzyciela.
 \end{description}
@@ -286,9 +287,9 @@ Pożyczki istnieją od tysięcy lat. Pierwsze informacje o pożyczaniu pieniędz
 
 Zajęcie było to tak popularne, że grupy osób zaczęły się specjalizować w pośrednictwie między tymi, którzy mieli pieniądze oraz tymi, którzy te pieniądze chcieli pożyczyć. Dzisiaj te grupy stanowią banki. 
 
-Wypaczając idee pożyczania pieniędzy od osób posiadających pieniądze (pożyczkodawców) do osób biorących te pieniądze na pewien czas (pożyczkobiorców), banki stały się przedsiębiorstwami szukającymi zysków na obrocie pieniędzmi -- nie tylko na ich pożyczaniu. Doprowadziło to do bardzo wielu niebezpiecznych zachowań. 
+Wypaczając ideę pożyczania pieniędzy od osób posiadających pieniądze (pożyczkodawców) do osób biorących te pieniądze na pewien czas (pożyczkobiorców), banki stały się przedsiębiorstwami szukającymi zysków na obrocie pieniędzmi -- nie tylko na ich pożyczaniu. Doprowadziło to do bardzo wielu niebezpiecznych zachowań. 
 
-Najgorszym z nich jest \textbf{system rezerw cząstkowych}. Działa on do czasu, kiedy następuje zalanie rynku toksycznymi pożyczkami. Jednakże gdy to nastąpi, bank nie jest w stanie utrzymać płynności finansowej. Okazuje się wówczas, że większość jego pieniędzy to zabezpieczenia na papierze, których nie da się wyegzekwować. 
+Najgorszym z nich jest \textbf{system rezerw cząstkowych}. Działa on poprawnie do czasu, kiedy następuje zalanie rynku \textbf{toksycznymi pożyczkami}. Jednakże gdy to nastąpi, bank nie jest w stanie utrzymać płynności finansowej. Okazuje się wówczas, że większość jego pieniędzy to zabezpieczenia bez pokrycia, których nie da się wyegzekwować. 
 
 Kolejnym niebezpieczeństwem, jakie niesie ze sobą system rezerw cząstkowych, jest stałe zagrożenie wahaniami nastrojów społecznych. W wyniku plotki rozpuszczonej wśród klientów banku bądź też czasowej niewypłacalności depozytów może nastąpić \textbf{zjawisko paniki bankowej}. Wielu ekonomistów zgadza się z poglądem, iż dobrze zarządzany system rezerw cząstkowych prowadzi do szybszego rozwoju gospodarczego i uniezależnia bogactwo kraju od złóż naturalnych.\cite{fractionalReserveBanking}
 
@@ -328,7 +329,7 @@ Jeśli kontaktu nie można nawiązać natychmiast, można skorzystać udostępni
 
 Kolejny krok stanowi podjęcie działań prawnych. Na tym etapie zaczynają się problemy dla inwestora, gdyż musi podjąć decyzję, czy ściągać należności samodzielnie, wynająć firmę prawniczą lub też skorzystać z usług windykacyjnych dostępnych w serwisie. 
 
-Dobrym rozwiązaniem jest wspólna windykacja większości PD aukcji. Polega ona na tym, że inwestorzy wspólnie wynajmują firmę windykacyjną, gdzie za 10-15\% odzyskanej kwoty mogą liczyć na większe prawdopodobieństwo odzyskania pieniędzy. Jeśli firma nie odzyska długu, nie dostaje wynagrodzenia.
+Dobrym rozwiązaniem jest wspólna windykacja większości pożyczkodawców aukcji. Polega ona na tym, że inwestorzy wspólnie wynajmują firmę windykacyjną, gdzie za 10-15\% odzyskanej kwoty mogą liczyć na większe prawdopodobieństwo odzyskania pieniędzy. Jeśli firma nie odzyska długu, nie dostaje wynagrodzenia.
 
 
 \section{Jakie zyski można osiągnąć?}
@@ -486,7 +487,7 @@ W okolicy 10 dnia każdego miesiąca o wieczornej porze należy uzbroić się w 
 W tym rozdziale przedstawiam technologie i narzędzia, które w znaczący sposób pomogły zrealizować projekt. Skupiam się na pobieżnym opisie technologii, prezentuję również sposób implementacji komponentów aplikacji.
 
 \section{Microsoft Visual Studio Community 2015}
-Miejscem, w którym spędziłem najwięcej czasu, napisałem i złożyłem projekt jest Visual Studio (VS) w wersji Community Edition 2015. Jest to obecnie najbardziej podstawowa ze wszystkich wersji IDE (Integrated Developer Environment) przeznaczonych do tworzenia aplikacji mobilnych na telefony z systemem Windows Phone 8.1. Narzędzia dostępne w tym oprogramowaniu są w zupełności wystarczające by tworzyć aplikacje typu Kopra. Należy pamiętać, że VS jest środowiskiem wymagającym sporych zasobów sprzętowych. Na stronie producenta \cite{vs} można znaleźć informacje o minimalnych wymaganiach: procesor 1.6 GHz lub szybszy, 1Gb pamięci RAM, 4Gb miejsca na dysku twardym, karta graficzna wspierająca DirectX 9.0c i rozdzielczość przynajmniej 1024 x 786. Aby programować urządzenia Windows Phone należy mieć wielokrotnie mocniejszy sprzęt, szczególnie jeśli programuje się przy użyciu emulatorów.
+Miejscem, w którym spędziłem najwięcej czasu, napisałem i złożyłem projekt jest Visual Studio (VS) w wersji Community Edition 2015. Jest to obecnie najbardziej podstawowa ze wszystkich wersji IDE (Integrated Developer Environment) przeznaczonych do tworzenia aplikacji mobilnych na telefony z systemem Windows Phone 8.1. Narzędzia dostępne w tym oprogramowaniu są w zupełności wystarczające by tworzyć aplikacje typu Kopra. Należy pamiętać, że VS jest środowiskiem wymagającym sporych zasobów sprzętowych. Na stronie producenta \cite{vs} można znaleźć informacje o minimalnych wymaganiach: procesor 1.6 GHz lub szybszy, 1Gb pamięci RAM, 4~GB miejsca na dysku twardym, karta graficzna wspierająca DirectX 9.0c i rozdzielczość przynajmniej 1024 x 786. Aby programować urządzenia Windows Phone należy mieć wielokrotnie mocniejszy sprzęt, szczególnie jeśli programuje się przy użyciu emulatorów.
 
 \section{Język C\# 5.0}
 Język programowania Microsoft Visual C\# został zaprojektowany z myślą o tworzeniu aplikacji działających z zestawem narzędzi .NET Framework. Firma Microsoft projektowała go jako potężny, a zarazem prosty język orientowany obiektowo z bezpiecznym typowaniem. \cite{csharp} Składnia wywodzi się z rodziny języków C. Dziedziczy wiele najlepszych cech języka C++ i Microsoft Visual Basic, odrzucając większość ich anachronizmów, tworząc bardziej logiczną strukturę języka. Pierwsza wersja oficjalnie zadebiutowała w 2001 roku. Wielu programistów uważało go za próbę skopiowania Javy, jednak kolejne wersje przewyższają prostotą składni i klarownością instrukcji swój domniemany pierwowzór. Premiera C\# 2.0 ze środowiskiem Visual Studio 2005 wprowadzały kilka nowych elementów do języka, takich jak typy generyczne, iteratory, metody anonimowe. Uważam, że kolejna wersja języka, C\# 3.0 przyczyniła się do największej adopcji wśród programistów. Wszystko przez innowacyjne konstrukcje, które konkurencja wprowadzała przez kilka następnych lat. Moją ulubioną nowością tego wydania jest LINQ (Language-Integrated Query). Również wersja C\# 5.0 daje wrażenie dynamicznego rozwoju języka. Projektanci ułatwili tworzenie wywołań asynchronicznych przez dodanie modyfikatorów metod async/await. Kolejne wersje języka wprowadzają udogodnienia z ułatwiające największe wyzwania stojące przed programistą. Każda wersja języka jest ściśle powiązana ze środowiskiem Visual Studio C\# oraz zestawem narzędzi .NET Framework, choć numeracja wersji nie zawsze się pokrywa.
@@ -497,7 +498,7 @@ W odniesieniu do zmian wprowadzonych przez Microsoft w 2016 roku w związku z wp
 
 
 \section{Windows Phone 8.1 SDK}
-Microsoft ukrył stronę z Windows Phone 8.1 SDK oraz zestawem emulatorów na rzecz promocji Windows 10 Mobile. Zestaw narzędzi jest dość trudny w odnalezieniu. By się dostać do zasobu, musiałem użyć zewnętrznej wyszukiwarki, ponieważ ta ze strony Microsoft.com nie zwraca wyników. Żeby zdobyć zestaw narzędzi programistycznych na tą platformę, trzeba przeszukiwać archiwa Mircosoftu. \cite{tajneArchiwaMicrosoftu} Do programowania na system Windows Phone potrzebne jest urządzenie fizyczne (preferowana Nokia Lumia) bądź emulator, do którego wymagany jest procesor ze wsparciem SLAT (Second Level Address Translation). Należy również pamiętać, że do komfortowej pracy z emulatorem potrzeba przynajmniej 8Gb pamięci RAM. Zestaw SDK zawiera 6 różnych konfiguracji emulatorów: 
+Microsoft ukrył stronę z Windows Phone 8.1 SDK oraz zestawem emulatorów na rzecz promocji Windows 10 Mobile. Zestaw narzędzi jest dość trudny w odnalezieniu. By się dostać do zasobu, musiałem użyć zewnętrznej wyszukiwarki, ponieważ ta ze strony Microsoft.com nie zwraca wyników. Żeby zdobyć zestaw narzędzi programistycznych na tą platformę, trzeba przeszukiwać archiwa Mircosoftu. \cite{tajneArchiwaMicrosoftu} Do programowania na system Windows Phone potrzebne jest urządzenie fizyczne (preferowana Nokia Lumia) bądź emulator, do którego wymagany jest procesor ze wsparciem SLAT (Second Level Address Translation). Należy również pamiętać, że do komfortowej pracy z emulatorem potrzeba przynajmniej 8~GB pamięci RAM. Zestaw SDK zawiera 6 różnych konfiguracji emulatorów: 
 
 \begin{figure}[htp]
 	\centering
@@ -507,12 +508,12 @@ Microsoft ukrył stronę z Windows Phone 8.1 SDK oraz zestawem emulatorów na rz
 
 Aplikację przetestowałem na każdym z wyżej wymienionych urządzeń wirtualnych, w orientacji pionowej oraz na urządzeniach Nokia Lumia 925, Microsoft Lumia 530, Nokia Lumia 625.
 
-Kopra została również uruchomiona pod emulatorem systemu Windows Mobile 10 i działa poprawnie pod poniższym konfiguracjami. Nie została przetestowana dokładnie na nich, również nie miałem dostępu do urządzeń fizycznych z systemem WM 10, stąd użytkownik powinien używać oprogramowania na tym systemie na własną odpowiedzialność.
+Kopra została również uruchomiona pod emulatorem systemu Windows 10 Mobile i działa poprawnie pod poniższym konfiguracjami. Nie została przetestowana dokładnie na nich, również nie miałem dostępu do urządzeń fizycznych z systemem Windows 10 Mobile, stąd użytkownik powinien używać oprogramowania na tym systemie na własną odpowiedzialność.
 
 \begin{figure}[htp]
 	\centering
 			\includegraphics[resolution=120]{emulatoryWin10.png}
-		\caption{Zestaw konfiguracji emulatorów dostępny w Windows Mobile 10 SDK}
+		\caption{Zestaw konfiguracji emulatorów dostępny w Windows 10 Mobile SDK}
 \end{figure}
 
 
@@ -523,7 +524,7 @@ Najpopularniejsze narzędzie do pracy z danymi w formacie JSON. Oprogramowanie d
 
 
 \section{Git i GitHub}
-W utrzymaniu ładu z kolejnymi wersjami pomógł mi Git. Jest to rozproszony system kontroli wersji stworzony przez Linusa Torvaldsa jako narzędzie do zarządzania kodem źródłowym Linuxa, kiedy relacje z firmą BitMover pogorszyły się i projekt Linux stracił możliwość korzystania z BitKeeper’a za darmo. Git został zaprojektowany w oparciu o 5 cech, które do dziś stanowią jego podstawę: szybkość, prosta konstrukcja, wsparcie dla równoległego rozwoju wielu wersji jednocześnie, w pełni rozproszony, z możliwością zarządzania wielkimi projektami. \cite{git} Przekonującym argumentem do użycia właśnie tego systemu kontroli wersji jest dostęp do serwisów zintegrowanych z oprogramowaniem. Zmiany przechowywane są lokalnie w formie lokalnej bazy. Większość akcji wykonywanych na repozytorium git, dodaje dane do bazy. To sprawia, że popsucie czegoś bez możliwości przywrócenia stanu jest prawie niemożliwe. Dlatego można śmiało psuć projekt, bez obaw na utratę danych. Tworząc większe funkcjonalności w projekcie korzystałem z możliwości tworzenia własnych gałęzi (branch), a następnie po zaimplementowaniu łączyłem je do głównej linii produkcyjnej (master).
+W utrzymaniu ładu z kolejnymi wersjami pomógł mi Git. Jest to rozproszony system kontroli wersji stworzony przez Linusa Torvaldsa jako narzędzie do zarządzania kodem źródłowym Linuxa, kiedy relacje z firmą BitMover pogorszyły się i projekt Linux stracił możliwość korzystania z BitKeeper’a za darmo. Git został zaprojektowany w oparciu o 5 cech, które do dziś stanowią jego podstawę: szybkość, prosta konstrukcja, wsparcie dla równoległego rozwoju wielu wersji jednocześnie, w pełni rozproszony, z możliwością zarządzania wielkimi projektami. \cite{git} Przekonującym argumentem do użycia właśnie tego systemu kontroli wersji jest dostęp do serwisów zintegrowanych z oprogramowaniem. Zmiany przechowywane są lokalnie w formie lokalnej bazy. Większość akcji wykonywanych na repozytorium Git, dodaje dane do bazy. To sprawia, że popsucie czegoś bez możliwości przywrócenia stanu jest prawie niemożliwe. Dlatego można śmiało psuć projekt, bez obaw na utratę danych. Tworząc większe funkcjonalności w projekcie korzystałem z możliwości tworzenia własnych gałęzi (branch), a następnie po zaimplementowaniu łączyłem je do głównej linii produkcyjnej (master).
 
 Zamiast korzystać z własnego serwera systemu kontroli wersji, użyłem darmowego i najbardziej popularnego serwisu oferujące usługi przechowania repozytorium założonego w Git. Na chwilę obecną jest największą platformą hostującą projekty open-source. Ponad 18 milionów użytkowników i 48 milionów założonych projektów daje mi gwarancję, że w trakcie tworzenia projektu serwis nie zostanie wyłączony z użycia. Usługa oferuje możliwość przechowania kodu widocznego dla wszystkich (Public) oraz tylko dla wybranych użytkowników (Private). GitHub jest darmowy dla pierwszego typu hostingu. \cite{gutHubCennik} Kod źródłowy jest widoczny dla każdego, jeśli ktoś zechce wykonać własną gałąź aplikacji i w jakikolwiek sposób ją poprawić, będzie to dla mnie miłym zaskoczeniem.
 
@@ -747,7 +748,7 @@ Windows Phone 8.1 pozwala wykonywać aplikacji zadania bez konieczności trzyman
 
 \section{Etymologia nazwy}
 
-Nazwa aplikacji powstała już w trakcie tworzenia, kiedy wiedziałem już z którym serwisem aplikacja będzie współpracować. Szukałem czegoś co jednym słowem opisze sposób myślenia inwestora. \textit{,,Jak wyciągnąć największe zyski z inwestycji?''}. W połączeniu z nazwą serwisu, który obsługuje, nie mogło być lepszej nazwy jak Kopra1. Co miało podkreślić, wyciągnięcie esencji z Kokosa.
+Nazwa aplikacji powstała już w trakcie tworzenia, kiedy wiedziałem już z którym serwisem aplikacja będzie współpracować. Szukałem czegoś co jednym słowem opisze sposób myślenia inwestora. \textit{,,Jak wyciągnąć największe zyski z inwestycji?''}. W połączeniu z nazwą serwisu, który obsługuje, nie mogło być lepszej nazwy jak Kopra. Co miało podkreślić, wyciągnięcie esencji z Kokosa.
 
 \section{Korzyści względem wersji przeglądarkowej}
 
