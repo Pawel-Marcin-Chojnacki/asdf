@@ -541,24 +541,42 @@ Kopra została również uruchomiona w emulatorze systemu Windows 10 Mobile i dz
 
 Newtonsoft.Json stanowi najpopularniejsze narzędzie do pracy z danymi w formacie JSON. Oprogramowanie działa na jednej z najbardziej liberalnych licencji, MIT.\cite{mitLicence} Wśród bibliotek dostępnych w menadżerze pakietów NuGet, zajmuje pierwsze miejsce mając ponad 15 milionów pobrań.[15] 
 
-Json.NET znacznie uprościł proces przetwarzania danych otrzymanych z serwisu. Zgodnie z opisem zamieszczonym na stronie projektu, biblioteka jest bardzo łatwa w użyciu, nawet w przypadku złożonych typach danych. Znalazłem się jednak kilkukrotnie w sytuacji, gdzie musiałem rozbudować mechanizm serializujący o dodatkowe warunki. Działo się tak kiedy serwis zwracał mi różne rodzaje danych dla jednego zapytania. 
+Json.NET znacznie uprościł proces przetwarzania danych otrzymanych z serwisu. Zgodnie z opisem zamieszczonym na stronie projektu, biblioteka jest bardzo łatwa w użyciu, nawet w przypadku złożonych typach danych. Znalazłem się jednak kilkukrotnie w sytuacji, gdy musiałem rozbudować mechanizm serializujący o dodatkowe warunki. Działo się tak kiedy serwis zwracał mi różne rodzaje danych dla jednego zapytania. 
 
 Do pobierania elementów ze struktury HTML, których nie można pobrać przez API serwisu, istnieje mechanizm wspierający XPath. JSONPath \cite{jsonPath} jest wbudowany w bibliotekę i świetnie wspiera pobieranie elementów wg ścieżki oraz natychmiastowe serializowanie ich do formatu JSON.
 
 
 \section{Git i GitHub}
-W utrzymaniu ładu z kolejnymi wersjami pomógł mi Git. Jest to rozproszony system kontroli wersji stworzony przez Linusa Torvaldsa jako narzędzie do zarządzania kodem źródłowym Linuxa, kiedy relacje z firmą BitMover pogorszyły się i projekt Linux stracił możliwość korzystania z BitKeeper’a za darmo. Git został zaprojektowany w oparciu o 5 cech, które do dziś stanowią jego podstawę: szybkość, prosta konstrukcja, wsparcie dla równoległego rozwoju wielu wersji jednocześnie, w pełni rozproszony, z możliwością zarządzania wielkimi projektami. \cite{git} Przekonującym argumentem do użycia właśnie tego systemu kontroli wersji jest dostęp do serwisów zintegrowanych z oprogramowaniem. Zmiany przechowywane są lokalnie w formie lokalnej bazy. Większość akcji wykonywanych na repozytorium Git, dodaje dane do bazy. To sprawia, że popsucie czegoś bez możliwości przywrócenia stanu jest prawie niemożliwe. Dlatego można śmiało psuć projekt, bez obaw na utratę danych. Tworząc większe funkcjonalności w projekcie korzystałem z możliwości tworzenia własnych gałęzi (branch), a następnie po zaimplementowaniu łączyłem je do głównej linii produkcyjnej (master).
+W utrzymaniu ładu podczas pracy z kolejnymi wersjami aplikacji pomógł mi Git. Jest to rozproszony system kontroli wersji, stworzony przez Linusa Torvaldsa jako narzędzie do zarządzania kodem źródłowym Linuxa. Motywacją autora do napisania własnego systemu kontroli wersji było pogorszenie relacji z firmą BitMover, gdyż w efekcie projekt Linux stracił możliwość darmowgo korzystania z BitKeeper'a. 
 
-Zamiast korzystać z własnego serwera systemu kontroli wersji, użyłem darmowego i najbardziej popularnego serwisu oferujące usługi przechowania repozytorium założonego w Git. Na chwilę obecną jest największą platformą hostującą projekty open-source. Ponad 18 milionów użytkowników i 48 milionów założonych projektów daje mi gwarancję, że w trakcie tworzenia projektu serwis nie zostanie wyłączony z użycia. Usługa oferuje możliwość przechowania kodu widocznego dla wszystkich (Public) oraz tylko dla wybranych użytkowników (Private). GitHub jest darmowy dla pierwszego typu hostingu. \cite{gutHubCennik} Kod źródłowy jest widoczny dla każdego, jeśli ktoś zechce wykonać własną gałąź aplikacji i w jakikolwiek sposób ją poprawić, będzie to dla mnie miłym zaskoczeniem.
+Git został zaprojektowany w oparciu o 5~cech, które do dziś stanowią jego podstawę: szybkość, prosta konstrukcja, wsparcie dla równoległego rozwoju wielu wersji jednocześnie, w pełni rozproszony, z możliwością zarządzania wielkimi projektami.\cite{git}
+
+Przekonującym argumentem do użycia właśnie tego systemu kontroli wersji jest dostęp do serwisów zintegrowanych z oprogramowaniem. Zmiany przechowywane są lokalnie w formie lokalnej bazy. Większość akcji wykonywanych na repozytorium Git to dodawanie danych do bazy. Sprawia to, że zniszczenie czegoś bez możliwości przywrócenia stanu jest prawie niemożliwe. Dzięki temu można śmiało dokonywać zmian w projekcie bez obaw o utratę danych. 
+
+Tworząc większe funkcjonalności w projekcie korzystałem z możliwości tworzenia własnych gałęzi \textit{(branch)}, a następnie po zaimplementowaniu łączyłem je do głównej linii produkcyjnej \textit{(master)}.
+
+Zamiast korzystać z własnego serwera systemu kontroli wersji, użyłem darmowego i najbardziej popularnego serwisu oferującego usługi przechowania repozytorium Git -- GitHub.com. Na chwilę obecną jest on największą platformą hostującą projekty open-source. Ponad 18~milionów użytkowników i 48~milionów założonych projektów pozwala twierdzić, że w trakcie tworzenia projektu serwis nie zostanie nagle wyłączony z użycia. Usługa oferuje możliwość przechowania kodu widocznego dla wszystkich \textit{(Public)} oraz tylko dla wybranych użytkowników \textit{(Private)}. GitHub jest darmowy dla pierwszego typu hostingu.\cite{gutHubCennik} 
+
+Również kod źródłowy Kopry jest widoczny dla każdego -- jeśli ktoś zechce wykonać własną gałąź aplikacji i w jakikolwiek sposób ją poprawić, będzie to dla mnie miłym zaskoczeniem.
 
 
 \section{LinqPad}
-Narzędzie wykorzystałem do szybkiego modelowania kodu metod. Jest to produkt powszechnie używany do modelowania fragmentów kodów w środowisku .NET. Program jest używany do pisania interaktywnych zapytań SQL z wykorzystaniem LINQ oraz pisania kodu C\# bez konieczności uruchamiania Visual Studio. \cite{linqPad} Produkt jest tworzony na modelu Freemium, co oznacza, że program jest darmowy z wyłączeniem pewnych funkcjonalności, za które należy zapłacić. \cite{linqPadWiki}
+Narzędzie LinqPad wykorzystałem w celu szybkiego modelowania kodu metod. Jest to produkt powszechnie używany do modelowania fragmentów kodów w środowisku .NET. 
+
+Zaletę programu stanowi możliwość pisania interaktywnych zapytań SQL z wykorzystaniem LINQ oraz pisania kodu C\# bez konieczności uruchamiania Visual Studio.\cite{linqPad} 
+
+Produkt jest tworzony na modelu Freemium, co oznacza, że program jest darmowy z wyłączeniem pewnych funkcjonalności, za które należy zapłacić.\cite{linqPadWiki}
 
 
 
 \section{ILSpy}
-Przeglądarka plików assembly i dekompilator kodu .NET, oparty o licencję MIT. Projekt hostowany jest na GitHub, gdzie można pobrać jego źródła. \cite{ilSpyRepo} Narzędzie początkowo używałem do dekompilacji biblioteki HtmlAgilityPack, która przez zbyt wiele błędów zmusiła mnie do przeglądania jej wewnętrznych metod. Na późniejszym etapie ILSpy pomógł mi zrozumieć dokładniej część biblioteki .NET zawartej w przestrzeni nazw System.Net.Http. ILSpy stał się szczególnie popularny, kiedy narzędzie Microsoftu o nazwie IL DASM, przestało być częścią pakietu Visual Studio. Przed wersją Visual Studio 2012, IL DASM był dostępny z poziomu folderu Microsoft SDK Tools jako narzędzie do zestawu razem z IL ASM. Ten zaś służy jako narzędzie do generowania kodu wykonywalnego z kodu pośredniego. Obecnie te narzędzia dostępne są w formie konsolowych programów. ILSpy jest w pełni graficznym narzędziem. Uważam, że jest najlepszym darmowym narzędziem do przeglądania plików assembly.
+ILSpy to przeglądarka plików assembly i dekompilator kodu .NET, oparty o licencję MIT. Projekt hostowany jest na GitHub, gdzie można pobrać jego źródła.\cite{ilSpyRepo} 
+
+Początkowo używałem tego narzędzia do dekompilacji biblioteki \textit{HtmlAgilityPack}, która przez wzgląd na zbyt wiele błędów zmusiła mnie do przeglądania jej wewnętrznych metod. Na późniejszym etapie ILSpy pomógł mi dokładniej zrozumieć część biblioteki .NET zawartej w przestrzeni nazw \texttt{System.Net.Http}. 
+
+ILSpy stał się szczególnie popularny, kiedy narzędzie Microsoftu o nazwie IL DASM przestało stanowić część pakietu Visual Studio. Przed wersją Visual Studio 2012, IL~DASM był dostępny z poziomu folderu \textit{Microsoft SDK Tools} jako narzędzie udostępnione w zestawie razem z IL ASM. Ten zaś służy jako narzędzie do generowania kodu wykonywalnego z kodu pośredniego. Obecnie te narzędzia dostępne są w formie konsolowych programów. 
+
+ILSpy jest w pełni graficznym narzędziem. Uważam, że stanowi najlepsze darmowe rozwiązanie dla przeglądania plików assembly.
 
  
 
