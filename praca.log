@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.27)  6 JAN 2017 13:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.27)  6 JAN 2017 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,20 +661,20 @@ LaTeX Warning: Label `lst:test' multiply defined.
 )
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
@@ -768,29 +768,29 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OML+plm on input line 181.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 186.
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 181
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 186
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 181
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 186
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 181.
+(Font)              <10> on input line 186.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 181.
+(Font)              <7> on input line 186.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 181.
+(Font)              <5> on input line 186.
  [1
 
 
@@ -811,7 +811,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-Overfull \hbox (12.07054pt too wide) in paragraph at lines 207--208
+Overfull \hbox (12.07054pt too wide) in paragraph at lines 212--213
 \OT4/cmr/m/n/10 Podmiot go-spo-dar-czy, któ-ry zaj-mu-je si¦ ob-ro-tem ±rod-ków
  fi-nan-so-wych po-wie-rzo-nych przez klien-
  []
@@ -828,47 +828,47 @@ Rozdzia\PlPrIeC {\l } 1.
 [11
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 311.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 316.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 311.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 316.
  [12]
-Overfull \hbox (1.68375pt too wide) in paragraph at lines 373--373
+Overfull \hbox (1.68375pt too wide) in paragraph at lines 378--378
  []|\OT4/cmr/m/n/9 Podstawowy| 
  []
 
 
-Overfull \hbox (1.68375pt too wide) in paragraph at lines 373--373
+Overfull \hbox (1.68375pt too wide) in paragraph at lines 378--378
  []|\OT4/cmr/m/n/9 Podstawowy| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--375
+Underfull \hbox (badness 10000) in paragraph at lines 365--380
 
  []
 
 [13]
-Overfull \hbox (6.65231pt too wide) in paragraph at lines 411--411
+Overfull \hbox (6.65231pt too wide) in paragraph at lines 416--416
  []|\OT4/cmr/bx/n/9 Spªacalno±¢| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--413
+Underfull \hbox (badness 10000) in paragraph at lines 399--418
 
  []
 
 [14]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 472
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 477
 .
  (/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 ) [15] [16]
 Rozdzia\PlPrIeC {\l } 2.
 
-Overfull \hbox (0.65268pt too wide) in paragraph at lines 492--493
+Overfull \hbox (0.65268pt too wide) in paragraph at lines 497--498
 []\OT4/cmr/m/n/10 Nale»y pa-mi¦-ta¢, »e VS jest ±ro-do-wi-skiem wy-ma-ga-j¡-cym
  spo-rych za-so-bów sprz¦-to-wych. Na stro-
  []
@@ -878,16 +878,16 @@ Overfull \hbox (0.65268pt too wide) in paragraph at lines 492--493
 ] <emulatory.png, id=70, 226.446pt x 87.9285pt>
 File: emulatory.png Graphic file (type png)
  <use emulatory.png>
-Package pdftex.def Info: emulatory.png used on input line 522.
+Package pdftex.def Info: emulatory.png used on input line 527.
 (pdftex.def)             Requested size: 226.44543pt x 87.92827pt.
  [18 <./emulatory.png>] <emulatoryWin10.png, id=74, 218.0145pt x 79.497pt>
 File: emulatoryWin10.png Graphic file (type png)
 
 <use emulatoryWin10.png>
-Package pdftex.def Info: emulatoryWin10.png used on input line 533.
+Package pdftex.def Info: emulatoryWin10.png used on input line 538.
 (pdftex.def)             Requested size: 218.01395pt x 79.4968pt.
  [19 <./emulatoryWin10.png>]
-Overfull \hbox (20.26439pt too wide) in paragraph at lines 575--576
+Overfull \hbox (20.26439pt too wide) in paragraph at lines 580--581
 []\OT4/cmr/m/n/10 Pocz¡tkowo u»y-wa-ªem te-go na-rz¦-dzia do de-kom-pi-la-cji b
 i-blio-te-ki \OT4/cmr/m/it/10 Htm-lA-gi-li-ty-Pack\OT4/cmr/m/n/10 , któ-ra prze
 z wzgl¡d
@@ -901,7 +901,7 @@ Rozdzia\PlPrIeC {\l } 3.
 File: strukturaFolderow.png Graphic file (type png)
 
 <use strukturaFolderow.png>
-Package pdftex.def Info: strukturaFolderow.png used on input line 626.
+Package pdftex.def Info: strukturaFolderow.png used on input line 631.
 (pdftex.def)             Requested size: 130.08566pt x 152.9711pt.
 
 
@@ -910,16 +910,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <listawidokow.png, id=86, 228.855pt x 186.6975pt>
 File: listawidokow.png Graphic file (type png)
  <use listawidokow.png>
-Package pdftex.def Info: listawidokow.png used on input line 636.
+Package pdftex.def Info: listawidokow.png used on input line 641.
 (pdftex.def)             Requested size: 128.0387pt x 104.45587pt.
 
 <listaviewmodeli.png, id=87, 228.855pt x 200.75pt>
 File: listaviewmodeli.png Graphic file (type png)
  <use listaviewmodeli.png>
-Package pdftex.def Info: listaviewmodeli.png used on input line 641.
+Package pdftex.def Info: listaviewmodeli.png used on input line 646.
 (pdftex.def)             Requested size: 128.0387pt x 112.31813pt.
 
-Underfull \hbox (badness 2772) in paragraph at lines 642--642
+Underfull \hbox (badness 2772) in paragraph at lines 647--647
 []\OT4/cmr/m/n/10 Rysunek 3.3: Li-sta pli-ków
  []
 
@@ -939,33 +939,33 @@ Rozdzia\PlPrIeC {\l } 4.
 File: kafelekSzeroki.png Graphic file (type png)
 
 <use kafelekSzeroki.png>
-Package pdftex.def Info: kafelekSzeroki.png used on input line 816.
+Package pdftex.def Info: kafelekSzeroki.png used on input line 821.
 (pdftex.def)             Requested size: 128.0387pt x 62.24126pt.
 
 <kafelekKwadratowy.png, id=110, 158.09062pt x 158.09062pt>
 File: kafelekKwadratowy.png Graphic file (type png)
 
 <use kafelekKwadratowy.png>
-Package pdftex.def Info: kafelekKwadratowy.png used on input line 821.
+Package pdftex.def Info: kafelekKwadratowy.png used on input line 826.
 (pdftex.def)             Requested size: 128.0387pt x 128.04787pt.
  <splashScreen.png, id=111, 361.35pt x 602.25pt>
 File: splashScreen.png Graphic file (type png)
 
 <use splashScreen.png>
-Package pdftex.def Info: splashScreen.png used on input line 835.
+Package pdftex.def Info: splashScreen.png used on input line 840.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--839
+Underfull \hbox (badness 10000) in paragraph at lines 838--844
 
  []
 
 <logowanie.png, id=112, 361.35pt x 602.25pt>
 File: logowanie.png Graphic file (type png)
  <use logowanie.png>
-Package pdftex.def Info: logowanie.png used on input line 847.
+Package pdftex.def Info: logowanie.png used on input line 852.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 845--851
+Underfull \hbox (badness 10000) in paragraph at lines 850--856
 
  []
 
@@ -973,10 +973,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 845--851
 <mainScreen.png, id=118, 361.35pt x 602.25pt>
 File: mainScreen.png Graphic file (type png)
  <use mainScreen.png>
-Package pdftex.def Info: mainScreen.png used on input line 859.
+Package pdftex.def Info: mainScreen.png used on input line 864.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--863
+Underfull \hbox (badness 10000) in paragraph at lines 862--868
 
  []
 
@@ -996,19 +996,19 @@ Rozdzia\PlPrIeC {\l } 5.
  [35] [36
 
 ]
-Overfull \hbox (4.3278pt too wide) in paragraph at lines 931--933
+Overfull \hbox (4.3278pt too wide) in paragraph at lines 936--938
 []\OT4/cmr/m/it/10 Billionaire who bro-ke the Bank of En-gland\OT4/cmr/m/n/10 ,
  \OT4/cmtt/m/n/10 http://www.telegraph.co.uk/finance/2773265/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 949--951
+Underfull \hbox (badness 10000) in paragraph at lines 954--956
 \OT4/cmtt/m/n/10 wiadomosci/artykul/koniec;lokat;antybelkowych;co;w;zamian,82,0
 ,1057874.html\OT4/cmr/m/n/10 ,
  []
 
 [37]
-Overfull \hbox (4.37216pt too wide) in paragraph at lines 963--965
+Overfull \hbox (4.37216pt too wide) in paragraph at lines 968--970
 []\OT4/cmr/m/it/10 Podstawowe sto-py pro-cen-to-we NBP\OT4/cmr/m/n/10 , \OT4/cm
 tt/m/n/10 http://www.nbp.pl/home.aspx?f=/dzienne/stopy.htm\OT4/cmr/m/n/10 , 
  []
@@ -1021,7 +1021,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6532 strings out of 494877
  86906 string characters out of 6179085
- 203980 words of memory out of 5000000
+ 203982 words of memory out of 5000000
  9668 multiletter control sequences out of 15000+600000
  17648 words of font info for 47 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
@@ -1045,7 +1045,7 @@ e1/public/pl/plr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy
 are/texlive/texmf-dist/fonts/type1/public/pl/plti9.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/pl/pltt9.pfb>
-Output written on praca.pdf (39 pages, 330390 bytes).
+Output written on praca.pdf (39 pages, 330360 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams
