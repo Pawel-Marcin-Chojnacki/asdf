@@ -69,6 +69,11 @@
 \fancyhead[LE]{\rightmark}
 \fancyhead[RO]{\leftmark}
 
+% WYGLĄD TABEL
+
+% vertical padding
+\renewcommand{\arraystretch}{1.5}
+
 % CODE LISTINGS 
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
@@ -201,7 +206,7 @@ Toruń 2016
 	\item[Aukcja pożyczkowa] Oferta umowy pożyczkowej wystawiona przez~pożyczkobiorcę, zweryfikowana na~określonej platformie zgodnie z~jej kryteriami. Oferta taka skierowana jest do~wielu podmiotów określonych jako \textit{pożyczkodawców}.
 	\item[Automat inwestycyjny] Oprogramowanie przeznaczone do~symulowania działań pożyczkodawcy przez~wpłacanie środków na~aukcje spełniające określone kryteria.
 	\item[FriendlyScore] Przyznanie punktacji użytkownikowi w~oparciu o~analizę danych z~kont w~serwisach społecznościowych, np.~Facebooka czy Twittera oraz~dodatkowe weryfikacje, np.~weryfikację pracodawcy.
-	\item[Giełda Papierów Wartościowych] Jest to instytucja publiczna zapewniająca możliwość obrotu giełdowymi papierami wartościowymi. Pozwala ona na~kupno oraz~sprzedaż papierów wartościowych takich jak akcje i~obligacje. W~mojej pracy ograniczę~się do~polskiego rynku kapitałowego, dlatego pojęcie ,,Giełda Papierów Wartościowych'' (w skrócie ,,Giełda'') będzie w~niej oznaczać instytucję ,,Giełda Papierów Wartościowych w~Warszawie SA''.
+	\item[Giełda Papierów Wartościowych] Jest to instytucja publiczna zapewniająca możliwość obrotu giełdowymi papierami wartościowymi. Pozwala ona na~kupno oraz~sprzedaż papierów wartościowych takich jak akcje i~obligacje. W~mojej pracy ograniczę~się do~polskiego rynku kapitałowego, dlatego pojęcie ,,Giełda Papierów Wartościowych'' (w skrócie ,,Giełda'') będzie w~niej oznaczać instytucję ,,Giełda Papierów Wartościowych w~Warszawie SA''.\cite{gielda}
 %	\item[Inteligencja finansowa] Pojęcie nie~zostało zdefiniowane przez~Słownik Języka Polskiego, jednak szeroko używane w~,,poradnikach'' finansowych, blogach czy książkach nt. rozwoju osobistego. Oznacza sprawne posługiwanie~się finansami, zrozumienie podstawowych zasad matematyki, tj. procent, procent składany, porównywanie liczb czy obliczanie wartości prostych szerów, ciągów. Zbiór umiejętności tak oczywisty dla~matematyków, że nie~wpadli by nazwać go ,,inteligencją''.
 	\item[Instrument finansowy (ang. \textit{financial instrument})]  Jest to kontrakt zawarty między dwiema stronami regulujący zależność finansową między tymi stronami. W~tym kontrakcie zawarte są dwie strony. Strona długa (ang. \textit{long party}), inaczej -- posiadacz długiej pozycji, oraz~strona krótka \textit{(short party)}, inaczej -- posiadacz krótkiej pozycji. Przykładem instrumentu finansowego są papiery wartościowe. \cite{inwestycje}
 	\item[Instytucja finansowa] Podmiot gospodarczy, który zajmuje~się obrotem środków finansowych powierzonych przez~klientów (udzielanie kredytów, inwestycje, gromadzenie środków pieniężnych).
@@ -317,9 +322,9 @@ W~akapitach poniżej znajduje~się krótkie omówienie tych problemów oraz~spos
 \subsection*{Urząd Skarbowy}
 Zyski z~przychodów kapitałowych są opodatkowane 19-procentową stawką (na rok 2016). Jedyną jasną kwestią jest to, iż od~każdego wypracowanego zysku należy zapłacić podatek. 
 
-Problem pojawia~się z~interpretacją prawa -- kiedy należy założyć działalność gospodarczą oraz~w~jaki sposób rozliczać~się z~Urzędem Skarbowym i~fiskusem. Naczelny Sąd Administracyjny w~sprawie o~sygnaturze II FSK 1472/10 orzekł, że regularne inwestowanie w~pożyczki nosi znamiona działalności gospodarczej.\cite{nsaZnamiona} Jednak w~sprawie o~sygnaturze II FSK 142/10 ten sam sąd wydał wyrok odwrotny, uznając wówczas, że pożyczanie pieniędzy nie~nosi znamion prowadzenia działalności gospodarczej. \cite{nsaWyrokOdwrotny} 
+Problem pojawia~się z~interpretacją prawa -- kiedy należy założyć działalność gospodarczą oraz~w~jaki sposób rozliczać~się z~Urzędem Skarbowym i~fiskusem. Naczelny Sąd Administracyjny w~sprawie o~sygnaturze II FSK 1472/10 orzekł, że regularne inwestowanie w~pożyczki nosi znamiona działalności gospodarczej.\cite{nsaZnamiona} Jednak w~sprawie o~sygnaturze II FSK 142/10 ten sam sąd wydał wyrok odwrotny, uznając wówczas, że pożyczanie pieniędzy nie~nosi znamion prowadzenia działalności gospodarczej.\cite{nsaWyrokOdwrotny} 
 
-Mając na~uwadze powyższe wyroki, przed rozpoczęciem regularnego pożyczania, \emph{należy zwrócić~się do~dyrektora właściwej sobie Izby Skarbowej z~zapytaniem o~sposób rozliczania.} \cite{oswiadczenieKokos}
+Mając na~uwadze powyższe wyroki, przed rozpoczęciem regularnego pożyczania, \emph{należy zwrócić~się do~dyrektora właściwej sobie Izby Skarbowej z~zapytaniem o~sposób rozliczania.}\cite{oswiadczenieKokos}
 
 \subsection*{Windykacja}
 
@@ -588,7 +593,7 @@ W~tym rozdziale przedstawię wzorzec architektoniczny MVVM, jego zalety i~wady o
 
 \subsection{Opis wzorca Model View ViewModel}
 
-Wprowadzony przez~Microsoft w~2005 roku, wzorzec architektoniczny, opiera~się na~tych samych założeniach co~zaprezentowany lata wcześniej model prezentacji (Presetation Model). PM dziedziczy po~Model Widok Prezenter MVP - \textit{(ang.Model View Presenter)}, wzorzec architektoniczny z~początku lat 90 ubiegłego wieku. Z tym, że wzorzec PM jest szczególnie przydatny w~programowaniu złożonych interfejsów użytkownika. Na~systemie Windows, Presentation Model bardzo dobrze współpracuje z~interfejsem użytkownika zbudowanym z~biblioteką Windows Presentation Foundation (WPF) oraz~biblioteką Silverlight. Właśnie dlatego Microsoft zbudował wersję wzorca PM specjalnie pod WPF i~nazwał go Model-View-ViewModel (MVVM). \cite{aspNet} MVVM używa wielu specyficznych możliwości i~narzędzi znanych z~platformy Silverlight takich jak wiązanie danych. Wprowadzenie wzorca MVVM w~aplikacjach opierających~się na~technologiach WPF, Silverlight jest zalecanym podejściem, ponieważ są to bardzo ułatwiają jego implementację.
+Wprowadzony przez~Microsoft w~2005 roku, wzorzec architektoniczny, opiera~się na~tych samych założeniach co~zaprezentowany lata wcześniej model prezentacji (Presetation Model). PM dziedziczy po~Model Widok Prezenter MVP -- \textit{(ang.Model View Presenter)}, wzorzec architektoniczny z~początku lat 90 ubiegłego wieku. Z tym, że wzorzec PM jest szczególnie przydatny w~programowaniu złożonych interfejsów użytkownika. Na~systemie Windows, Presentation Model bardzo dobrze współpracuje z~interfejsem użytkownika zbudowanym z~biblioteką Windows Presentation Foundation (WPF) oraz~biblioteką Silverlight. Właśnie dlatego Microsoft zbudował wersję wzorca PM specjalnie pod WPF i~nazwał go Model-View-ViewModel (MVVM).\cite{aspNet} MVVM używa wielu specyficznych możliwości i~narzędzi znanych z~platformy Silverlight takich jak wiązanie danych. Wprowadzenie wzorca MVVM w~aplikacjach opierających~się na~technologiach WPF, Silverlight jest zalecanym podejściem, ponieważ są to bardzo ułatwiają jego implementację.
 
 Do~zalet Model View ViewModel względem tradycyjnego podejścia (przeciągania kotrolek z~Toolboxa i~pisanie dalej w~formie Code-behind) są:
 
@@ -615,7 +620,7 @@ Wzorzec podzielony jest na~trzy części, które wspierają testowanie aplikacji
 
 \subsection{MVVM vs MVC}
 
-Praca nie~byłaby kompletna, gdybym nie~wspomniał nic o~wzorcu, który wpłynął w~znaczący sposób na~rozwój MVVM. Wzorzec bardzo podobny, który powstał jednak dużo wcześniej to Model-View-Controller (MVC). Jest to wzorzec architektoniczny, używany do~implementacji interfejsu użytkownika. Polega na~podziale oprogramowania na~trzy niezależne od~siebie części. Wzorzec został zaprezentowany po~raz pierwszy przez~Trygve Reenskaug jeszcze w~latach 70tych. \cite{mvcXerox} Wzorzec dzieli modelowanie domeny, prezentacji i~akcji na~trzy oddzielne klasy. Model zarządza zachowaniem i~danymi w~domenie aplikacji, odpowiada na~żądania informacji o~swoim stanie oraz~odpowiada na~żądania zmiany stanu, które otrzyma od~kontrolera. View stanowi o~graficznej części aplikacji, otrzymuje od~kontrolera informacje w~jaki sposób interpretować dane wejściowe otrzymane od~użytkownika. Controller służy do~przetwarzania informacji otrzymywanych od~użytkownika np.~z~urządzeń wejściowych. MVC stał~się bardzo popularnym wzorcem przy projektowaniu aplikacji typu desktop, a później także Web. 
+Praca nie~byłaby kompletna, gdybym nie~wspomniał nic o~wzorcu, który wpłynął w~znaczący sposób na~rozwój MVVM. Wzorzec bardzo podobny, który powstał jednak dużo wcześniej to Model-View-Controller (MVC). Jest to wzorzec architektoniczny, używany do~implementacji interfejsu użytkownika. Polega na~podziale oprogramowania na~trzy niezależne od~siebie części. Wzorzec został zaprezentowany po~raz pierwszy przez~Trygve Reenskaug jeszcze w~latach 70tych.\cite{mvcXerox} Wzorzec dzieli modelowanie domeny, prezentacji i~akcji na~trzy oddzielne klasy. Model zarządza zachowaniem i~danymi w~domenie aplikacji, odpowiada na~żądania informacji o~swoim stanie oraz~odpowiada na~żądania zmiany stanu, które otrzyma od~kontrolera. View stanowi o~graficznej części aplikacji, otrzymuje od~kontrolera informacje w~jaki sposób interpretować dane wejściowe otrzymane od~użytkownika. Controller służy do~przetwarzania informacji otrzymywanych od~użytkownika np.~z~urządzeń wejściowych. MVC stał~się bardzo popularnym wzorcem przy projektowaniu aplikacji typu desktop, a później także Web. 
 
 
 \subsection{Implementacja MVVM w~aplikacji}
@@ -919,10 +924,13 @@ Stworzona przeze mnie aplikacja jest pierwsza w~swojej kategorii. Liczę na~odze
 \bibitem{inwestycje} \textsc{Jajuga K., Jajuga T.:}
 \textit{Inwestycje. Instrumenty finansowe, ryzyko finansowe, inżynieria finansowa}, Warszawa, Wydawnictwo Naukowe PWN SA, 2015, Wydanie III zm., \\ISBN 978-83-01-14957-4.
 
+\bibitem{gielda} \textsc{Dębski W.:}
+\textit{Rynek finansowy i jego mechanizmy. Podstawy teorii i praktyki}, Warszawa, Wydawnictwo Naukowe PWN SA, 2014, Wydanie VI zm., ISBN 978-83-01-17996-0.
+
 \bibitem{slownikPwn} \textsc{Drabik L., Sobol	E.:}
 \textit{Słownik języka polskiego PWN}, Wydawnictwo Naukowe PWN, 2007, ISBN 978-8-3011-7377-7.
 
-\bibitem{slownikNBP} \textit{Słownik serwisu NBP - Portal Edukacji Ekonomicznej}, \\
+\bibitem{slownikNBP} \textit{Słownik serwisu NBP -- Portal Edukacji Ekonomicznej}, \\
 \texttt{https://www.nbportal.pl/slownik/pozycje-slownika/toksyczne-aktywa}, \\dostęp: 05.01.2017.
 
 \bibitem{soros} \textit{Billionaire who broke the Bank of England}, 
