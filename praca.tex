@@ -777,18 +777,38 @@ Komunikacja z~serwisem odbywa~się przy pomocy klasy \texttt{KokosConnectionMana
 
 \section{Notyfikacje przez~BackgroundTask}
 
-
 \subsection{Opis}
 
 Windows Phone 8.1 pozwala wykonywać aplikacji zadania bez~konieczności trzymania jej na~pierwszym planie. Funkcjonalność ta nazywa~się \textit{Background Task} i~użyłem jej do~powiadamiania użytkownika o~nowych aukcjach w~serwisie.
 
 \subsection{Implementacja NewAuctionNotifier}
 
-{\color{red}\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non lectus pulvinar, bibendum est eu, venenatis odio. In faucibus orci vel tortor pellentesque molestie. Nullam vel risus mattis, volutpat arcu non, cursus est. Phasellus facilisis risus id justo consectetur porta. Integer neque lorem, tincidunt in mi id, eleifend consequat quam. Sed lacinia feugiat neque. Sed id eleifend lectus, et vulputate enim. Aenean viverra, diam vitae sodales auctor, risus risus varius metus, vitae bibendum metus nibh et ipsum. Aenean id placerat neque. }}
+Aby zaimplementować notyfikacje o nowych aukcjach, utworzyłem nowy projekt w Visual Studio typu \texttt{Windows Runtime Component}. W projekcie zawierającym aplikację, podpiąłem referencję do nowo utworzonego projektu, dodałem do właściwości deklarację wsparcia dla \texttt{Background Task}. Na koniec określiłem punkt wejściowy czyli klasę, która implementuje interfejs \texttt{IBackgroundTask}.
 
+Kod między projektem aplikacji i projektem zadania w tle nie może być współdzielony, dlatego utworzyłem osobne klasy, które są okrojoną wersją klas pochodzących z projektu \textbf{Kopra}. Są to klasy \texttt{Auction}, \texttt{Auctions}, \texttt{Paging}, \texttt{RequestGenerator}, \texttt{Response}, \texttt{SearchAuctionResult}, \texttt{SettingsManager}.
 
+\noindent
+\begin{lstlisting}[caption=Implementacja wykonywanego zadania w~tle., label=lst:test]
+public sealed class NewAuctionsTask : IBackgroundTask
+{
+...
+        public async void Run(IBackgroundTaskInstance taskInstance) 
+        {
+        	BackgroundTaskDeferral deferral = taskInstance.GetDeferral();
+        	var filterLink = await GetFilter();
+        	...
+        	Uri link = _requestGenerator.FilteredAuction(filterLink);
+        	var auctions = await AuctionDownloader.GetAuctionsByParameters(link) as List<Auction>;
+        	_foundAuction = GetNewestAuctions(auctions);
+			...            
+			CreateToastNotification(_foundAuction);
+        	deferral.Complete();
+		}
+...
+}
 
-
+\end{lstlisting}
+ 
 
 \chapter{Prezentacja interfejsu aplikacji}
 
@@ -846,6 +866,7 @@ W~trakcie uruchamiania aplikacji, użytkownik może zobaczyć duże logo aplikac
 
 \subsection{Strona logowania}
 Pierwszy ekran jaki widzi użytkownik, jest on wykonany w~motywie pośrednim. Pozwala na~łagodne przejście między domyślnym ciemnym motywem Windows Phone na~motyw jasny, który będzie widoczny po~zalogowaniu~się do~serwisu. Na~tym ekranie użytkownik jest zmuszony do~przekazania loginu (adresu email) oraz~hasła bezpośrednio do~strony Kokos.pl. Po wybraniu przycisku zaloguj, jest on zastąpiony przez~napis ,,Logowanie...'' oraz~animację paska postępu. Dodatkowym elementem są komunikaty informujące użytkownika np.~o~braku połączenia z~Internetem.
+
 \begin{figure}[h]
 	\begin{minipage}[h]{\textwidth}
 		\centering
@@ -855,9 +876,9 @@ Pierwszy ekran jaki widzi użytkownik, jest on wykonany w~motywie pośrednim. Po
 	\hfill
 \end{figure}
 
-
 \subsection{Strona główna}
 Ekran dostępny po~zalogowaniu składa~się z~trzech części. Na~górze ekranu po~lewej stronie widnieje mała wersja logo oraz~nazwy aplikacji. Po prawej stronie, znajduje~się nazwa zalogowanego użytkownika. Drugą część stanowią przyciski, symulujące wyglądem kafelki znane w~ekosystemie Windows Phone 8. Jest to miejsce agregujące najważniejsze funkcje dostępne dla~użytkownika. 
+
 \begin{figure}[h]
 	\begin{minipage}[h]{\textwidth}
 		\centering
@@ -870,24 +891,126 @@ Ekran dostępny po~zalogowaniu składa~się z~trzech części. Na~górze ekranu 
 \subsection{Dodaj filtr}
 Ekran znajduje~się pod przyciskiem \textit{Dodaj filtr} z~ikoną znaku plus na~stronie głównej aplikacji. Służy on przeznaczony do~określania parametrów aukcji jakie odpowiadają wymaganiom użytkownika. Po wpisaniu nazwy filtru i określeniu  które są zapisywane w pamięci telefonu celem powtórnego użycia. Po wpisaniu kryteriów użytkownik może zapisać je na telefonie. Filtry są świetnym sposobem na oszczędzenie czasu, ponieważ pozwalają zapamiętać preferencje użytkownika, są również niezbędne do działania powiadomień w tle, gdzie należy wybrać jeden z filtrów jako monitor aukcji.
 
-{\color{red}miejsce na obrazek}
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{addFilterScreen1.png}
+		\caption{Ekran dodawania filtrów}
+	\end{minipage}
+\hspace*{60px}
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{addFilterScreen2.png}
+		\caption{Ekran dodawania filtrów}
+	\end{minipage}
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{addFilterScreen3.png}
+		\caption{Potwierdzenie zapisania filtru}
+	\end{minipage}
+	\hfill
+\end{figure}
 
 \subsection{Szukaj aukcji}
 Ekran oznaczony ikoną lupy pozwala na szybkie wyszukanie aukcji spełniających wymagania użytkownika.
-{\color{red}Ekran szukaj aukcji}
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{searchScreen1.png}
+		\caption{Ekran dodawania filtrów}
+	\end{minipage}
+\hspace*{60px}
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{searchScreen2.png}
+		\caption{Ekran dodawania filtrów}
+	\end{minipage}
+	\hfill
+\end{figure}
+
 \subsection{Wyniki wyszukiwania}
 Ekran dostępny po wybraniu funkcji szukaj (ikona lupy) lub wybraniu jednego filtru z listy. Wyświetla stronę ze znalezionymi aukcjami dla 
-{\color{red}Ekran wyniki wyszukiwania}
+
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{searchResultScreen.png}
+		\caption{Ekran z listą wyszukanych aukcji}
+	\end{minipage}
+	\hfill
+\end{figure}
+
 \subsection{Lista filtrów}
-{\color{red}Ekran lista filtrów}
+Na tym ekranie dostępne są zdefiniowane przez użytkownika filtry. Pozwalają one na szybki dostęp do aukcji.
+
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{filtersListScreen.png}
+		\caption{Ekran z listą filtrów}
+	\end{minipage}
+	\hfill
+\end{figure}
+
 \subsection{Ustawienia}
-{\color{red}Ekran ustawienia}
+Ekran oznaczony na stronie głównej ikoną zębatki. Pozwala na sprawdzenie poprawności pobranego klucza dostępu do serwisu, datę ważności klucza oraz zawiera funkcjonalność monitora aukcji. 
+
+Monitor aukcji służy on do ciągłego przeszukiwania serwisu celem znalezienia nowych aukcji spełniających wybrane przez użytkownika kryteria. Kryteria określa się przez wybranie jednego ze zdefiniowanych filtrów z listy "Filtr do powiadomień" i wybranie przycisku "Monitor aukcji".
+
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{settingsScreen.png}
+		\caption{Ekran ustawień aplikacji}
+	\end{minipage}
+	\hfill
+\end{figure}
+
 \subsection{Raport inwestora}
-{\color{red}Ekran raport inwestora}
+Na tym ekranie wyświetlane są statystyki spłacalności z poprzedniego miesiąca, prognoza przyszłych zysków, aktualne saldo oraz liczba pożyczek w toku.
+
+\begin{figure}[h]
+	\begin{minipage}[h]{\textwidth}
+		\centering
+		\includegraphics[width=0.3\textwidth]{investorReportScreen.png}
+		\caption{Ekran z raportem inwestora}
+	\end{minipage}
+	\hfill
+\end{figure}
+
 \subsection{Najnowsze aukcje}
 {\color{red}Ekran najnowsze aukcje}
+
 \subsection{Szczegóły aukcji}
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{auctionDetailsScreen1.png}
+		\caption{Ekran dodawania filtrów}
+	\end{minipage}
+\hspace*{60px}
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{auctionDetailsScreen2.png}
+		\caption{Ekran dodawania filtrów}
+	\end{minipage}
+	\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{auctionDetailsScreen3.png}
+		\caption{Potwierdzenie zapisania filtru}
+	\end{minipage}
+		\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{auctionDetailsScreen4.png}
+		\caption{Potwierdzenie zapisania filtru}
+	\end{minipage}
+		\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{auctionDetailsScreen5.png}
+		\caption{Potwierdzenie zapisania filtru}
+	\end{minipage}
+		\begin{minipage}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{auctionDetailsScreen6.png}
+		\caption{Potwierdzenie zapisania filtru}
+	\end{minipage}
+	\hfill
+\end{figure}
 {\color{red}Ekran szczegóły aukcji}
+
 \section{Instrukcja obsługi do~aplikacji}
 Aby korzystać z aplikacji, należy mieć aktywne konto w serwisie kokos.pl oraz aktywować klucz API pierwszy raz przez przeglądarkę. Po uruchomieniu Kopry, należy podać adres email oraz hasło logowania do serwisu. Po poprawnej weryfikacji, użytkownik zostanie przeniesiony do ekranu głównego, skąd może się dostać do wszystkich najważniejszych funkcjonalności aplikacji. Użytkownik może przeskoczyć bezpośrednio do jednej z trzech najnowszych aukcji wyświetlanych na dole ekranu.
 

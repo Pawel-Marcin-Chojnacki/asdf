@@ -35,25 +35,25 @@
 \contentsline {section}{\numberline {3.3}Notyfikacje przez\nobreakspace {}BackgroundTask}{26}
 \contentsline {subsection}{\numberline {3.3.1}Opis}{26}
 \contentsline {subsection}{\numberline {3.3.2}Implementacja NewAuctionNotifier}{26}
-\contentsline {chapter}{\numberline {4}Prezentacja interfejsu aplikacji}{27}
-\contentsline {section}{\numberline {4.1}Etymologia nazwy}{27}
-\contentsline {section}{\numberline {4.2}Korzy\IeC {\'s}ci wzgl\IeC {\k e}dem wersji przegl\IeC {\k a}darkowej}{27}
-\contentsline {section}{\numberline {4.3}Koszt u\IeC {\.z}ytkowania aplikacji}{27}
-\contentsline {section}{\numberline {4.4}Bezpiecze\IeC {\'n}stwo danych przechowywanych w\nobreakspace {}aplikacji}{27}
-\contentsline {section}{\numberline {4.5}Jak wygl\IeC {\k a}da Kopra?}{28}
-\contentsline {subsection}{\numberline {4.5.1}Logo}{28}
-\contentsline {subsection}{\numberline {4.5.2}Splash screen}{28}
-\contentsline {subsection}{\numberline {4.5.3}Strona logowania}{29}
-\contentsline {subsection}{\numberline {4.5.4}Strona g\IeC {\l }\IeC {\'o}wna}{29}
-\contentsline {subsection}{\numberline {4.5.5}Dodaj filtr}{29}
-\contentsline {subsection}{\numberline {4.5.6}Szukaj aukcji}{30}
-\contentsline {subsection}{\numberline {4.5.7}Wyniki wyszukiwania}{30}
-\contentsline {subsection}{\numberline {4.5.8}Lista filtr\IeC {\'o}w}{30}
-\contentsline {subsection}{\numberline {4.5.9}Ustawienia}{30}
-\contentsline {subsection}{\numberline {4.5.10}Raport inwestora}{30}
-\contentsline {subsection}{\numberline {4.5.11}Najnowsze aukcje}{30}
-\contentsline {subsection}{\numberline {4.5.12}Szczeg\IeC {\'o}\IeC {\l }y aukcji}{30}
-\contentsline {section}{\numberline {4.6}Instrukcja obs\IeC {\l }ugi do\nobreakspace {}aplikacji}{31}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{33}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{33}
-\contentsline {chapter}{Bibliografia}{35}
+\contentsline {chapter}{\numberline {4}Prezentacja interfejsu aplikacji}{29}
+\contentsline {section}{\numberline {4.1}Etymologia nazwy}{29}
+\contentsline {section}{\numberline {4.2}Korzy\IeC {\'s}ci wzgl\IeC {\k e}dem wersji przegl\IeC {\k a}darkowej}{29}
+\contentsline {section}{\numberline {4.3}Koszt u\IeC {\.z}ytkowania aplikacji}{29}
+\contentsline {section}{\numberline {4.4}Bezpiecze\IeC {\'n}stwo danych przechowywanych w\nobreakspace {}aplikacji}{29}
+\contentsline {section}{\numberline {4.5}Jak wygl\IeC {\k a}da Kopra?}{30}
+\contentsline {subsection}{\numberline {4.5.1}Logo}{30}
+\contentsline {subsection}{\numberline {4.5.2}Splash screen}{30}
+\contentsline {subsection}{\numberline {4.5.3}Strona logowania}{31}
+\contentsline {subsection}{\numberline {4.5.4}Strona g\IeC {\l }\IeC {\'o}wna}{31}
+\contentsline {subsection}{\numberline {4.5.5}Dodaj filtr}{31}
+\contentsline {subsection}{\numberline {4.5.6}Szukaj aukcji}{32}
+\contentsline {subsection}{\numberline {4.5.7}Wyniki wyszukiwania}{32}
+\contentsline {subsection}{\numberline {4.5.8}Lista filtr\IeC {\'o}w}{32}
+\contentsline {subsection}{\numberline {4.5.9}Ustawienia}{32}
+\contentsline {subsection}{\numberline {4.5.10}Raport inwestora}{32}
+\contentsline {subsection}{\numberline {4.5.11}Najnowsze aukcje}{33}
+\contentsline {subsection}{\numberline {4.5.12}Szczeg\IeC {\'o}\IeC {\l }y aukcji}{33}
+\contentsline {section}{\numberline {4.6}Instrukcja obs\IeC {\l }ugi do\nobreakspace {}aplikacji}{33}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{39}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{39}
+\contentsline {chapter}{Bibliografia}{41}
