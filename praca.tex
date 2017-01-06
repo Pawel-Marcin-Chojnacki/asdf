@@ -783,9 +783,9 @@ Windows Phone 8.1 pozwala wykonywać aplikacji zadania bez~konieczności trzyman
 
 \subsection{Implementacja NewAuctionNotifier}
 
-Aby zaimplementować notyfikacje o nowych aukcjach, utworzyłem nowy projekt w Visual Studio typu \texttt{Windows Runtime Component}. W projekcie zawierającym aplikację, podpiąłem referencję do nowo utworzonego projektu, dodałem do właściwości deklarację wsparcia dla \texttt{Background Task}. Na koniec określiłem punkt wejściowy czyli klasę, która implementuje interfejs \texttt{IBackgroundTask}.
+Aby zaimplementować notyfikacje o~nowych aukcjach, utworzyłem nowy projekt w~Visual Studio typu \texttt{Windows Runtime Component}. W~projekcie zawierającym aplikację, podpiąłem referencję do~nowo utworzonego projektu, dodałem do~właściwości deklarację wsparcia dla \texttt{Background Task}. Na koniec określiłem punkt wejściowy czyli klasę, która implementuje interfejs \texttt{IBackgroundTask}.
 
-Kod między projektem aplikacji i projektem zadania w tle nie może być współdzielony, dlatego utworzyłem osobne klasy, które są okrojoną wersją klas pochodzących z projektu \textbf{Kopra}. Są to klasy \texttt{Auction}, \texttt{Auctions}, \texttt{Paging}, \texttt{RequestGenerator}, \texttt{Response}, \texttt{SearchAuctionResult}, \texttt{SettingsManager}.
+Kod między projektem aplikacji i~projektem zadania w~tle nie może być współdzielony, dlatego utworzyłem osobne klasy, które są~okrojoną wersją klas pochodzących z~projektu \textbf{Kopra}. Są to klasy \texttt{Auction}, \texttt{Auctions}, \texttt{Paging}, \texttt{RequestGenerator}, \texttt{Response}, \texttt{SearchAuctionResult}, \texttt{SettingsManager}.
 
 \noindent
 \begin{lstlisting}[caption=Implementacja wykonywanego zadania w~tle., label=lst:test]
@@ -852,7 +852,6 @@ Logo aplikacji jest rysunkiem połowy owocu kokosowego z~liśćmi drzewa kokosow
 
 \subsection{Splash screen}
 
-
 W~trakcie uruchamiania aplikacji, użytkownik może zobaczyć duże logo aplikacji wraz z~jej nazwą na~niebieskim tle. 
 \begin{figure}[h]
 	\begin{minipage}[h]{\textwidth}
@@ -889,7 +888,7 @@ Ekran dostępny po~zalogowaniu składa~się z~trzech części. Na~górze ekranu 
 \end{figure}
 
 \subsection{Dodaj filtr}
-Ekran znajduje~się pod przyciskiem \textit{Dodaj filtr} z~ikoną znaku plus na~stronie głównej aplikacji. Służy on przeznaczony do~określania parametrów aukcji jakie odpowiadają wymaganiom użytkownika. Po wpisaniu nazwy filtru i określeniu  które są zapisywane w pamięci telefonu celem powtórnego użycia. Po wpisaniu kryteriów użytkownik może zapisać je na telefonie. Filtry są świetnym sposobem na oszczędzenie czasu, ponieważ pozwalają zapamiętać preferencje użytkownika, są również niezbędne do działania powiadomień w tle, gdzie należy wybrać jeden z filtrów jako monitor aukcji.
+Ekran znajduje~się pod przyciskiem \textit{Dodaj filtr} z~ikoną znaku plus na~stronie głównej aplikacji. Służy on do~określania parametrów aukcji jakie odpowiadają wymaganiom użytkownika. Po~wpisaniu nazwy filtru i~określeniu  które są~zapisywane w~pamięci telefonu celem powtórnego użycia. Po wpisaniu kryteriów użytkownik może zapisać je na telefonie. Filtry są~sposobem na~oszczędzenie czasu, ponieważ pozwalają zapamiętać preferencje użytkownika, są~również niezbędne do~działania powiadomień w~tle, gdzie należy wybrać jeden z~filtrów jako monitor aukcji.
 
 \begin{figure}[h]
 	\centering
@@ -980,6 +979,7 @@ Na tym ekranie wyświetlane są statystyki spłacalności z poprzedniego miesią
 {\color{red}Ekran najnowsze aukcje}
 
 \subsection{Szczegóły aukcji}
+Ekran zawierający wszystkie ważne
 \begin{figure}[h]
 	\centering
 	\begin{minipage}[b]{0.3\textwidth}
