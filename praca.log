@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.27)  6 JAN 2017 23:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.27)  7 JAN 2017 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,20 +664,20 @@ LaTeX Warning: Label `lst:test' multiply defined.
 )
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
@@ -746,14 +746,14 @@ e
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
 * h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 688.5567pt, 85.35826pt)
+* v-part:(T,H,B)=(99.58464pt, 645.87756pt, 99.58464pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=426.79135pt
-* \textheight=688.5567pt
+* \textheight=645.87756pt
 * \oddsidemargin=27.31465pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-31.2056pt
+* \topmargin=-2.75284pt
 * \headheight=12.0pt
 * \headsep=18.06749pt
 * \topskip=10.0pt
@@ -771,63 +771,30 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
-* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=426.79135pt
-* \textheight=674.33032pt
-* \oddsidemargin=27.31465pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-16.97922pt
-* \headheight=12.0pt
-* \headsep=18.06749pt
-* \topskip=10.0pt
-* \footskip=25.29494pt
-* \marginparwidth=0.0pt
-* \marginparsep=0.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-LaTeX Font Info:    Try loading font information for OML+plm on input line 187.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 186.
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 187
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 186
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 187
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 186
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 187.
+(Font)              <10> on input line 186.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 187.
+(Font)              <7> on input line 186.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 187.
+(Font)              <5> on input line 186.
  [1
-
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -847,20 +814,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-Overfull \hbox (12.07054pt too wide) in paragraph at lines 213--214
+Overfull \hbox (12.07054pt too wide) in paragraph at lines 212--213
 \OT4/cmr/m/n/10 Podmiot go-spo-dar-czy, któ-ry zaj-mu-je si¦ ob-ro-tem ±rod-ków
  fi-nan-so-wych po-wie-rzo-nych przez klien-
  []
 
 [5
 
-] [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [6] [7
 
- [7
-
-]
-[8] [9] [10
+] [8] [9] [10
 
 
 ]
@@ -868,79 +831,74 @@ Rozdzia\PlPrIeC {\l } 1.
 [11
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 317.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 316.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 317.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 316.
  [12]
-Overfull \hbox (1.68375pt too wide) in paragraph at lines 379--379
+Overfull \hbox (1.68375pt too wide) in paragraph at lines 378--378
  []|\OT4/cmr/m/n/9 Podstawowy| 
  []
 
 
-Overfull \hbox (1.68375pt too wide) in paragraph at lines 379--379
+Overfull \hbox (1.68375pt too wide) in paragraph at lines 378--378
  []|\OT4/cmr/m/n/9 Podstawowy| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--381
+Underfull \hbox (badness 10000) in paragraph at lines 365--380
 
  []
 
 
-Overfull \hbox (6.65231pt too wide) in paragraph at lines 417--417
+Overfull \hbox (6.65231pt too wide) in paragraph at lines 416--416
  []|\OT4/cmr/bx/n/9 Spªacalno±¢| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--419
+Underfull \hbox (badness 10000) in paragraph at lines 399--418
 
  []
 
-
-Underfull \vbox (badness 4048) has occurred while \output is active []
-
- [13]
-[14]
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 478
+[13] [14]
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 477
 .
  (/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [15] [16
-
-]
+) [15]
+[16]
 Rozdzia\PlPrIeC {\l } 2.
 
-Overfull \hbox (0.65268pt too wide) in paragraph at lines 498--499
+Overfull \hbox (0.65268pt too wide) in paragraph at lines 497--498
 []\OT4/cmr/m/n/10 Nale»y pa-mi¦-ta¢, »e VS jest ±ro-do-wi-skiem wy-ma-ga-j¡-cym
  spo-rych za-so-bów sprz¦-to-wych. Na stro-
  []
 
-[17] <emulatory.png, id=70, 226.446pt x 87.9285pt>
+[17
+
+] <emulatory.png, id=70, 226.446pt x 87.9285pt>
 File: emulatory.png Graphic file (type png)
  <use emulatory.png>
-Package pdftex.def Info: emulatory.png used on input line 528.
+Package pdftex.def Info: emulatory.png used on input line 527.
 (pdftex.def)             Requested size: 226.44543pt x 87.92827pt.
 
 <emulatoryWin10.png, id=71, 218.0145pt x 79.497pt>
 File: emulatoryWin10.png Graphic file (type png)
  <use emulatoryWin10.png>
-Package pdftex.def Info: emulatoryWin10.png used on input line 539.
+Package pdftex.def Info: emulatoryWin10.png used on input line 538.
 (pdftex.def)             Requested size: 218.01395pt x 79.4968pt.
 
-Underfull \vbox (badness 1412) has occurred while \output is active []
-
- [18 <./emulatory.png> <./emulatoryWin10.png>]
-Overfull \hbox (20.26439pt too wide) in paragraph at lines 581--582
+[18 <./emulatory.png>] [19 <./emulatoryWin10.png>]
+Overfull \hbox (20.26439pt too wide) in paragraph at lines 580--581
 []\OT4/cmr/m/n/10 Pocz¡tkowo u»y-wa-ªem te-go na-rz¦-dzia do de-kom-pi-la-cji b
 i-blio-te-ki \OT4/cmr/m/it/10 Htm-lA-gi-li-ty-Pack\OT4/cmr/m/n/10 , któ-ra prze
 z wzgl¡d
  []
 
-[19] [20]
+[20]
 Rozdzia\PlPrIeC {\l } 3.
 [21
 
@@ -948,280 +906,304 @@ Rozdzia\PlPrIeC {\l } 3.
 File: strukturaFolderow.png Graphic file (type png)
 
 <use strukturaFolderow.png>
-Package pdftex.def Info: strukturaFolderow.png used on input line 632.
+Package pdftex.def Info: strukturaFolderow.png used on input line 631.
 (pdftex.def)             Requested size: 130.08566pt x 152.9711pt.
  <listawidokow.png, id=86, 228.855pt x 186.6975pt>
 File: listawidokow.png Graphic file (type png)
 
 <use listawidokow.png>
-Package pdftex.def Info: listawidokow.png used on input line 642.
+Package pdftex.def Info: listawidokow.png used on input line 641.
 (pdftex.def)             Requested size: 128.0387pt x 104.45587pt.
  <listaviewmodeli.png, id=87, 228.855pt x 200.75pt>
 File: listaviewmodeli.png Graphic file (type png)
 
 <use listaviewmodeli.png>
-Package pdftex.def Info: listaviewmodeli.png used on input line 647.
+Package pdftex.def Info: listaviewmodeli.png used on input line 646.
 (pdftex.def)             Requested size: 128.0387pt x 112.31813pt.
 
-Underfull \hbox (badness 2772) in paragraph at lines 648--648
+Underfull \hbox (badness 2772) in paragraph at lines 647--647
 []\OT4/cmr/m/n/10 Rysunek 3.3: Li-sta pli-ków
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./strukturaFolderow.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23 <./listawidokow.png> <./listaviewmodeli.png>] [24] [25] [26]
+[22 <./strukturaFolderow.png>] [23 <./listawidokow.png> <./listaviewmodeli.png>
+] [24] [25] [26]
 Rozdzia\PlPrIeC {\l } 4.
-<kafelekSzeroki.png, id=105, 325.215pt x 158.09062pt>
+
+Underfull \vbox (badness 2213) has occurred while \output is active []
+
+ [27
+
+]
+<kafelekSzeroki.png, id=108, 325.215pt x 158.09062pt>
 File: kafelekSzeroki.png Graphic file (type png)
  <use kafelekSzeroki.png>
-Package pdftex.def Info: kafelekSzeroki.png used on input line 842.
+Package pdftex.def Info: kafelekSzeroki.png used on input line 841.
 (pdftex.def)             Requested size: 128.0387pt x 62.24126pt.
 
-<kafelekKwadratowy.png, id=107, 158.09062pt x 158.09062pt>
+<kafelekKwadratowy.png, id=110, 158.09062pt x 158.09062pt>
 File: kafelekKwadratowy.png Graphic file (type png)
 
 <use kafelekKwadratowy.png>
 Package pdftex.def Info: kafelekKwadratowy.png used on input line 847.
 (pdftex.def)             Requested size: 128.0387pt x 128.04787pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<splashScreen.png, id=108, 361.35pt x 602.25pt>
+ <splashScreen.png, id=111, 361.35pt x 602.25pt>
 File: splashScreen.png Graphic file (type png)
- <use splashScreen.png>
-Package pdftex.def Info: splashScreen.png used on input line 861.
+
+<use splashScreen.png>
+Package pdftex.def Info: splashScreen.png used on input line 864.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--865
-
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 864--865
+[][][][] 
  []
 
-[27
-
-] <logowanie.png, id=112, 361.35pt x 602.25pt>
+<logowanie.png, id=112, 361.35pt x 602.25pt>
 File: logowanie.png Graphic file (type png)
  <use logowanie.png>
-Package pdftex.def Info: logowanie.png used on input line 874.
+Package pdftex.def Info: logowanie.png used on input line 871.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--878
-
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 871--872
+[][][][] 
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 <mainScreen.png, id=113, 361.35pt x 602.25pt>
 File: mainScreen.png Graphic file (type png)
  <use mainScreen.png>
-Package pdftex.def Info: mainScreen.png used on input line 886.
+Package pdftex.def Info: mainScreen.png used on input line 878.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--890
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 878--879
+[][][][] 
+ []
 
+[28 <./kafelekSzeroki.png> <./kafelekKwadratowy.png> <./splashScreen.png> <./lo
+gowanie.png> <./mainScreen.png>]
+<addFilterScreen1.png, id=121, 361.35pt x 602.25pt>
+File: addFilterScreen1.png Graphic file (type png)
+ <use addFilterScreen1.png>
+Package pdftex.def Info: addFilterScreen1.png used on input line 900.
+(pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
+
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 900--901
+[][][][] 
+ []
+
+<addFilterScreen2.png, id=122, 361.35pt x 602.25pt>
+File: addFilterScreen2.png Graphic file (type png)
+ <use addFilterScreen2.png>
+Package pdftex.def Info: addFilterScreen2.png used on input line 907.
+(pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
+
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 907--908
+[][][][] 
+ []
+
+<addFilterScreen3.png, id=123, 361.35pt x 602.25pt>
+File: addFilterScreen3.png Graphic file (type png)
+ <use addFilterScreen3.png>
+Package pdftex.def Info: addFilterScreen3.png used on input line 914.
+(pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
+
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 914--915
+[][][][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[28 <./kafelekSzeroki.png> <./kafelekKwadratowy.png> <./splashScreen.png>]
-<addFilterScreen1.png, id=119, 361.35pt x 602.25pt>
-File: addFilterScreen1.png Graphic file (type png)
- <use addFilterScreen1.png>
-Package pdftex.def Info: addFilterScreen1.png used on input line 898.
-(pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
-
-<addFilterScreen2.png, id=120, 361.35pt x 602.25pt>
-File: addFilterScreen2.png Graphic file (type png)
- <use addFilterScreen2.png>
-Package pdftex.def Info: addFilterScreen2.png used on input line 903.
-(pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
-
-<addFilterScreen3.png, id=121, 361.35pt x 602.25pt>
-File: addFilterScreen3.png Graphic file (type png)
- <use addFilterScreen3.png>
-Package pdftex.def Info: addFilterScreen3.png used on input line 907.
-(pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
-
-Underfull \hbox (badness 1221) in paragraph at lines 908--908
+Underfull \hbox (badness 1221) in paragraph at lines 915--915
 []\OT4/cmr/m/n/10 Rysunek 4.8: Po-twier-dze-nie
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<searchScreen1.png, id=122, 361.35pt x 602.25pt>
+<searchScreen1.png, id=124, 361.35pt x 602.25pt>
 File: searchScreen1.png Graphic file (type png)
  <use searchScreen1.png>
-Package pdftex.def Info: searchScreen1.png used on input line 919.
+Package pdftex.def Info: searchScreen1.png used on input line 933.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-<searchScreen2.png, id=123, 361.35pt x 602.25pt>
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 933--934
+[][][][] 
+ []
+
+<searchScreen2.png, id=125, 361.35pt x 602.25pt>
 File: searchScreen2.png Graphic file (type png)
  <use searchScreen2.png>
-Package pdftex.def Info: searchScreen2.png used on input line 924.
+Package pdftex.def Info: searchScreen2.png used on input line 940.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 940--941
+[][][][] 
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<searchResultScreen.png, id=124, 361.35pt x 602.25pt>
+<searchResultScreen.png, id=126, 361.35pt x 602.25pt>
 File: searchResultScreen.png Graphic file (type png)
 
 <use searchResultScreen.png>
-Package pdftex.def Info: searchResultScreen.png used on input line 936.
+Package pdftex.def Info: searchResultScreen.png used on input line 947.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 934--940
-
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 947--948
+[][][][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<filtersListScreen.png, id=125, 361.35pt x 602.25pt>
+[29 <./addFilterScreen1.png> <./addFilterScreen2.png> <./addFilterScreen3.png>]
+<filtersListScreen.png, id=133, 361.35pt x 602.25pt>
 File: filtersListScreen.png Graphic file (type png)
 
 <use filtersListScreen.png>
-Package pdftex.def Info: filtersListScreen.png used on input line 948.
+Package pdftex.def Info: filtersListScreen.png used on input line 970.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 946--952
-
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 970--971
+[][][][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<settingsScreen.png, id=126, 361.35pt x 602.25pt>
+<settingsScreen.png, id=134, 361.35pt x 602.25pt>
 File: settingsScreen.png Graphic file (type png)
  <use settingsScreen.png>
-Package pdftex.def Info: settingsScreen.png used on input line 962.
+Package pdftex.def Info: settingsScreen.png used on input line 977.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 960--966
-
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 977--978
+[][][][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 1308) in paragraph at lines 978--978
+[]\OT4/cmr/m/n/10 Rysunek 4.13: Ekran usta-
+ []
 
-<investorReportScreen.png, id=127, 361.35pt x 602.25pt>
+<investorReportScreen.png, id=135, 361.35pt x 602.25pt>
 File: investorReportScreen.png Graphic file (type png)
 
 <use investorReportScreen.png>
-Package pdftex.def Info: investorReportScreen.png used on input line 974.
+Package pdftex.def Info: investorReportScreen.png used on input line 984.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--978
-
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 984--985
+[][][][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[29 <./logowanie.png>]
-<auctionDetailsScreen1.png, id=132, 361.35pt x 602.25pt>
+<auctionDetailsScreen1.png, id=136, 361.35pt x 602.25pt>
 File: auctionDetailsScreen1.png Graphic file (type png)
 
 <use auctionDetailsScreen1.png>
-Package pdftex.def Info: auctionDetailsScreen1.png used on input line 987.
+Package pdftex.def Info: auctionDetailsScreen1.png used on input line 1003.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-<auctionDetailsScreen2.png, id=133, 361.35pt x 602.25pt>
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 1003--1004
+[][][][] 
+ []
+
+<auctionDetailsScreen2.png, id=137, 361.35pt x 602.25pt>
 File: auctionDetailsScreen2.png Graphic file (type png)
 
 <use auctionDetailsScreen2.png>
-Package pdftex.def Info: auctionDetailsScreen2.png used on input line 992.
+Package pdftex.def Info: auctionDetailsScreen2.png used on input line 1010.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-<auctionDetailsScreen3.png, id=134, 361.35pt x 602.25pt>
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 1010--1011
+[][][][] 
+ []
+
+<auctionDetailsScreen3.png, id=138, 361.35pt x 602.25pt>
 File: auctionDetailsScreen3.png Graphic file (type png)
 
 <use auctionDetailsScreen3.png>
-Package pdftex.def Info: auctionDetailsScreen3.png used on input line 996.
+Package pdftex.def Info: auctionDetailsScreen3.png used on input line 1017.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-<auctionDetailsScreen4.png, id=135, 361.35pt x 602.25pt>
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 1017--1018
+[][][][] 
+ []
+
+<auctionDetailsScreen4.png, id=139, 361.35pt x 602.25pt>
 File: auctionDetailsScreen4.png Graphic file (type png)
 
 <use auctionDetailsScreen4.png>
-Package pdftex.def Info: auctionDetailsScreen4.png used on input line 1000.
+Package pdftex.def Info: auctionDetailsScreen4.png used on input line 1026.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-<auctionDetailsScreen5.png, id=136, 361.35pt x 602.25pt>
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 1026--1027
+[][][][] 
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 1027--1027
+[]\OT4/cmr/m/n/10 Rysunek 4.18: Fi-nan-se po-
+ []
+
+<auctionDetailsScreen5.png, id=140, 361.35pt x 602.25pt>
 File: auctionDetailsScreen5.png Graphic file (type png)
 
 <use auctionDetailsScreen5.png>
-Package pdftex.def Info: auctionDetailsScreen5.png used on input line 1004.
+Package pdftex.def Info: auctionDetailsScreen5.png used on input line 1033.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
-<auctionDetailsScreen6.png, id=137, 361.35pt x 602.25pt>
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 1033--1034
+[][][][] 
+ []
+
+<auctionDetailsScreen6.png, id=141, 361.35pt x 602.25pt>
 File: auctionDetailsScreen6.png Graphic file (type png)
 
 <use auctionDetailsScreen6.png>
-Package pdftex.def Info: auctionDetailsScreen6.png used on input line 1008.
+Package pdftex.def Info: auctionDetailsScreen6.png used on input line 1040.
 (pdftex.def)             Requested size: 128.0387pt x 213.4005pt.
 
+Overfull \hbox (2.79999pt too wide) in paragraph at lines 1040--1041
+[][][][] 
+ []
 
-LaTeX Warning: Float too large for page by 59.53368pt on input line 1012.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30 <./mainScreen.png>] [31 <./addFilterScreen1.png> <./addFilterScreen2.png> <
-./addFilterScreen3.png>] [32 <./searchScreen1.png> <./searchScreen2.png> <./sea
-rchResultScreen.png>] [33 <./filtersListScreen.png> <./settingsScreen.png>]
-[34 <./investorReportScreen.png>] [35 <./auctionDetailsScreen1.png> <./auctionD
-etailsScreen2.png> <./auctionDetailsScreen3.png> <./auctionDetailsScreen4.png> 
-<./auctionDetailsScreen5.png> <./auctionDetailsScreen6.png>] [36
+[30 <./searchScreen1.png> <./searchScreen2.png> <./searchResultScreen.png>]
+[31] [32 <./filtersListScreen.png> <./settingsScreen.png> <./investorReportScre
+en.png> <./auctionDetailsScreen1.png> <./auctionDetailsScreen2.png> <./auctionD
+etailsScreen3.png>] [33 <./auctionDetailsScreen4.png> <./auctionDetailsScreen5.
+png> <./auctionDetailsScreen6.png>] [34
 
 ]
 Rozdzia\PlPrIeC {\l } 5.
-[37] [38
+[35] [36
 
 ] (./praca.lof)
 \tf@lof=\write4
 \openout4 = `praca.lof'.
 
- [39] [40
+ [37] [38
 
 ]
-Overfull \hbox (4.3278pt too wide) in paragraph at lines 1060--1062
+Overfull \hbox (4.3278pt too wide) in paragraph at lines 1092--1094
 []\OT4/cmr/m/it/10 Billionaire who bro-ke the Bank of En-gland\OT4/cmr/m/n/10 ,
  \OT4/cmtt/m/n/10 http://www.telegraph.co.uk/finance/2773265/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1080
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1112
 \OT4/cmtt/m/n/10 wiadomosci/artykul/koniec;lokat;antybelkowych;co;w;zamian,82,0
 ,1057874.html\OT4/cmr/m/n/10 ,
  []
 
-
-Overfull \hbox (4.37216pt too wide) in paragraph at lines 1092--1094
+[39]
+Overfull \hbox (4.37216pt too wide) in paragraph at lines 1124--1126
 []\OT4/cmr/m/it/10 Podstawowe sto-py pro-cen-to-we NBP\OT4/cmr/m/n/10 , \OT4/cm
 tt/m/n/10 http://www.nbp.pl/home.aspx?f=/dzienne/stopy.htm\OT4/cmr/m/n/10 , 
  []
 
-[41] [42] (./praca.aux)
+[40] [41] (./praca.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6630 strings out of 494877
- 89230 string characters out of 6179085
- 214008 words of memory out of 5000000
- 9751 multiletter control sequences out of 15000+600000
+ 6650 strings out of 494877
+ 89652 string characters out of 6179085
+ 209011 words of memory out of 5000000
+ 9771 multiletter control sequences out of 15000+600000
  17648 words of font info for 47 fonts, out of 8000000 for 9000
  56 hyphenation exceptions out of 8191
- 41i,12n,49p,1136b,1780s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,49p,1136b,1784s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plsc.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/share/texlive/texmf-dist/fonts/e
 nc/dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plitt.en
@@ -1241,10 +1223,10 @@ e1/public/pl/plr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy
 are/texlive/texmf-dist/fonts/type1/public/pl/plti9.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/pl/pltt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/pl/pltt9.pfb>
-Output written on praca.pdf (42 pages, 854490 bytes).
+Output written on praca.pdf (41 pages, 962612 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 254 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

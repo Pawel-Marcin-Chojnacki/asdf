@@ -20,10 +20,10 @@
 \contentsline {section}{\numberline {2.2}J\IeC {\k e}zyk C\# 5.0}{17}
 \contentsline {section}{\numberline {2.3}.NET Framework}{18}
 \contentsline {section}{\numberline {2.4}Windows Phone 8.1 SDK}{18}
-\contentsline {section}{\numberline {2.5}Newtonsoft.Json}{19}
+\contentsline {section}{\numberline {2.5}Newtonsoft.Json}{18}
 \contentsline {section}{\numberline {2.6}Git i\nobreakspace {}GitHub}{19}
 \contentsline {section}{\numberline {2.7}LinqPad}{19}
-\contentsline {section}{\numberline {2.8}ILSpy}{19}
+\contentsline {section}{\numberline {2.8}ILSpy}{20}
 \contentsline {chapter}{\numberline {3}Budowa projektu}{21}
 \contentsline {section}{\numberline {3.1}Wzorzec MVVM}{21}
 \contentsline {subsection}{\numberline {3.1.1}Opis wzorca Model View ViewModel}{21}
@@ -40,20 +40,20 @@
 \contentsline {section}{\numberline {4.2}Korzy\IeC {\'s}ci wzgl\IeC {\k e}dem wersji przegl\IeC {\k a}darkowej}{27}
 \contentsline {section}{\numberline {4.3}Koszt u\IeC {\.z}ytkowania aplikacji}{27}
 \contentsline {section}{\numberline {4.4}Bezpiecze\IeC {\'n}stwo danych przechowywanych w\nobreakspace {}aplikacji}{27}
-\contentsline {section}{\numberline {4.5}Jak wygl\IeC {\k a}da Kopra?}{27}
-\contentsline {subsection}{\numberline {4.5.1}Logo}{27}
+\contentsline {section}{\numberline {4.5}Jak wygl\IeC {\k a}da Kopra?}{28}
+\contentsline {subsection}{\numberline {4.5.1}Logo}{28}
 \contentsline {subsection}{\numberline {4.5.2}Splash screen}{28}
-\contentsline {subsection}{\numberline {4.5.3}Strona logowania}{28}
-\contentsline {subsection}{\numberline {4.5.4}Strona g\IeC {\l }\IeC {\'o}wna}{28}
+\contentsline {subsection}{\numberline {4.5.3}Strona logowania}{29}
+\contentsline {subsection}{\numberline {4.5.4}Strona g\IeC {\l }\IeC {\'o}wna}{29}
 \contentsline {subsection}{\numberline {4.5.5}Dodaj filtr}{29}
 \contentsline {subsection}{\numberline {4.5.6}Szukaj aukcji}{29}
-\contentsline {subsection}{\numberline {4.5.7}Wyniki wyszukiwania}{29}
-\contentsline {subsection}{\numberline {4.5.8}Lista filtr\IeC {\'o}w}{29}
-\contentsline {subsection}{\numberline {4.5.9}Ustawienia}{29}
-\contentsline {subsection}{\numberline {4.5.10}Raport inwestora}{29}
+\contentsline {subsection}{\numberline {4.5.7}Wyniki wyszukiwania}{30}
+\contentsline {subsection}{\numberline {4.5.8}Lista filtr\IeC {\'o}w}{30}
+\contentsline {subsection}{\numberline {4.5.9}Ustawienia}{30}
+\contentsline {subsection}{\numberline {4.5.10}Raport inwestora}{30}
 \contentsline {subsection}{\numberline {4.5.11}Najnowsze aukcje}{30}
 \contentsline {subsection}{\numberline {4.5.12}Szczeg\IeC {\'o}\IeC {\l }y aukcji}{30}
-\contentsline {section}{\numberline {4.6}Instrukcja obs\IeC {\l }ugi do\nobreakspace {}aplikacji}{30}
-\contentsline {chapter}{\numberline {5}Podsumowanie}{37}
-\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{37}
-\contentsline {chapter}{Bibliografia}{39}
+\contentsline {section}{\numberline {4.6}Instrukcja obs\IeC {\l }ugi do\nobreakspace {}aplikacji}{31}
+\contentsline {chapter}{\numberline {5}Podsumowanie}{35}
+\contentsline {chapter}{Spis rysunk\IeC {\'o}w}{35}
+\contentsline {chapter}{Bibliografia}{37}

@@ -14,8 +14,7 @@
 %\usepackage{showframe} % debug
 \marginparwidth 0pt
 \marginparsep 0pt
-% wymiary wzięte z http://www.kulturoznawstwo.uni.wroc.pl/?page_id=5741
-\usepackage[top=2.5cm,bottom=3cm,inner=3.5cm,outer=2.5cm]{geometry}
+\usepackage[top=3.5cm,bottom=3.5cm,inner=3.5cm,outer=2.5cm]{geometry}
 
 % HEADER, FOOTER
 \usepackage{fancyhdr} 
@@ -151,7 +150,7 @@ basicstyle=\ttfamily\small,
 
 %\newgeometry{inner=3cm,outer=3cm}
 
-\newgeometry{top=3cm,bottom=3cm,inner=3.5cm,outer=2.5cm}
+\vspace*{1cm}
 \begin{center}
 \begin{large}
 Uniwersytet Mikołaja Kopernika\\[1mm]
@@ -834,18 +833,20 @@ Aplikacja ma po~zalogowaniu ma dostęp do~wszystkich danych osobowych umieszczon
 
 \subsection{Logo}
 
-Logo aplikacji jest rysunkiem połowy owocu kokosowego z~liśćmi drzewa kokosowego. Jak wspomniałem w~pierwszych rozdziałach pracy, jest to nawiązanie nazwy do~wykorzystywanego serwisu. Logo zostało wykonane w~bieli, bez~tła, dlatego jest przystosowane do~każdego motywu kolorystycznego z~nasyconymi barwami (różnymi od~bieli).
+Logo aplikacji (rysunki \ref{fig:logoSzerokie}, \ref{fig:logoKwadratowe}) ilustruje połowę owocu kokosowego z~liśćmi drzewa kokosowego. Jak wspomniałem w~pierwszych rozdziałach pracy, jest to nawiązanie nazwy do~wykorzystywanego serwisu. Logo zostało wykonane w~bieli, bez~tła, dlatego jest przystosowane do~każdego motywu kolorystycznego z~nasyconymi barwami (różnymi od~bieli).
 
 \begin{figure}[h]
 	\centering
 	\begin{minipage}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{kafelekSzeroki.png}
 		\caption{Logo na~szerokim kafelku}
+		\label{fig:logoSzerokie}
 	\end{minipage}
 \hspace*{60px}
 	\begin{minipage}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{kafelekKwadratowy.png}
 		\caption{Logo na~kwadratowym kafelku}
+		\label{fig:logoKwadratowe}
 	\end{minipage}
 	\hfill
 \end{figure}
@@ -854,163 +855,194 @@ Logo aplikacji jest rysunkiem połowy owocu kokosowego z~liśćmi drzewa kokosow
 \subsection{Splash screen}
 
 
-W~trakcie uruchamiania aplikacji, użytkownik może zobaczyć duże logo aplikacji wraz z~jej nazwą na~niebieskim tle. 
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{splashScreen.png}
+W~trakcie uruchamiania aplikacji, użytkownik może zobaczyć duże logo aplikacji wraz z~jej nazwą na~niebieskim tle (rysunek \ref{fig:splashScreen}).
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{splashScreen.png}}
 		\caption{Splash screen}
+		\label{fig:splashScreen}
 	\end{minipage}
 	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{logowanie.png}}
+		\caption{Ekran logowania}
+		\label{fig:logowanie}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{mainScreen.png}}
+		\caption{Strona główna aplikacji}
+		\label{fig:stronaGlowna}
+	\end{minipage}
 \end{figure}
 
 
 \subsection{Strona logowania}
-Pierwszy ekran jaki widzi użytkownik, jest on wykonany w~motywie pośrednim. Pozwala na~łagodne przejście między domyślnym ciemnym motywem Windows Phone na~motyw jasny, który będzie widoczny po~zalogowaniu~się do~serwisu. Na~tym ekranie użytkownik jest zmuszony do~przekazania loginu (adresu email) oraz~hasła bezpośrednio do~strony Kokos.pl. Po wybraniu przycisku zaloguj, jest on zastąpiony przez~napis ,,Logowanie...'' oraz~animację paska postępu. Dodatkowym elementem są komunikaty informujące użytkownika np.~o~braku połączenia z~Internetem.
+Pierwszy ekran (rysunek \ref{fig:logowanie}), jaki widzi użytkownik, jest on wykonany w~motywie pośrednim. Pozwala na~łagodne przejście między domyślnym ciemnym motywem Windows Phone na~motyw jasny, który będzie widoczny po~zalogowaniu~się do~serwisu. Na~tym ekranie użytkownik jest zmuszony do~przekazania loginu (adresu email) oraz~hasła bezpośrednio do~strony Kokos.pl. Po wybraniu przycisku zaloguj, jest on zastąpiony przez~napis ,,Logowanie...'' oraz~animację paska postępu. Dodatkowym elementem są komunikaty informujące użytkownika np.~o~braku połączenia z~Internetem.
 
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{logowanie.png}
-		\caption{Ekran logowania}
-	\end{minipage}
-	\hfill
-\end{figure}
+
 
 \subsection{Strona główna}
-Ekran dostępny po~zalogowaniu składa~się z~trzech części. Na~górze ekranu po~lewej stronie widnieje mała wersja logo oraz~nazwy aplikacji. Po prawej stronie, znajduje~się nazwa zalogowanego użytkownika. Drugą część stanowią przyciski, symulujące wyglądem kafelki znane w~ekosystemie Windows Phone 8. Jest to miejsce agregujące najważniejsze funkcje dostępne dla~użytkownika. 
-
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{mainScreen.png}
-		\caption{Strona główna aplikacji}
-	\end{minipage}
-	\hfill
-\end{figure}
+Ekran dostępny po~zalogowaniu (rysunek \ref{fig:stronaGlowna}) składa~się z~trzech części. Na~górze ekranu po~lewej stronie widnieje mała wersja logo oraz~nazwy aplikacji. Po prawej stronie, znajduje~się nazwa zalogowanego użytkownika. Drugą część stanowią przyciski, symulujące wyglądem kafelki znane w~ekosystemie Windows Phone 8. Jest to miejsce agregujące najważniejsze funkcje dostępne dla~użytkownika. 
 
 \subsection{Dodaj filtr}
-Ekran znajduje~się pod przyciskiem \textit{Dodaj filtr} z~ikoną znaku plus na~stronie głównej aplikacji. Służy on przeznaczony do~określania parametrów aukcji jakie odpowiadają wymaganiom użytkownika. Po wpisaniu nazwy filtru i określeniu  które są zapisywane w pamięci telefonu celem powtórnego użycia. Po wpisaniu kryteriów użytkownik może zapisać je na telefonie. Filtry są świetnym sposobem na oszczędzenie czasu, ponieważ pozwalają zapamiętać preferencje użytkownika, są również niezbędne do działania powiadomień w tle, gdzie należy wybrać jeden z filtrów jako monitor aukcji.
+Ekran (rysunki \ref{fig:dodawanieFiltrow}, \ref{fig:dodawanieFiltrowCd}) znajduje~się pod przyciskiem \textit{Dodaj filtr} z~ikoną znaku plus na~stronie głównej aplikacji. Służy on przeznaczony do~określania parametrów aukcji jakie odpowiadają wymaganiom użytkownika. Po wpisaniu nazwy filtru i określeniu  które są zapisywane w pamięci telefonu celem powtórnego użycia. Po wpisaniu kryteriów użytkownik może zapisać je na telefonie (rysunek \ref{fig:dodawanieFiltrowPotwierdzenie}). Filtry są świetnym sposobem na oszczędzenie czasu, ponieważ pozwalają zapamiętać preferencje użytkownika, są również niezbędne do działania powiadomień w tle, gdzie należy wybrać jeden z filtrów jako monitor aukcji.
 
 \begin{figure}[h]
 	\centering
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{addFilterScreen1.png}
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{addFilterScreen1.png}}
 		\caption{Ekran dodawania filtrów}
-	\end{minipage}
-\hspace*{60px}
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{addFilterScreen2.png}
-		\caption{Ekran dodawania filtrów}
-	\end{minipage}
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{addFilterScreen3.png}
-		\caption{Potwierdzenie zapisania filtru}
+		\label{fig:dodawanieFiltrow}
 	\end{minipage}
 	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{addFilterScreen2.png}}
+		\caption{Ekran dodawania filtrów (cd.)}
+		\label{fig:dodawanieFiltrowCd}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{addFilterScreen3.png}}
+		\caption{Potwierdzenie zapisania filtru}
+		\label{fig:dodawanieFiltrowPotwierdzenie}
+	\end{minipage}
 \end{figure}
+
+
+
 
 \subsection{Szukaj aukcji}
-Ekran oznaczony ikoną lupy pozwala na szybkie wyszukanie aukcji spełniających wymagania użytkownika.
+Ekran (rysunki \ref{fig:wyszukiwanie}, \ref{fig:wyszukiwanieCd}) oznaczony ikoną lupy pozwala na szybkie wyszukanie aukcji spełniających wymagania użytkownika.
+
+\subsection{Wyniki wyszukiwania}
+Ekran (rysunek \ref{fig:listaWyszukanych}) dostępny po wybraniu funkcji szukaj (ikona lupy) lub wybraniu jednego filtru z listy. Wyświetla stronę ze znalezionymi aukcjami dla 
 
 \begin{figure}[h]
 	\centering
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{searchScreen1.png}
-		\caption{Ekran dodawania filtrów}
-	\end{minipage}
-\hspace*{60px}
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{searchScreen2.png}
-		\caption{Ekran dodawania filtrów}
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{searchScreen1.png}}
+		\caption{Ekran wyszukiwania aukcji}
+		\label{fig:wyszukiwanie}
 	\end{minipage}
 	\hfill
-\end{figure}
-
-\subsection{Wyniki wyszukiwania}
-Ekran dostępny po wybraniu funkcji szukaj (ikona lupy) lub wybraniu jednego filtru z listy. Wyświetla stronę ze znalezionymi aukcjami dla 
-
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{searchResultScreen.png}
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{searchScreen2.png}}
+		\caption{Ekran wyszukiwania aukcji (cd.)}
+		\label{fig:wyszukiwanieCd}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{searchResultScreen.png}}
 		\caption{Ekran z listą wyszukanych aukcji}
+		\label{fig:listaWyszukanych}
 	\end{minipage}
-	\hfill
 \end{figure}
+
 
 \subsection{Lista filtrów}
-Na tym ekranie dostępne są zdefiniowane przez użytkownika filtry. Pozwalają one na szybki dostęp do aukcji.
+Na tym ekranie (rysunek \ref{fig:listaFiltrow}) dostępne są zdefiniowane przez użytkownika filtry. Pozwalają one na szybki dostęp do aukcji.
 
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{filtersListScreen.png}
-		\caption{Ekran z listą filtrów}
-	\end{minipage}
-	\hfill
-\end{figure}
 
 \subsection{Ustawienia}
-Ekran oznaczony na stronie głównej ikoną zębatki. Pozwala na sprawdzenie poprawności pobranego klucza dostępu do serwisu, datę ważności klucza oraz zawiera funkcjonalność monitora aukcji. 
+Ekran (rysunek \ref{fig:ustawienia}) oznaczony na stronie głównej ikoną zębatki. Pozwala na sprawdzenie poprawności pobranego klucza dostępu do serwisu, datę ważności klucza oraz zawiera funkcjonalność monitora aukcji. 
 
 Monitor aukcji służy on do ciągłego przeszukiwania serwisu celem znalezienia nowych aukcji spełniających wybrane przez użytkownika kryteria. Kryteria określa się przez wybranie jednego ze zdefiniowanych filtrów z listy "Filtr do powiadomień" i wybranie przycisku "Monitor aukcji".
 
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{settingsScreen.png}
-		\caption{Ekran ustawień aplikacji}
-	\end{minipage}
-	\hfill
-\end{figure}
-
 \subsection{Raport inwestora}
-Na tym ekranie wyświetlane są statystyki spłacalności z poprzedniego miesiąca, prognoza przyszłych zysków, aktualne saldo oraz liczba pożyczek w toku.
+Na tym ekranie wyświetlane są statystyki spłacalności z poprzedniego miesiąca, prognoza przyszłych zysków, aktualne saldo oraz liczba pożyczek w toku (rysunek \ref{fig:raportInwestora}).
 
-\begin{figure}[h]
-	\begin{minipage}[h]{\textwidth}
-		\centering
-		\includegraphics[width=0.3\textwidth]{investorReportScreen.png}
-		\caption{Ekran z raportem inwestora}
+\begin{figure}[hb]
+	\centering
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{filtersListScreen.png}}
+		\caption{Ekran z listą filtrów}
+		\label{fig:listaFiltrow}
 	\end{minipage}
 	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{settingsScreen.png}}
+		\caption{Ekran ustawień aplikacji}
+		\label{fig:ustawienia}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{investorReportScreen.png}}
+		\caption{Ekran z raportem inwestora}
+		\label{fig:raportInwestora}
+	\end{minipage}
 \end{figure}
+
 
 \subsection{Najnowsze aukcje}
 {\color{red}Ekran najnowsze aukcje}
 
 \subsection{Szczegóły aukcji}
-\begin{figure}[h]
+
+{\color{red}Ekran szczegóły aukcji} (rysunki \ref{fig:aukcjaPodsumowanie}, \ref{fig:aukcjaPozyczkobiorca}, \ref{fig:aukcjaRekomendacje}, \ref{fig:aukcjaFinanse}, \ref{fig:aukcjaInwestorzy}, \ref{fig:aukcjaKomentarze})
+
+
+\begin{figure}[p]
 	\centering
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{auctionDetailsScreen1.png}
-		\caption{Ekran dodawania filtrów}
-	\end{minipage}
-\hspace*{60px}
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{auctionDetailsScreen2.png}
-		\caption{Ekran dodawania filtrów}
-	\end{minipage}
-	\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{auctionDetailsScreen3.png}
-		\caption{Potwierdzenie zapisania filtru}
-	\end{minipage}
-		\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{auctionDetailsScreen4.png}
-		\caption{Potwierdzenie zapisania filtru}
-	\end{minipage}
-		\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{auctionDetailsScreen5.png}
-		\caption{Potwierdzenie zapisania filtru}
-	\end{minipage}
-		\begin{minipage}[b]{0.3\textwidth}
-		\includegraphics[width=\textwidth]{auctionDetailsScreen6.png}
-		\caption{Potwierdzenie zapisania filtru}
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{auctionDetailsScreen1.png}}
+		\caption{Podsumowanie aukcji}
+		\label{fig:aukcjaPodsumowanie}
 	\end{minipage}
 	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{auctionDetailsScreen2.png}}
+		\caption{Dane pożyczkobiorcy}
+		\label{fig:aukcjaPozyczkobiorca}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{auctionDetailsScreen3.png}}
+		\caption{Rekomendacje pożyczkobiorcy}
+		\label{fig:aukcjaRekomendacje}
+	\end{minipage}
 \end{figure}
-{\color{red}Ekran szczegóły aukcji}
+\begin{figure}[p]
+	\centering
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{auctionDetailsScreen4.png}}
+		\caption{Finanse pożyczkobiorcy}
+		\label{fig:aukcjaFinanse}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{auctionDetailsScreen5.png}}
+		\caption{Lista inwestorów}
+		\label{fig:aukcjaInwestorzy}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\textwidth}
+		\setlength{\fboxsep}{1pt}
+		\fcolorbox{gray}{white}{\includegraphics[width=\textwidth]{auctionDetailsScreen6.png}}
+		\caption{Komentarze do aukcji}
+		\label{fig:aukcjaKomentarze}
+	\end{minipage}
+\end{figure}
+
 
 \section{Instrukcja obsługi do~aplikacji}
 Aby korzystać z aplikacji, należy mieć aktywne konto w serwisie kokos.pl oraz aktywować klucz API pierwszy raz przez przeglądarkę. Po uruchomieniu Kopry, należy podać adres email oraz hasło logowania do serwisu. Po poprawnej weryfikacji, użytkownik zostanie przeniesiony do ekranu głównego, skąd może się dostać do wszystkich najważniejszych funkcjonalności aplikacji. Użytkownik może przeskoczyć bezpośrednio do jednej z trzech najnowszych aukcji wyświetlanych na dole ekranu.
