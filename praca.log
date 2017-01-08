@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.3)  7 JAN 2017 17:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.3)  8 JAN 2017 18:41
 entering extended mode
 **./praca.tex
 (praca.tex
@@ -1143,9 +1143,7 @@ Overfull \hbox (2.79999pt too wide) in paragraph at lines 975--976
 [][][][] 
  []
 
-[30 <./searchScreen1.png> <./searchScreen2.png> <./searchResultScreen.png> <./f
-iltersListScreen.png> <./settingsScreen.png> <./investorReportScreen.png>]
-<auctionDetailsScreen1.png, id=149, 361.35pt x 602.25pt>
+<auctionDetailsScreen1.png, id=140, 361.35pt x 602.25pt>
 File: auctionDetailsScreen1.png Graphic file (type png)
 
 <use auctionDetailsScreen1.png>
@@ -1156,7 +1154,7 @@ Overfull \hbox (2.79999pt too wide) in paragraph at lines 996--997
 [][][][] 
  []
 
-<auctionDetailsScreen2.png, id=150, 361.35pt x 602.25pt>
+<auctionDetailsScreen2.png, id=141, 361.35pt x 602.25pt>
 File: auctionDetailsScreen2.png Graphic file (type png)
 
 <use auctionDetailsScreen2.png>
@@ -1167,7 +1165,7 @@ Overfull \hbox (2.79999pt too wide) in paragraph at lines 1003--1004
 [][][][] 
  []
 
-<auctionDetailsScreen3.png, id=151, 361.35pt x 602.25pt>
+<auctionDetailsScreen3.png, id=142, 361.35pt x 602.25pt>
 File: auctionDetailsScreen3.png Graphic file (type png)
 
 <use auctionDetailsScreen3.png>
@@ -1178,7 +1176,7 @@ Overfull \hbox (2.79999pt too wide) in paragraph at lines 1010--1011
 [][][][] 
  []
 
-<auctionDetailsScreen4.png, id=152, 361.35pt x 602.25pt>
+<auctionDetailsScreen4.png, id=143, 361.35pt x 602.25pt>
 File: auctionDetailsScreen4.png Graphic file (type png)
 
 <use auctionDetailsScreen4.png>
@@ -1194,7 +1192,7 @@ Underfull \hbox (badness 1412) in paragraph at lines 1020--1020
 []\OT4/cmr/m/n/10 Rysunek 4.18: Fi-nan-se po-
  []
 
-<auctionDetailsScreen5.png, id=153, 361.35pt x 602.25pt>
+<auctionDetailsScreen5.png, id=144, 361.35pt x 602.25pt>
 File: auctionDetailsScreen5.png Graphic file (type png)
 
 <use auctionDetailsScreen5.png>
@@ -1205,7 +1203,7 @@ Overfull \hbox (2.79999pt too wide) in paragraph at lines 1026--1027
 [][][][] 
  []
 
-<auctionDetailsScreen6.png, id=154, 361.35pt x 602.25pt>
+<auctionDetailsScreen6.png, id=145, 361.35pt x 602.25pt>
 File: auctionDetailsScreen6.png Graphic file (type png)
 
 <use auctionDetailsScreen6.png>
@@ -1216,9 +1214,11 @@ Overfull \hbox (2.79999pt too wide) in paragraph at lines 1033--1034
 [][][][] 
  []
 
-[31 <./auctionDetailsScreen1.png> <./auctionDetailsScreen2.png> <./auctionDetai
-lsScreen3.png>] [32 <./auctionDetailsScreen4.png> <./auctionDetailsScreen5.png>
- <./auctionDetailsScreen6.png>]
+[30 <./searchScreen1.png> <./searchScreen2.png> <./searchResultScreen.png>]
+[31 <./filtersListScreen.png> <./settingsScreen.png> <./investorReportScreen.pn
+g> <./auctionDetailsScreen1.png> <./auctionDetailsScreen2.png> <./auctionDetail
+sScreen3.png>] [32 <./auctionDetailsScreen4.png> <./auctionDetailsScreen5.png> 
+<./auctionDetailsScreen6.png>]
 Rozdzia\PlPrIeC {\l } 5.
 [33
 
@@ -1260,7 +1260,7 @@ Here is how much of TeX's memory you used:
  10001 multiletter control sequences out of 15000+200000
  18803 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 41i,12n,49p,1163b,1231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,49p,1166b,1231s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/pawel/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc
 }{C:/Users/pawel/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}
 {C:/Users/pawel/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{
@@ -1288,7 +1288,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Users/pawel/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti9.pfb><C:/Users/pawe
 l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt10.pfb><C:/Users/
 pawel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt9.pfb>
-Output written on praca.pdf (39 pages, 770240 bytes).
+Output written on praca.pdf (39 pages, 770343 bytes).
 PDF statistics:
  259 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

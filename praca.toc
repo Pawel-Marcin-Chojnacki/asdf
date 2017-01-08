@@ -47,10 +47,10 @@
 \contentsline {subsection}{\numberline {4.5.6}Wyszukiwanie aukcji}{29}
 \contentsline {subsection}{\numberline {4.5.7}Wyniki wyszukiwania}{30}
 \contentsline {subsection}{\numberline {4.5.8}Lista filtr\IeC {\'o}w}{30}
-\contentsline {subsection}{\numberline {4.5.9}Ustawienia}{31}
-\contentsline {subsection}{\numberline {4.5.10}Raport inwestora}{31}
-\contentsline {subsection}{\numberline {4.5.11}Szczeg\IeC {\'o}\IeC {\l }y aukcji}{31}
-\contentsline {section}{\numberline {4.6}Instrukcja obs\IeC {\l }ugi do\nobreakspace {}aplikacji}{32}
+\contentsline {subsection}{\numberline {4.5.9}Ustawienia}{30}
+\contentsline {subsection}{\numberline {4.5.10}Raport inwestora}{30}
+\contentsline {subsection}{\numberline {4.5.11}Szczeg\IeC {\'o}\IeC {\l }y aukcji}{30}
+\contentsline {section}{\numberline {4.6}Instrukcja obs\IeC {\l }ugi do\nobreakspace {}aplikacji}{31}
 \contentsline {chapter}{\numberline {5}Podsumowanie}{33}
 \contentsline {chapter}{Spis rysunk\IeC {\'o}w}{33}
 \contentsline {chapter}{Bibliografia}{35}
