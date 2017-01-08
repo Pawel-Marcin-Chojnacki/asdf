@@ -9,6 +9,7 @@
 \usepackage{listings} % syntax highlighting
 \usepackage{verbatimbox} % marginesy dla~tabel
 \usepackage{emptypage} % usuwa nagłówki i~numery stron z~pustych stron
+\usepackage{afterpage} % to zapobiega ustawianiu obrazka PO tym
 
 % PAGE LAYOUT
 %\usepackage{showframe} % debug
@@ -928,6 +929,7 @@ Ekran (rysunki \ref{fig:wyszukiwanie}, \ref{fig:wyszukiwanieCd}) oznaczony ikon�
 Ekran (rysunek \ref{fig:listaWyszukanych}) dostępny jest po wywołaniu funkcji szukaj (ikona lupy) lub wybraniu jednego filtru z listy. Wyświetla stronę ze znalezionymi aukcjami dla zadanych kryteriów wyszukiwania.
 
 \begin{figure}[h]
+
 	\centering
 	\begin{minipage}[t]{0.3\textwidth}
 		\setlength{\fboxsep}{1pt}
@@ -949,12 +951,15 @@ Ekran (rysunek \ref{fig:listaWyszukanych}) dostępny jest po wywołaniu funkcji 
 		\caption{Ekran z listą wyszukanych aukcji}
 		\label{fig:listaWyszukanych}
 	\end{minipage}
+\vspace*{-0.25cm}
 \end{figure}
+
 
 \subsection{Lista filtrów}
 Na tym ekranie (rysunek \ref{fig:listaFiltrow}) dostępne są zdefiniowane przez użytkownika filtry. Pozwalają one na szybki dostęp do aukcji. Przytrzymując nazwę wybranego filtru na ekranie użytkownik otrzymuje możliwość usunięcia go listy.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
+
 	\centering
 	\begin{minipage}[t]{0.3\textwidth}
 		\setlength{\fboxsep}{1pt}
@@ -989,7 +994,7 @@ Na tym ekranie wyświetlane są statystyki spłacalności z poprzedniego miesią
 \subsection{Szczegóły aukcji}
 Ekran zawierający wszystkie ważne informacje dotyczące pojedynczej aukcji. Jest to ekran typu \textit{pivot}, co oznacza, że dane są podzielone sekcjami i należy przewinąć ekran w lewo lub w prawo by przejść do kolejnej sekcji. Po przytrzymaniu obszaru ekranu, wyświetli się menu kontekstowe pozwalające otworzyć aktualnie prezentowaną aukcję w przeglądarce internetowej (rysunki \ref{fig:aukcjaPodsumowanie}, \ref{fig:aukcjaPozyczkobiorca}, \ref{fig:aukcjaRekomendacje}, \ref{fig:aukcjaFinanse}, \ref{fig:aukcjaInwestorzy}, \ref{fig:aukcjaKomentarze}).
 
-\begin{figure}[!ht]
+\begin{figure}[h]
 	\centering
 	\begin{minipage}[t]{0.3\textwidth}
 		\setlength{\fboxsep}{1pt}
@@ -1012,7 +1017,7 @@ Ekran zawierający wszystkie ważne informacje dotyczące pojedynczej aukcji. Je
 		\label{fig:aukcjaRekomendacje}
 	\end{minipage}
 \end{figure}
-\begin{figure}[t]
+\begin{figure}[ht!]
 	\centering
 	\begin{minipage}[t]{0.3\textwidth}
 		\setlength{\fboxsep}{1pt}
@@ -1036,8 +1041,8 @@ Ekran zawierający wszystkie ważne informacje dotyczące pojedynczej aukcji. Je
 	\end{minipage}
 \end{figure}
 
-
 \newpage
+\afterpage{\clearpage}
 \section{Instrukcja obsługi do~aplikacji}
 Aby korzystać z aplikacji, należy mieć aktywne konto w serwisie kokos.pl oraz aktywować klucz API pierwszy raz przez przeglądarkę. Po uruchomieniu Kopry, należy podać adres email oraz hasło logowania do serwisu. Po poprawnej weryfikacji, użytkownik zostanie przeniesiony do ekranu głównego, skąd może się dostać do wszystkich najważniejszych funkcjonalności aplikacji. Użytkownik może przeskoczyć bezpośrednio do jednej z trzech najnowszych aukcji wyświetlanych na dole ekranu.
 
