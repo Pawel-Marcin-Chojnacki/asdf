@@ -200,6 +200,9 @@ Toruń 2016
 
 \tableofcontents
 
+% ################################
+%        SŁOWNIK POJĘĆ
+% ################################
 \chapter*{Słownik pojęć}
 \markboth{}{Słownik pojęć}
 \addcontentsline{toc}{chapter}{Słownik pojęć}
@@ -209,7 +212,6 @@ Toruń 2016
 	\item[Automat inwestycyjny] Oprogramowanie przeznaczone do~symulowania działań pożyczkodawcy przez~wpłacanie środków na~aukcje spełniające określone kryteria.
 	\item[FriendlyScore] Przyznanie punktacji użytkownikowi w~oparciu o~analizę danych z~kont w~serwisach społecznościowych, np.~Facebooka czy Twittera oraz~dodatkowe weryfikacje, np.~weryfikację pracodawcy.
 	\item[Giełda Papierów Wartościowych] Jest to instytucja publiczna zapewniająca możliwość obrotu giełdowymi papierami wartościowymi. Pozwala ona na~kupno oraz~sprzedaż papierów wartościowych takich jak akcje i~obligacje. W~mojej pracy ograniczę~się do~polskiego rynku kapitałowego, dlatego pojęcie ,,Giełda Papierów Wartościowych'' (w skrócie ,,Giełda'') będzie w~niej oznaczać instytucję ,,Giełda Papierów Wartościowych w~Warszawie SA''.\cite{gielda}
-%	\item[Inteligencja finansowa] Pojęcie nie~zostało zdefiniowane przez~Słownik Języka Polskiego, jednak szeroko używane w~,,poradnikach'' finansowych, blogach czy książkach nt. rozwoju osobistego. Oznacza sprawne posługiwanie~się finansami, zrozumienie podstawowych zasad matematyki, tj. procent, procent składany, porównywanie liczb czy obliczanie wartości prostych szerów, ciągów. Zbiór umiejętności tak oczywisty dla~matematyków, że nie~wpadli by nazwać go ,,inteligencją''.
 	\item[Instrument finansowy (ang. \textit{financial instrument})]  Jest to kontrakt zawarty między dwiema stronami regulujący zależność finansową między tymi stronami. W~tym kontrakcie zawarte są dwie strony. Strona długa (ang. \textit{long party}), inaczej -- posiadacz długiej pozycji, oraz~strona krótka (\textit{short party}), inaczej -- posiadacz krótkiej pozycji. Przykładem instrumentu finansowego są papiery wartościowe.\cite{inwestycje}
 	\item[Instytucja finansowa] Podmiot gospodarczy, który zajmuje~się obrotem środków finansowych powierzonych przez~klientów (udzielanie kredytów, inwestycje, gromadzenie środków pieniężnych).
 	\item[Oferta inwestycyjna] Przekazanie wkładu pieniężnego na~wybraną pożyczkę przez~jednego z~pożyczkodawców. Wiąże~się to ze~wstępną akceptacją oferty pożyczkowej na~warunkach wcześniej określonych przez~osobę wystawiającą aukcję pożyczkową (\textit{pożyczkobiorcę}).
@@ -223,7 +225,10 @@ Toruń 2016
 	\item[Windykacja] Dochodzenie własności za pomocą dostępnych środków prawnych. Dążenie do~odzyskania pieniędzy przekazanych podmiotowi przez~osobę wszczynającą proces odzyskiwania należności.
 	\item[Zobowiązania] Zmuszenie prawem do~świadczenia pieniężnego na~rzecz wierzyciela.
 \end{description}
- 
+
+% ################################
+%        WSTĘP
+% ################################
 \chapter*{Wstęp}
 \markboth{}{Wstęp}
 \addcontentsline{toc}{chapter}{Wstęp}
@@ -285,9 +290,11 @@ Jako osoba inwestująca wziąłem sprawy we własne ręce i~stworzyłem aplikacj
 Uważam, że \textbf{Kopra} ułatwi użytkownikom systemu Windows Phone 8.1 szybki dostęp do~informacji.
 
 
-
-
 \clearpage{\pagestyle{empty}\cleardoublepage}
+
+% ################################
+%        O POŻYCZANIU
+% ################################
 \chapter{O pożyczaniu}
 \section{Krótka historia pieniądza}
 Pożyczki istnieją od~tysięcy lat. Pierwsze informacje o~pożyczaniu pieniędzy wywodzą~się ze~starożytnej Mezopotamii \cite{financingCivilization}. 
@@ -355,9 +362,6 @@ Utrzymywanie~się z~odsetek zarobionych na~pożyczkach wymaga pełnoetatowego za
 
 
 \section{Porównanie najpopularniejszych instrumentów finansowych}
-
-% będziesz chciał sobie robić kolory, to można tak:
-% \cellcolor[HTML]{D8FF91}
 
 Zysk rośnie wraz z~ryzykiem. Przy inwestowaniu aktywów zawsze istnieje ryzyko straty części lub~całości inwestycji. Można zaobserwować niemal wykładniczą zależność między ryzykiem utraty inwestycji, a wysokością osiągniętych zysków. 
 
@@ -490,6 +494,9 @@ Odpowiedzi z~serwera bywają nieprzewidywalne. Podczas tworzenia aplikacji na~za
 W~okolicy 10 dnia każdego miesiąca o~wieczornej porze należy uzbroić~się w~cierpliwość, gdyż wówczas inwestorzy szturmują serwis w~poszukiwaniu najlepszych aukcji. Wtedy z~powodu opóźnień, częściej zamiast spodziewanej odowiedzi otrzymamy błąd 503.
 
 
+% ################################
+%        WYKORZYSTANE TECHNOLOGIE I NARZĘDZIA
+% ################################
 \chapter{Wykorzystane technologie i~narzędzia}
 W~tym rozdziale przedstawiam technologie i~narzędzia, które znacząco pomogły mi w~realizacji projektu.
 
@@ -585,8 +592,10 @@ ILSpy stał~się szczególnie popularny, kiedy narzędzie Microsoftu o~nazwie IL
 
 ILSpy jest w~pełni graficznym narzędziem. Uważam, że stanowi najlepsze darmowe rozwiązanie dla~przeglądania plików assembly.
 
- 
 
+% ################################
+%        BUDOWA PROJEKTU
+% ################################
 \chapter{Budowa projektu}
 Projekt został zbudowany w~oparciu o~bibliotekę Windows Phone SDK z~wykorzystaniem wzorca architektonicznego MVVM. Z narzędzi zewnętrznych, zapewniłem integrację z~Web API serwisu Kokos.
 
@@ -814,6 +823,9 @@ public sealed class NewAuctionsTask : IBackgroundTask
 \end{lstlisting}
  
 
+% ################################
+%        PREZENTACJA INTERFEJSU APLIKACJI
+% ################################
 \chapter{Prezentacja interfejsu aplikacji}
 
 \section{Etymologia nazwy}
@@ -1049,7 +1061,10 @@ Aby korzystać z aplikacji, należy mieć aktywne konto w serwisie kokos.pl oraz
 
 Aby uruchomić zadania w~tle, należy mieć dodany przynajmniej jeden filtr w~aplikacji, a następnie z~ekranu ustawień wybrać z~listy, jakie aukcje mają być wyszukiwane w~tle. Maksymalnie co~30 minut można otrzymać powiadomienie, z~nową aukcją.
 
- 
+
+% ################################
+%        PODSUMOWANIE
+% ################################
 \chapter{Podsumowanie}
 Aplikacja ma w~założeniu rozwiązać problem, jakim jest szybki dostęp do~oferty pożyczkowej na~urządzeniach mobilnych. Skupia~się na~obsłudze najpopularniejszego serwisu oferującego usługi typu ,,p2p lending''. \textbf{Kopra} ma wyciągnąć najważniejsze informacje potrzebne do~dalszego procesu myślowego, czy warto zainteresować~się ofertą pożyczkową. 
 
@@ -1060,14 +1075,18 @@ Oprogramowanie stworzyłem z~myślą o~telefonach Windows Phone 8.1 wraz z~kolej
 Na~chwilę obecną aplikacja ma możliwość sprawdzania w~tle jednego filtru użytkownika. Funkcjonalność można rozszerzyć o~wybór ilości powiadomień na~godzinę, które użytkownik jest w~stanie zaakceptować, oraz~dodać listę filtrów, które miałyby być sprawdzane i~ustawić dla~nich priorytety. W~kolejnych wersjach przewiduję również możliwość tworzenia kopii zapasowej filtrów na~dysku OneDrive oraz~dzielenie~się nimi z~innymi inwestorami. Kolejnym kamieniem milowym w~rozwoju aplikacji może być automat inwestycyjny, który korzystając z~funkcjonalności wyszukiwania aukcji w~tle, inwestowałby automatycznie określoną kwotę w~znalezione oferty inwestycyjne.
 
 Stworzona przeze mnie aplikacja jest pierwsza w~swojej kategorii. Liczę na~odzew programistów po~publikacji Kopry w~Sklepie Microsoft. Zależy mi, by inwestowanie przez~Koprę było łatwą formą pomnażania oszczędności bez~konieczności płacenia wysokich prowizji pośrednikom, co~pomoże poprawić domowy budżet wielu osób.
- 
- 
- 
- 
+
+
+% ################################
+%        SPIS RYSUNKÓW
+% ################################
 \addcontentsline{toc}{chapter}{Spis rysunków}
 \listoffigures
 
 
+% ################################
+%        BIBLIOGRAFIA
+% ################################
 \addcontentsline{toc}{chapter}{Bibliografia}
 \begin{thebibliography}{99}
 
