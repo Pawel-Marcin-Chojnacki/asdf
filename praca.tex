@@ -24,14 +24,14 @@
 
 % TABLE OF CONTENTS
 
-%kropki w~spisie tresci
+% dots in table of contents
 \makeatletter
 \def\numberline#1{\hb@xt@\@tempdima{#1.\hfil}}
 \makeatother
 
 % CHAPTER TITLE
 
-%kropki po~tytułach rodziałów
+% dots after chapter titles
 \makeatletter
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
@@ -51,19 +51,18 @@
 
 % SPIS TREŚCI
 
-%kropki w~spisie tresci
+% dots in table of contents
 \makeatletter
 \def\numberline#1{\hb@xt@\@tempdima{#1.\hfil}}
 \makeatother
 
 % TYTUŁY ROZDZIAŁÓW
 
-%kropki po~tytułach rozdziałów
+% dots after chapters titles
 \makeatletter
 \renewcommand*\@seccntformat[1]%
 {\csname the#1\endcsname.\enspace}
 \makeatother
-
 
 % KONFIGURACJA WYGLĄDU NAGŁÓWKA TEGO CO SIĘ POWTARZA
 
@@ -138,8 +137,6 @@ keywordstyle=\color{bluekeywords},
 stringstyle=\color{redstrings},
 basicstyle=\ttfamily\small,
 }
-
-
 
 
 \begin{document}
@@ -1203,11 +1200,5 @@ Stworzona przeze mnie aplikacja jest pierwsza w~swojej kategorii. Liczę na~odze
 \bibitem{mvcXerox} \textit{Oryginalna notka techniczna nt. wzorca MVC stworzona dla~XEROX PARC w~latach 1978-79}, \\
 \texttt{http://heim.ifi.uio.no/~trygver/themes/mvc/mvc-index.html}, \\dostęp: 22.2016.
 
-
-
 \end{thebibliography}
-
-
-
-
 \end{document}
